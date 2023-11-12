@@ -28,14 +28,14 @@ define config.check_conflicting_properties = True
 define gui.accent_color = '#0099cc'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#ff0000'
+define gui.idle_color = '#888888'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
 define gui.idle_small_color = '#aaaaaa'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#540000'
+define gui.hover_color = '#66c1e0'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
@@ -211,8 +211,8 @@ define gui.choice_button_borders = Borders(150, 8, 150, 8)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = '#ff0000'
-define gui.choice_button_text_hover_color = "#8f0000"
+define gui.choice_button_text_idle_color = '#888888'
+define gui.choice_button_text_hover_color = "#ffffff"
 define gui.choice_button_text_insensitive_color = '#8888887f'
 
 
@@ -248,7 +248,7 @@ define gui.file_slot_rows = 2
 
 ## The position of the left side of the navigation buttons, relative to the left
 ## side of the screen.
-define gui.navigation_xpos = 90
+define gui.navigation_xpos = 60
 
 ## The vertical position of the skip indicator.
 define gui.skip_ypos = 15
