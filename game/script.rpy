@@ -7,13 +7,40 @@ define e = Character("Eileen")
 
 
 # The game starts here.
-
+image intro_slideshow:
+    "intro-cg-1.png"
+    pause 1.5
+    "intro-cg-2.png"
+    pause 1.5
+    "intro-cg-3.png"
+    pause 1.5
+    "intro-cg-4.png"
+    pause 1.5
+    "intro-cg-5.png"
+    pause 1.5
+    "intro-cg-6.png"
+    pause 1.5
+    "intro-cg-7.png"
+    pause 1.5
+    "intro-cg-8.png"
+    pause 1.5
+    "intro-cg-9.png"
+    pause 1.5
+    "intro-cg-10.png"
+    pause 1.5
 label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    jump global_visitMarlon
+    scene trigger warning
+    # shift options down      
+    menu:
+        "Continue":
+            #play intro
+            #RESIZE THEM
+            scene "intro_slideshow"
+            
+            
+            #scene pt-courtyard
+            #jump global_visitMarlon
+        "Back":
+            return
 
     return
