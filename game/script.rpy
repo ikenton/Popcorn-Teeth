@@ -9,11 +9,14 @@ define e = Character("Eileen")
 # The game starts here.
 
 label start:
-
+    scene pt-courtyard
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
-
-    jump global_visitMarlon
-
+    menu:
+         
+        "marlon's":
+            jump global_visitMarlon
+        "bonnie's":
+            jump global_bonnie
     return
