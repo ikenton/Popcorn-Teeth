@@ -310,6 +310,7 @@ label global_visitMarlon:
                         m "Sometimes I think you deserve that fate more than he did."
                 jump talking
             "How close are you to the Ringmaster?" if not closeCrimson and ringmaster:
+                $ ringmaster = False
                 p "It sounds like you’re pretty close to the Ringmaster."
                 show marlon nuetral
                 m "I’ve been a part of this Circus since I was kid, and I always looked up to him."
@@ -326,7 +327,30 @@ label global_visitMarlon:
                 "Marlon takes another look at the portrait on the wall."
                 jump talking
         label dialogTreeEndings:
-    
-    
+            $ crimsonhere = True
+            menu:
+                "I’m done talking to you. It’s time to end this.":
+                    p "All of this talking is making me hungry. And I did spy some tasty teeth in that mouth of yours."
+                    show marlon surprised
+                    m "Huh? What do you mean…?!"
+                    if crimsonhere:
+                        "I leap forward, trying to pry Marlon’s pretty little mouth just wide enough to yank out his teeth. But as soon as I move for him, I feel a large force jump on me."
+                        "I get pushed off of Marlon, rolling across the floor of the trailer. Once I get my bearings, I realize that I’m being pinned down by Marlon’s lion."
+                        p "Get off of me!"
+                        "I struggle against his weight, but I’m too weak to fend off this fully grown lion."
+                        show marlon angry
+                        m "Argh, you were trying to kill me!"
+                        show marlon disapointed
+                        m "And I thought I liked you…"
+                        show marlon nuetral
+                        m "Crimson, it’s feeding time."
+                        hide marlon nuetral
+                        show crimson bad
+                        "The lion on top of my growls, raising its hackles to reveal large and sharp teeth. For a moment, I smile as I think about how delicious they must be…"
+                        "And then, I feel the lion’s jaw wrap around my neck, piercing my throat with his fangs. The lion rips my body to shreds, piece by piece, and my vision fades to black."
+                "We should try to get out of here. Together.":
+                    p ""
+                "I think I hear something going on outside.":
+                    p ""
     
     return
