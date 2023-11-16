@@ -372,6 +372,24 @@ label global_visitMarlon:
                         "The lion on top of my growls, raising its hackles to reveal large and sharp teeth. For a moment, I smile as I think about how delicious they must be…"
                         "And then, I feel the lion’s jaw wrap around my neck, piercing my throat with his fangs. The lion rips my body to shreds, piece by piece, and my vision fades to black."
                         return
+                    else:
+                        "I leap forward, quickly overtaking the smaller man beneath me."
+                        show marlon surprised
+                        m "P-Pita! What are you doing…?!"
+                        p "I’m getting tired of hearing your little sob stories. No matter what, I can’t forgive you for just standing aside while the Ringmaster tortured me!"
+                        p "You think I’m his favorite plaything? Well, you’re right. He just loves to hear me scream in pain. And you know what? I bet I’d love to hear you scream, too!"
+                        "I take my hands and shove them into his mouth, forcing them between his lips as I try to pry it open."
+                        m "P-Please stop, that hurts…!"
+                        p "That’s right, beg. Beg for your life as I take it away, just like the Ringmaster and this damn Circus took away mine."
+                        p "Oh, I wonder how he’ll react once he’s seen how I devoured his precious little boy."
+                        show marlon bad
+                        "My hands are thrust into his mouth cavity, as I dig my fingers into its roof and bottom jaw. I begin to stretch Marlon’s mouth wider and wider, and all he can do is cry and scream."
+                        "Finally, with a sharp crack, I break his jaw as his mouth begins to fill with blood from his torn skin and muscles. He falls limp beneath me."
+                        "I take out his teeth piece by piece, savoring each little snack as I take it into my mouth and chew. I can feel my power growing stronger."
+                        hide marlon bad
+                        show pita laugh
+                        p "Delicious."
+                        jump global_courtyard
                 "We should try to get out of here. Together.":
                     p "You know how bad the Ringmaster is. We should both try to escape him and this Circus"
                     if bad > 0:

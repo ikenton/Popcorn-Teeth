@@ -4,26 +4,33 @@
 # name of the character.
 
 define e = Character("Eileen")
-
+python:
+    global marlonVisit = False
+    global bonnieVisit = False
+    global hugoVisit = False
+    global ringmaster = False
 
 # The game starts here.
 label start:
     scene trigger warning
-    # shift options down      
+    # shift options down  
     menu:
         "Continue":
             #play intro
             #RESIZE THEM
-            scene pt-courtyard
-            menu:
-                "Marlon's":
-                    jump global_visitMarlon
-                "Bonnie's":
-                    jump global_bonnie
-                "Hugo's":
-                    "jump global_hugo"
-                "The Ringmaster's":
-                    "jump global_ringmaster"
+            label global_courtyard:
+                scene pt-courtyard
+                menu:
+                    "Marlon's" if not Marlon:
+                        $ hugo = True
+                        jump global_visitMarlon
+                    "Bonnie's":
+                        jump global_bonnie
+                    "Hugo's" if not Hugo:
+                        $ hugo = True
+                        "jump global_hugo"
+                    "The Ringmaster's":
+                        "jump global_ringmaster"
             
             #scene pt-courtyard
             #jump global_visitMarlon
