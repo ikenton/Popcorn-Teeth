@@ -19,7 +19,7 @@ label start:
                 "Marlon's":
                     jump global_visitMarlon
                 "Bonnie's":
-                    "jump global_bonnie"
+                    jump global_bonnie
                 "Hugo's":
                     "jump global_hugo"
                 "The Ringmaster's":

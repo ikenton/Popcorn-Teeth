@@ -7,9 +7,21 @@ define m = Character("Marlon", color = "#281aa3")
 define p = Character("Pita")
 default visited = False
 
-# The game starts here.
+transform alpha_dissolve:
+    alpha 0.0
+    linear 0.5 alpha 1.0
+    on hide:
+        linear 0.5 alpha 0
+# This is to fade the bar in and out, and is only required once in your script
+
+screen countdown:
+    timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
+    bar value time range timer_range xalign 0.5 yalign 0.9 xmaximum 300 at alpha_dissolve 
+    #This is the timer bar.
 
 label global_visitMarlon:
+    $ timer_range = 0
+    $ timer_jump = 0
     $ bad = 0
 
     #if pita has already visited
@@ -267,18 +279,26 @@ label global_visitMarlon:
                 m "Yes, for a while, he and I were happy…"
                 show marlon angry
                 m "But then the Ringmaster took that away from me."
+                $ time = 5
+                $ timer_range = 5
+                $ timer_jump = 'lizard_wrong'
+                show screen countdown
                 menu:
                     "His act wasn’t very good anyway.":
-                        $ bad += 1
-                        show marlon angry
-                        m "I wouldn’t expect you to sympathize. You’re the Ringmaster’s favorite little toy."
-                        m "You’re just some fairy tale. A spectacle for others to look at."
-                        show marlon disapointed
-                        m "Meanwhile, I and the rest of the Circus work day and night on our performances with barely any recognition from the Ringmaster."
-                        m "He did, too. He could bend and twist his body in impossible ways, but that was never enough for the Ringmaster or the rest of the Circus."
-                        show marlon angry
-                        m "Sometimes I think you deserve that fate more than he did."
+                        label lizard_wrong:
+                            hide screen countdown
+                            $ bad += 1
+                            p "His act wasn’t very good anyway."
+                            show marlon angry
+                            m "I wouldn’t expect you to sympathize. You’re the Ringmaster’s favorite little toy."
+                            m "You’re just some fairy tale. A spectacle for others to look at."
+                            show marlon disapointed
+                            m "Meanwhile, I and the rest of the Circus work day and night on our performances with barely any recognition from the Ringmaster."
+                            m "He did, too. He could bend and twist his body in impossible ways, but that was never enough for the Ringmaster or the rest of the Circus."
+                            show marlon angry
+                            m "Sometimes I think you deserve that fate more than he did."
                     "He died screaming in his cage.":
+                        hide screen countdown
                         $ bad += 1
                         m "I wouldn’t expect you to sympathize. You’re the Ringmaster’s favorite little toy."
                         m "You’re just some fairy tale. A spectacle for others to look at."
@@ -288,6 +308,7 @@ label global_visitMarlon:
                         show marlon angry
                         m "Sometimes I think you deserve that fate more than he did."
                     "He didn’t deserve that fate.":
+                        hide screen countdown
                         show marlon surprised
                         m "O-oh."
                         show marlon disapointed
@@ -301,6 +322,7 @@ label global_visitMarlon:
                         "Marlon paused for a moment, taking one more glance to the portrait on the wall before smiling to himself."
                         m "Echo"
                     "Really? You and him?":
+                        hide screen countdown
                         $ bad += 1
                         m "I wouldn’t expect you to sympathize. You’re the Ringmaster’s favorite little toy."
                         m "You’re just some fairy tale. A spectacle for others to look at."
@@ -355,6 +377,8 @@ label global_visitMarlon:
                     if bad > 0:
                         show marlon surprised
                         m "You're trying to escape...?!"
+                    #else:
+                        #good ending
                 "I think I hear something going on outside." if crimsonhere and not attempted:
                     $ attempted = True
                     p "I think I hear something outside… Like one of your animals choking on something."
@@ -370,47 +394,61 @@ label global_visitMarlon:
                     "{i}This is the perfect opportunity to get rid of the lion.{/i}"
                     "{i}Where are those treats again?{/i}"
                     #TIMED CHOICES
+                    $ time = 5
+                    $ timer_range = 5
+                    $ timer_jump = 'outOfTime'
+                    show screen countdown
                     menu:
                         "Walk to the cabinet":
+                            hide screen countdown
                             "I walk over and check inside for its contents, except I don’t find what I’m looking for."
                             p "Damn it, where are they?!"
                             "As I frantically start searching for the treats, I hear Marlon shouting from outside as he walks back towards the trailer."
-                            show marlon disapointed
+                            show marlon disapointed at right
                             m "Looks like it was a false alarm…"
                             "I walk away as calmly as I can to avoid any suspicions as Marlon enters the trailer."
                             show marlon nuetral
                             m "What were we talking about again?"
                             jump dialogTreeEndings
                         "Walk to the drawer":
+                            hide screen countdown
                             "I walk over and check inside for its contents, except I don’t find what I’m looking for."
                             p "Damn it, where are they?!"
                             "As I frantically start searching for the treats, I hear Marlon shouting from outside as he walks back towards the trailer."
-                            show marlon disapointed
+                            show marlon disapointed at right
                             m "Looks like it was a false alarm…"
                             "I walk away as calmly as I can to avoid any suspicions as Marlon enters the trailer."
                             show marlon nuetral
                             m "What were we talking about again?"
                             jump dialogTreeEndings
                         "Walk to the cupboard.":
+                            hide screen countdown
                             "I walk over and check inside for its contents where I find dozens of other treats lining the shelves. I have to act quickly and find what I’m looking for."
                             #TIMED MENU
+                            $ time = 5
+                            $ timer_range = 5
+                            $ timer_jump = 'outOfTime'
+                            show screen countdown
                             menu:
                                 "Take the “Salmon Bits”":
+                                    hide screen countdown
                                     "I grab the treat and turn back around to Crimson, but I get no reaction from him. The lion barely even looks in the treat’s direction when I throw it out the open door."
-                                    show marlon surprised
+                                    show marlon surprised at right
                                     m "Woah, what was that!"
                                     "I stash away the treats and walk away as calmly as I can to avoid any suspicions as Marlon enters the trailer."
                                     jump dialogTreeEndings
                                 "Take the “Stoat Bones”":
+                                    hide screen countdown
                                     "I grab the treat and turn back around to Crimson, but I get no reaction from him. The lion barely even looks in the treat’s direction when I throw it out the open door."
-                                    show marlon surprised
+                                    show marlon surprised at right
                                     m "Woah, what was that!"
                                     "I stash away the treats and walk away as calmly as I can to avoid any suspicions as Marlon enters the trailer."
                                     jump dialogTreeEndings
                                 "Take the “Steak Bites”":
+                                    hide screen countdown
                                     $ crimsonhere = False
                                     "I grab the treat and turn back to Crimson, whose eyes immediately lock onto the bag of “Steak Bites.” As I grab one treat and toss it out the open door, the lion immediately bolts out as Marlon comes back inside the trailer."
-                                    show marlon surprised
+                                    show marlon surprised at right
                                     hide crimson
                                     "I quickly stash the treats away and walk over to the door to close and lock it."
                                     p "It looks like Crimson wanted some time outside."
@@ -419,5 +457,12 @@ label global_visitMarlon:
                                     show marlon nuetral
                                     m "What were we talking about again?"
                                     jump dialogTreeEndings
+                    label outOfTime:
+                        hide screen countdown
+                        "I stand there for a bit too long..."
+                        show marlon disapointed at right
+                        m "Looks like it was a false alarm…"
+                        m "What were we talking about again?"
+                        jump dialogTreeEndings
 
     return
