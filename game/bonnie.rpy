@@ -23,10 +23,10 @@ label global_bonnie:
     "Stepping up to her door I turn the handle, the door clicking as I push it open. The inside is dim, lit only by the moonlight peeking through her windows, tinting the room an eerie blue hue."
 
     scene pt bonnie trailer
-    show pita teeth
+
     "I look around, I’ve not been in here before, but the room just screamed her name, from the posters strewn about the wall reciting her praises, flowers now wilted sat atop her vanity, and a lump in a bed decorated with the colors pink and green."
     "I was in Bonnie’s room."
-    show pita disgusted
+    
     "..."
     "I need to stay quiet... but..."
     menu:
@@ -43,7 +43,6 @@ label global_bonnie:
             menu:
                 "Hide behind the vanity":
                     hide screen countdown
-                    hide pita disgusted
                     show bonnie hidden
                     "I dash towards the vanity, hiding behind the old, rotted wood, white paint peeling off at every nook and cranny."
                     #show bonnie excited
@@ -61,15 +60,15 @@ label global_bonnie:
                     #show bonnie sad
                     b "{b}Sniffle...{/b}"
                     #hide bonnie sad
-                    #show pita disgusted
+                    
                     "Is she… crying…?"
                     "Now that I think about it… ever since my arrival, she’s been undermined by the ring leader, wasn’t she originally his favorite…? Is she really… to blame?"
-                    #show pita sad
+                    
                     "..."
                     "No… I don’t care…"
-                    #show pita laugh
+                    
                     "She’s been nothing but mean to me, she deserves this… she deserves {b}all{/b} that is coming to her…"
-                    #show pita teeth
+                    
                     "I slowly reach forward, a large grin forming on my face."
                     "Suddenly, I grab her leg, and pulling her down, I manage to hit her head against the vanity,knocking her unconscious."
                     p "I am so hungry… starved, even.."
@@ -82,7 +81,7 @@ label global_bonnie:
                     jump global_courtyard
                 "Hide under the bed":
                     hide screen countdown
-                    hide pita disgusted
+                    
                     "I scurry beneath the bed, eyeing Bonnie’s legs sliding off the side. She stands and steps over to her vanity… now’s my chance…"
                     show bonnie excited
                     "I crawl forward, inching my way over to her, she looks preoccupied, now is my chance to strike…!"
@@ -98,15 +97,14 @@ label global_bonnie:
                     "The drawer from her vanity, broken in half, held in her hands"
                     "The objects that were once inside now spilled out, decorating the floor in pink and green hair ties and makeup and other frilly things."
                     hide bonnie disgusted
-                    show pita disgusted
+                    
                     "My head is spinning, a terrible, throbbing pain in my skull."
                     "Her footsteps are muffled by the ringing in my head as she walks past me to her bed, grabbing something from behind it. It was something shiny, that reflected the dim light from her vanity"
-                    hide pita disgusted
+                    
                     show bonnie bad
                     "She stands above me, raising the object over her head."
                     #show bonnie disgusted
                     b "I’ve had enough of you, little fairy…"
-                    #show bonnie bad
                     "She slams the object into my stomach, my body lurching forward in pain, tears streaming down my cheeks, the life spilling from my eyes in pitiful, salty tears"
                     b "{b}Quite{/b} enough…"
                     "She stabs me again, my body convulsing. I can hear the knife being removed from me again, a disgusting slick, wet sound as my own life spills from the deep wound she created…"
@@ -120,15 +118,14 @@ label global_bonnie:
             jump global_courtyard
         
     label direct:
-        show pita teeth
+        
         "No… I’m done hiding. I’m taking her on here and now."
         "I stand my ground, balling my hands into tight fists as Bonnie rises from her slumber."
-        show pita teeth at left
-        show bonnie shocked at right
+       
+        show bonnie shocked 
         b "What- Pita?  What are you doing in here?!"
-        show pita disgusted
+        
         p "..."
-        show pita disgusted
         "I can feel my heart racing, my mouth sticky and sweat dripping from every pore. I clench my fists, stepping towards her."
         "She slips her hand behind her bed, glaring at me."
         show bonnie disgusted
@@ -151,10 +148,10 @@ label global_bonnie:
         "The hand behind her back suddenly shoots forward-"
         p "Kch- ah.."
         "She catches me on the object, my eyes falling to her hand, in it an incredibly sharp knife, implanted in my gut."
-        hide pita disgusted
+        
         show bonnie disgusted at center
         b "Oh you poor thing… how clumsy of you, falling right onto such a dangerous object like that…"
-        hide pita disgusted
+        
         show bonnie bad
         "I slide off, falling onto the ground."
         b "I’ve had enough of you, little fairy…"
