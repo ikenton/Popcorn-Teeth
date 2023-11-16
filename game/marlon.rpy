@@ -95,6 +95,7 @@ label global_visitMarlon:
         $ closeCrimson = True
         $ ringmaster = True
         $ lizardboy = True
+        $ attempted = False
 
         menu talking:
             
@@ -348,9 +349,75 @@ label global_visitMarlon:
                         show crimson bad
                         "The lion on top of my growls, raising its hackles to reveal large and sharp teeth. For a moment, I smile as I think about how delicious they must be…"
                         "And then, I feel the lion’s jaw wrap around my neck, piercing my throat with his fangs. The lion rips my body to shreds, piece by piece, and my vision fades to black."
+                        return
                 "We should try to get out of here. Together.":
-                    p ""
-                "I think I hear something going on outside.":
-                    p ""
-    
+                    p "You know how bad the Ringmaster is. We should both try to escape him and this Circus"
+                    if bad > 0:
+                        show marlon surprised
+                        m "You're trying to escape...?!"
+                "I think I hear something going on outside." if crimsonhere and not attempted:
+                    $ attempted = True
+                    p "I think I hear something outside… Like one of your animals choking on something."
+                    show marlon surprised
+                    m "W-what?!"
+                    show marlon disapointed
+                    m "Ugh, it might be my hyena again."
+                    show marlon nuetral
+                    m "Stay right here. I’ll be right back."
+                    hide marlon nuetral
+                    "Marlon quickly leaves the trailer, leaving me and Crimson behind. He also forgets to close the trailer door, letting it swing loosely on its hinges."
+                    #show pita?
+                    "{i}This is the perfect opportunity to get rid of the lion.{/i}"
+                    "{i}Where are those treats again?{/i}"
+                    #TIMED CHOICES
+                    menu:
+                        "Walk to the cabinet":
+                            "I walk over and check inside for its contents, except I don’t find what I’m looking for."
+                            p "Damn it, where are they?!"
+                            "As I frantically start searching for the treats, I hear Marlon shouting from outside as he walks back towards the trailer."
+                            show marlon disapointed
+                            m "Looks like it was a false alarm…"
+                            "I walk away as calmly as I can to avoid any suspicions as Marlon enters the trailer."
+                            show marlon nuetral
+                            m "What were we talking about again?"
+                            jump dialogTreeEndings
+                        "Walk to the drawer":
+                            "I walk over and check inside for its contents, except I don’t find what I’m looking for."
+                            p "Damn it, where are they?!"
+                            "As I frantically start searching for the treats, I hear Marlon shouting from outside as he walks back towards the trailer."
+                            show marlon disapointed
+                            m "Looks like it was a false alarm…"
+                            "I walk away as calmly as I can to avoid any suspicions as Marlon enters the trailer."
+                            show marlon nuetral
+                            m "What were we talking about again?"
+                            jump dialogTreeEndings
+                        "Walk to the cupboard.":
+                            "I walk over and check inside for its contents where I find dozens of other treats lining the shelves. I have to act quickly and find what I’m looking for."
+                            #TIMED MENU
+                            menu:
+                                "Take the “Salmon Bits”":
+                                    "I grab the treat and turn back around to Crimson, but I get no reaction from him. The lion barely even looks in the treat’s direction when I throw it out the open door."
+                                    show marlon surprised
+                                    m "Woah, what was that!"
+                                    "I stash away the treats and walk away as calmly as I can to avoid any suspicions as Marlon enters the trailer."
+                                    jump dialogTreeEndings
+                                "Take the “Stoat Bones”":
+                                    "I grab the treat and turn back around to Crimson, but I get no reaction from him. The lion barely even looks in the treat’s direction when I throw it out the open door."
+                                    show marlon surprised
+                                    m "Woah, what was that!"
+                                    "I stash away the treats and walk away as calmly as I can to avoid any suspicions as Marlon enters the trailer."
+                                    jump dialogTreeEndings
+                                "Take the “Steak Bites”":
+                                    $ crimsonhere = False
+                                    "I grab the treat and turn back to Crimson, whose eyes immediately lock onto the bag of “Steak Bites.” As I grab one treat and toss it out the open door, the lion immediately bolts out as Marlon comes back inside the trailer."
+                                    show marlon surprised
+                                    hide crimson
+                                    "I quickly stash the treats away and walk over to the door to close and lock it."
+                                    p "It looks like Crimson wanted some time outside."
+                                    show marlon disapointed
+                                    m "I guess you’re right…"
+                                    show marlon nuetral
+                                    m "What were we talking about again?"
+                                    jump dialogTreeEndings
+
     return
