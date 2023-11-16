@@ -1,12 +1,20 @@
-renpy.geometry renpy.solid
-renpy.dissolve renpy.geometry
-renpy.texture
->>>>>>> bonnie
-=======
-renpy.geometry renpy.texture
-<<<<<<< HEAD
-renpy.alpha renpy.geometry renpy.texture
-renpy.ftl
-renpy.dissolve renpy.dissolve
-renpy.solid
-renpy.alpha renpy.texture
+renpy.geometry renpy.solid
+
+renpy.dissolve renpy.geometry
+
+renpy.texture
+
+
+renpy.geometry renpy.texture
+
+
+renpy.alpha renpy.geometry renpy.texture
+
+renpy.ftl
+
+renpy.dissolve renpy.dissolve
+
+renpy.solid
+
+renpy.alpha renpy.texture
+
