@@ -4,11 +4,7 @@
 # name of the character.
 
 define e = Character("Eileen")
-python:
-    global marlonVisit = False
-    global bonnieVisit = False
-    global hugoVisit = False
-    global ringmaster = False
+
 
 # The game starts here.
 label start:
@@ -21,13 +17,13 @@ label start:
             label global_courtyard:
                 scene pt-courtyard
                 menu:
-                    "Marlon's" if not Marlon:
-                        $ hugo = True
+                    "Marlon's" :
+                        #$ marlonVisit = True
                         jump global_visitMarlon
                     "Bonnie's":
                         jump global_bonnie
-                    "Hugo's" if not Hugo:
-                        $ hugo = True
+                    "Hugo's":
+                        #$ hugo = True
                         "jump global_hugo"
                     "The Ringmaster's":
                         "jump global_ringmaster"

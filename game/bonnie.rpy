@@ -102,14 +102,13 @@ label global_bonnie:
                     "My head is spinning, a terrible, throbbing pain in my skull."
                     "Her footsteps are muffled by the ringing in my head as she walks past me to her bed, grabbing something from behind it. It was something shiny, that reflected the dim light from her vanity"
                     hide pita disgusted
-                    show bonnie excited
+                    show bonnie bad
                     "She stands above me, raising the object over her head."
-                    show bonnie disgusted
+                    #show bonnie disgusted
                     b "I’ve had enough of you, little fairy…"
+                    #show bonnie bad
                     "She slams the object into my stomach, my body lurching forward in pain, tears streaming down my cheeks, the life spilling from my eyes in pitiful, salty tears"
                     b "{b}Quite{/b} enough…"
-            #cgs 
-                    show bonnie bad
                     "She stabs me again, my body convulsing. I can hear the knife being removed from me again, a disgusting slick, wet sound as my own life spills from the deep wound she created…"
                     return
                 "Attempt a direct approach":
@@ -121,18 +120,24 @@ label global_bonnie:
             jump global_courtyard
         
     label direct:
+        show pita teeth
         "No… I’m done hiding. I’m taking her on here and now."
         "I stand my ground, balling my hands into tight fists as Bonnie rises from her slumber."
-        hide pita
-        show bonnie disgusted
+        show pita teeth at left
+        show bonnie shocked at right
         b "What- Pita?  What are you doing in here?!"
+        show pita disgusted
         p "..."
+        show pita disgusted
         "I can feel my heart racing, my mouth sticky and sweat dripping from every pore. I clench my fists, stepping towards her."
         "She slips her hand behind her bed, glaring at me."
+        show bonnie disgusted
         b "What are you getting at, little fairy… come to kill me, have you?"
         "I stumble, taking in a sharp breath, but I continue on my way towards her."
+        show bonnie excited
         b "Oh I see.. Lords aren’t you just…"
         "She pauses, pressing a finger to her lips in contemplation"
+        show bonnie disgusted
         b "Bothersome"
         p "Shut it, Bonnie… I’ve had enough of your incessant whining."
         show bonnie excited
@@ -144,5 +149,16 @@ label global_bonnie:
         "She stands from her bed, walking in long strides towards me."
         "This is my only chance… I lunge at her, my hands reaching for her neck, with intent to push her down"
         "The hand behind her back suddenly shoots forward-"
-        p ""
+        p "Kch- ah.."
+        "She catches me on the object, my eyes falling to her hand, in it an incredibly sharp knife, implanted in my gut."
+        hide pita disgusted
+        show bonnie disgusted at center
+        b "Oh you poor thing… how clumsy of you, falling right onto such a dangerous object like that…"
+        hide pita disgusted
+        show bonnie bad
+        "I slide off, falling onto the ground."
+        b "I’ve had enough of you, little fairy…"
+        "She slams the object into my stomach, my body lurching forward in pain, tears streaming down my cheeks, the life spilling from my eyes in pitiful, salty tears."
+        b "{b}Quite{/b} enough..."
+        "She stabs me again, my body convulsing. I can hear the knife being removed from me again, a disgusting slick, wet sound as my own life spills from the deep wound she created…"
     return
