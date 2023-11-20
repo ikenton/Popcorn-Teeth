@@ -5,6 +5,7 @@
 
 define m = Character("Marlon", color = "#281aa3")
 define p = Character("Pita")
+define r = Character("Ringmaster", color = "#880808")
 default visited = False
 
 transform alpha_dissolve:
@@ -226,7 +227,7 @@ label global_visitMarlon:
                                 #show crimson 
                                 "Crimson looked at me cautiously, but eventually he laid down on the ground belly up."
                             "Speak.":
-                                p "Alright, speaka."
+                                p "Alright, speak."
                                 #show crimson 
                                 "Crimson looked at me cautiously, but eventually he let out a loud roar that filled the trailer."
                         show marlon happy
@@ -391,12 +392,110 @@ label global_visitMarlon:
                         p "Delicious."
                         jump global_courtyard
                 "We should try to get out of here. Together.":
-                    p "You know how bad the Ringmaster is. We should both try to escape him and this Circus"
                     if bad > 0:
+                        p "You know how bad the Ringmaster is. We should both try to escape him and this Circus"
                         show marlon surprised
                         m "You're trying to escape...?!"
-                    #else:
+                        show marlon disapointed
+                        m "I should’ve known you were trying to leave, after all this time…"
+                        m "I thought I trusted you…"
+                        show marlon angry
+                        m "… No. I can’t let you leave. If you go, who knows what the Ringmaster will do to me, to all of us…"
+                        m "You’re staying right here."
+                        p "Damn it Marlon, after all you’ve been through? The torture and abuse the Ringmaster has put you through, and you still choose his side?!"
+                        show marlon disapointed
+                        m "You just don’t get it, Pita…"
+                        show marlon angry
+                        m "Crimson, get her."
+                        "Before I can even react, the lion pounces on top of me."
+                        show crimson bad
+                        "I can feel its claws press against my body as it takes a bite out of my arm. The pain is enough to send my vision flashing white as I fall unconscious."
+                        "The last thing I see is Marlon standing above me, his face warped with hurt, regret, and finally resolution."
+                        return
+                    else:
                         #good ending
+                        p "Marlon… I have to tell you the truth."
+                        show marlon nuetral
+                        m "What is it?"
+                        p "I’m trying to escape. You and I both know that we deserve better lives than this."
+                        p "Marlon, I know you want to leave, too. We need to leave the Circus and the Ringmaster."
+                        show marlon surprised
+                        m "O-oh… I…"
+                        "Marlon hesitates, but I interject quickly before he gets a chance to think about rejecting my offer."
+                        p "Do it for him."
+                        "I point to the portrait on the wall and he follows to look at it. Then, he turns to me with a look of determination."
+                        show marlon nuetral
+                        m "You’re right."
+                        show marlon disapointed
+                        m "Even if the Ringmaster is like… a father to me, it doesn’t excuse the horrible, terrible things he’s done to me and you… and Echo"
+                        m "It’s what he would’ve wanted for me… to be free and happy… and I can only do that if I’m away from this place…"
+                        show marlon happy
+                        m "Alright, I’ll come with you."
+                        "I grin knowing this makes my plans for escape so much easier"
+                        "And my stomach rumbles knowing this makes my plans for revenge even sweeter."
+                        p "Before we leave, I need to get my wand back from the Ringmaster. Without it, I don’t have any power."
+                        show marlon nuetral
+                        m "Alright, I’m sure I can sneak into the Ringmaster’s trailer to get it for you. I go there all the time anyways."
+                        p "Actually, it’s more than that."
+                        show marlon surprised
+                        m "Huh? What is it?"
+                        p "I  need {i}revenge{/i}. Revenge for what the Ringmaster has done to me, how he captured me and tortured me all for his little Circus."
+                        p "And I’m sure you want it, too. For everything the Ringmaster took away from you. Your life, your childhood, your partner…"
+                        p "With that wand, we can both take down the Ringmaster."
+                        show marlon nuetral
+                        "Marlon pauses to think, but this time he responds quickly and confidently, full of resolve."
+                        m "We’ll take him down, together."
+                        "We shake hands as we put our plan into motion: Marlon will escort me to the Ringmaster’s trailer, pretending as if I had been captured for escaping. Then, when the Ringmaster leasts expects it, Marlon will toss me my wand."
+                        "Before we leave, Marlon takes with him the portrait of Echo on the wall and a bag of Steak Bites, with Crimson following behind us as we leave his trailer."
+                        # sceme ringmaster's trailer
+                        scene pt-courtyard
+                        "We make it to the Ringmaster’s trailer, and putting on my best act yet, I pretend to be helplessly captured by Marlon."
+                        "When we enter the trailer, the Ringmaster is there playing quietly with my wand."
+                        #show ringmaster at right
+                        show marlon nuetral at left
+                        r "Well, well, well, what do we have here…"
+                        r "My little Marlon, bringing with him a new pet."
+                        m "S-she was trying to escape, but luckily my animals alerted me and I was able to catch her."
+                        r "Well done, my boy. You’ve proven to me that you’re still useful."
+                        r "Who said you can’t teach an old dog new tricks? You’ve learned well to fetch me my prized fairy."
+                        "Marlon backs away from me as the Ringmaster approaches, inching towards my wand which he left on his table."
+                        r "Trying to fly away, are we, my little princess?"
+                        p "{i}Don’t{/i} call me that."
+                        r "Aw, don’t be such a sour sugarplum. Be glad it was Marlon who caught you and not the others. Lord knows that {i}child{/i} couldn’t hurt a fly."
+                        "He grabs my face with a gloved hand, squeezing my cheeks as he pulls me closer to him."
+                        r "Oh what ever shall I do with you, pet? I can barely put you on a leash, let alone in a cage. Perhaps it’s time for more… drastic measures."
+                        r "I have ways to {i}discipline{/i} my naughty pets. Isn’t that right, Marlon?"
+                        "Marlon freezes just before he gets to my wand. He’s able to reel back and act like nothing happened."
+                        show marlon surprised
+                        m "Y-yes, sir…"
+                        r "Haha, of course you would know. After all, you’ve seen me work with the {i}naughtiest{/i} of them all."
+                        r "The nosey Echo, trying to seduce my precious Marlon right from under my nose. It’s a good thing he bit off more than he can chew with me."
+                        r "That was the last meal he ever had before he rotted away in his cage."
+                        show marlon angry 
+                        m "You’re wrong about him."
+                        "I see from over the Ringmaster’s shoulder, Marlon just grabbed my wand off the table. The Ringmaster turns to him with a crazed malice."
+                        r "What’s this, talking back to your {i}father{/i}? I taught you better manners than that."
+                        m "And you’re wrong about me, too. I’m not your little boy."
+                        m "I know now that everything you’ve ever done to me was wrong. And now, it’s time to end it."
+                        "Marlon throws my wand to me, and while the Ringmaster is distracted, I take off my fake bindings and catch my wand."
+                        r "What the hell is this?! You rotten fairy, you’ve turned my own pet against me!"
+                        p "I didn’t do anything other than wake him up to the truth."
+                        p "It’s finally over for you, Ringmaster."
+                        m "This is for Echo"
+                        "Marlon opens the door to let Crimson in. The lion pounces on top of the Ringmaster, who can’t help but struggle underneath the weights of the animal."
+                        r "GET OFF OF ME! MARLON, YOU STUPID SHIT, GET YOUR DISGUSTING CREATURE OFF OF ME!!!"
+                        m "I don’t take orders from you anymore. Crimson, it’s feeding time."
+                        "The lion clamps its jaws around the Ringmaster’s neck, tearing out his throat. I raise my wand, feeling my power slowly return to me as it surges from my fingertips."
+                        "With my powers back, I toss away the Ringmaster’s mask to reveal his face for the first time. He’s barely able to protest as blood begins to fill his mouth and lungs."
+                        r "Ghhhk– s-stop… chhhk– give that… b-back…"
+                        "Fear fills his eyes as he lifts into the air from my magic."
+                        p "I’ve been thinking about this feast since the moment I got here. And that look on your face is only going to make this much sweeter."
+                        "With my magic, I crack apart his jaw like a peanut shell, and almost instantly his body falls limp. Marlon winces and turns away from the scene."
+                        "As the Ringmaster’s body falls to the ground, I instantly rush over to his head, plucking out his teeth and gorging it down. I never realized how hungry I was until now."
+                        "And it’s sweet. {i}Oh so sweet{/i}."
+                        show marlon good
+                        "THE END"
+                        return
                 "I think I hear something going on outside." if crimsonhere and not attempted:
                     $ attempted = True
                     p "I think I hear something outside… Like one of your animals choking on something."

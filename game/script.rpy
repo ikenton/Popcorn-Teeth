@@ -16,16 +16,18 @@ label start:
             #RESIZE THEM
             label global_courtyard:
                 scene pt-courtyard
+                "I enter the courtyard where the main performers live. This is where I end this" #change line is bad
+                "Where should I go now?"
                 menu:
-                    "Marlon's" :
+                    "The blue wooden trailer with animal cages infront of it" :
                         #$ marlonVisit = True
                         jump global_visitMarlon
-                    "Bonnie's":
+                    "The pink and green floral trailer":
                         jump global_bonnie
-                    "Hugo's":
+                    "The bright colorful trailer":
                         #$ hugo = True
                         "jump global_hugo"
-                    "The Ringmaster's":
+                    "The red and gold panneled trailer":
                         "jump global_ringmaster"
             
             #scene pt-courtyard
