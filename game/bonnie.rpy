@@ -1,7 +1,7 @@
 
 define b = Character("Bonnie", color = "#9966cc")
 define p = Character("Pita")
-default bad = 0
+default alive = True
 #timer
 transform alpha_dissolve:
     alpha 0.0
@@ -17,6 +17,11 @@ screen countdown:
 label global_bonnie:
     $ timer_range = 0
     $ timer_jump = 0
+    if not alive:
+        "The room is empty except for Bonnie's body laying on the floor"
+        menu:
+            "Leave":
+                jump global_courtyard
     
     "I take a deep breath, steeling my nerves before hurrying over to {b}her{/b} trailer."
     "The outside a faded pink, 2 large windows sat on one side, painted green and decorated with a pattern of daisies that lined the rim."
@@ -38,7 +43,7 @@ label global_bonnie:
             #TIMED CHOFdiICES
             $ time = 5
             $ timer_range = 5
-            $ timer_jump = 'badending'
+            $ timer_jump = 'direct'
             show screen countdown
             menu:
                 "Hide behind the vanity":

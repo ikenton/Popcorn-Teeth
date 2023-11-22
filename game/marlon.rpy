@@ -6,7 +6,7 @@
 define m = Character("Marlon", color = "#281aa3")
 define p = Character("Pita")
 define r = Character("Ringmaster", color = "#880808")
-default visited = False
+default alive = True
 
 transform alpha_dissolve:
     alpha 0.0
@@ -26,21 +26,18 @@ label global_visitMarlon:
     $ bad = 0
 
     #if pita has already visited
-    if visited:
+    if not alive:
         "I decided to stop by Marlon's trailer again."
         scene pt-marlon-trailer
+        "The trailer is completely empty except for Marlon's body lying on the floor"
+        menu:
+            "Leave":
+                jump global_courtyard
         
-        show marlon surprised
-
-        m "O-Oh it's just you again..."
-
-        show marlon disapointed
-
-        m "Was there something else you needed?"
     
     #if first time visiting marlon
     else:
-        $ visited = True
+       
         "I think it’s time to stop by Marlon’s trailer."
         
 
@@ -384,6 +381,7 @@ label global_visitMarlon:
                         p "That’s right, beg. Beg for your life as I take it away, just like the Ringmaster and this damn Circus took away mine."
                         p "Oh, I wonder how he’ll react once he’s seen how I devoured his precious little boy."
                         show marlon bad
+                        $ alive = False
                         "My hands are thrust into his mouth cavity, as I dig my fingers into its roof and bottom jaw. I begin to stretch Marlon’s mouth wider and wider, and all he can do is cry and scream."
                         "Finally, with a sharp crack, I break his jaw as his mouth begins to fill with blood from his torn skin and muscles. He falls limp beneath me."
                         "I take out his teeth piece by piece, savoring each little snack as I take it into my mouth and chew. I can feel my power growing stronger."
