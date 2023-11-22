@@ -1,10 +1,7 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define e = Character("Eileen")
-
+﻿define e = Character("Eileen")
+default bonnieIsAlive = True
+default marlonIsAlive = True
+default hugoIsAlive = True
 
 # The game starts here.
 label start:  
@@ -20,12 +17,12 @@ label start:
                 "I enter the courtyard where the main performers live. This is where I end this" #change line is bad
                 "Where should I go now?"
                 menu:
-                    "The blue wooden trailer with animal cages infront of it" :
+                    "The blue wooden trailer with animal cages infront of it" if marlonIsAlive :
                         #$ marlonVisit = True
                         jump global_visitMarlon
-                    "The pink and green floral trailer":
+                    "The pink and green floral trailer" if bonnieIsAlive:
                         jump global_bonnie
-                    "The red, blue and yellow flashy trailer":
+                    "The red, blue and yellow flashy trailer" if hugoIsAlive:
                         #$ hugo = True
                         jump global_hugoVendetta
                     "The red and gold panneled trailer":
