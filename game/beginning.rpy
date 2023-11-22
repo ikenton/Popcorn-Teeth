@@ -88,7 +88,7 @@ label global_beginning:
                             "Wait":
                                 hide screen countdown
                                 label wait:
-                                    "I lay there under the trailer.I could hear Hugo walking inside the trailer."
+                                    "I lay there under the trailer. I could hear Hugo walking inside the trailer."
                                     "I remember seeing the toolbox behind the trailer. Maybe there’s something in there that I can use. I crawl out from under the trailer and I stand up. I don't bother dusting off my dress and I quietly go behind the trailer."
                                     "I open the toolbox and go through it. I find a rusty hammer, or is that blood on it? I hold it in my hand and it feels oddly heavy."
                                     "I didn’t realize I’ve become this weak…"
@@ -178,14 +178,14 @@ label global_beginning:
 
                                         "No":
                                             "Hugo sits up on the bed and stares at me."
-                                            show hugo mad 
+                                            show hugo upset 
                                             "Then explain why you have a lamp in your hands little fairy and why you’re out of your cage."
                                             "I hesitantly lower the lamp that’s in my hands."
                                             "Awkward…"
                                             p "Uhh, I was simply inspecting it"
                                             h "Ha! You’re a bad liar! You had an opportunity and you flopped. I wonder how the Ringmaster favored such an idiot over me. It pisses me off"
                                             "He gets off the bed and towers over me. "
-                                            show hugo happy
+                                            show hugo smile
                                             h "The circus will be mine again!"
                                             "I drop the lamp."
                                             jump badending
