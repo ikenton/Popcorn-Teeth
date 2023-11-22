@@ -7,7 +7,7 @@ define e = Character("Eileen")
 
 
 # The game starts here.
-label start:
+label start:  
     scene trigger warning
     # shift options down  
     menu:
