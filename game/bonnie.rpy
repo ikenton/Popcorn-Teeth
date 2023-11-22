@@ -38,7 +38,7 @@ label global_bonnie:
             #TIMED CHOFdiICES
             $ time = 5
             $ timer_range = 5
-            $ timer_jump = 'direct'
+            $ timer_jump = 'badending'
             show screen countdown
             menu:
                 "Hide behind the vanity":
