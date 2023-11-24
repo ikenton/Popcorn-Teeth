@@ -2,6 +2,7 @@
 default bonnieIsAlive = True
 default marlonIsAlive = True
 default hugoIsAlive = True
+default visitedRM = False
 
 # The game starts here.
 label start:  
