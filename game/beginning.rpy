@@ -2,21 +2,8 @@ define h = Character("Hugo", color = "#FFFF00")
 define p = Character("Pita")
 
 
-#timer
-transform alpha_dissolve:
-    alpha 0.0
-    linear 0.5 alpha 1.0
-    on hide:
-        linear 0.5 alpha 0
-    # This is to fade the bar in and out, and is only required once in your script
-screen countdown:
-    timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
-    bar value time range timer_range xalign 0.5 yalign 0.9 xmaximum 300 at alpha_dissolve 
-    #This is the timer bar.
-
 label global_beginning:
-    $ timer_range = 0
-    $ timer_jump = 0
+    
     scene pt-cage-tent
     show pita happy
     "Oh, he’ll pay, they’ll all pay for what they’ve done to me!"

@@ -106,13 +106,12 @@ label global_hugoVendetta:
                     h "What the?! What are you doing here?!"
                     p "Hugo?!-"
                     jump badending
-                
         "Wait and listen":
             "I dare not to take any chance of making myself known yet…I wait and listen for a while. After a moment,the humming stops and I can hear footsteps approaching!"
             #timed
             $ time = 5
             $ timer_range = 5
-            $ timer_jump = 'wait'
+            $ timer_jump = 'prebadending'
             show screen countdown
             menu:
                 "Hide!":
@@ -178,5 +177,9 @@ label global_hugoVendetta:
         show blackscreen
         return
 
-
+    label prebadending:
+        show hugo surprised
+        h "What the?! What are you doing here?!"
+        p "Hugo?!-"
+        jump badending
     
