@@ -1,33 +1,37 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define e = Character("Eileen")
-
+﻿define e = Character("Eileen")
+default bonnieIsAlive = True
+default marlonIsAlive = True
+default hugoIsAlive = True
+default visitedRM = False
 
 # The game starts here.
-
-label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    show eileen happy
-
-    # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
+label start:  
+    scene trigger warning
+    # shift options down  
+    menu:
+        "Continue":
+            #play intro
+            #RESIZE THEM
+            jump global_beginning
+            label global_courtyard:
+                scene pt-courtyard
+                #"I enter the courtyard where the main performers live. This is where I end this" #change line is bad
+                #"Where should I go now?"
+                menu:
+                    "The blue wooden trailer with animal cages infront of it" if marlonIsAlive :
+                        
+                        jump global_visitMarlon
+                    "The pink and green floral trailer" if bonnieIsAlive:
+                        jump global_bonnie
+                    "The red, blue and yellow flashy trailer" if hugoIsAlive:
+                       
+                        jump global_hugoVendetta
+                    "The red and gold panneled trailer":
+                        jump global_ringmaster
+            
+            #scene pt-courtyard
+            #jump global_visitMarlon
+        "Back":
+            return
 
     return
