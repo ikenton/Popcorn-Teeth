@@ -6,7 +6,7 @@
 define m = Character("Marlon", color = "#281aa3")
 define p = Character("Pita")
 define r = Character("Ringmaster", color = "#880808")
-
+default crimsonhere = True
 
 transform alpha_dissolve:
     alpha 0.0
@@ -338,7 +338,6 @@ label global_visitMarlon:
             "Marlon takes another look at the portrait on the wall."
             jump talking
     label dialogTreeEndings:
-        $ crimsonhere = True
         menu:
             "I’m done talking to you. It’s time to end this.":
                 p "All of this talking is making me hungry. And I did spy some tasty teeth in that mouth of yours."
@@ -376,7 +375,6 @@ label global_visitMarlon:
                     "Finally, with a sharp crack, I break his jaw as his mouth begins to fill with blood from his torn skin and muscles. He falls limp beneath me."
                     "I take out his teeth piece by piece, savoring each little snack as I take it into my mouth and chew. I can feel my power growing stronger."
                     hide marlon bad
-                    show pita laugh
                     p "Delicious."
                     jump global_courtyard
             "We should try to get out of here. Together.":
@@ -436,11 +434,12 @@ label global_visitMarlon:
                     "We shake hands as we put our plan into motion: Marlon will escort me to the Ringmaster’s trailer, pretending as if I had been captured for escaping. Then, when the Ringmaster leasts expects it, Marlon will toss me my wand."
                     "Before we leave, Marlon takes with him the portrait of Echo on the wall and a bag of Steak Bites, with Crimson following behind us as we leave his trailer."
                     # sceme ringmaster's trailer
-                    scene pt-courtyard
+                    scene blackscreen
                     "We make it to the Ringmaster’s trailer, and putting on my best act yet, I pretend to be helplessly captured by Marlon."
                     "When we enter the trailer, the Ringmaster is there playing quietly with my wand."
                     #show ringmaster at right
-                    show marlon nuetral at left
+                    show marlon nuetral at right
+                    show ringmaster at left
                     r "Well, well, well, what do we have here…"
                     r "My little Marlon, bringing with him a new pet."
                     m "S-she was trying to escape, but luckily my animals alerted me and I was able to catch her."
@@ -448,8 +447,11 @@ label global_visitMarlon:
                     r "Who said you can’t teach an old dog new tricks? You’ve learned well to fetch me my prized fairy."
                     "Marlon backs away from me as the Ringmaster approaches, inching towards my wand which he left on his table."
                     r "Trying to fly away, are we, my little princess?"
+                    
                     p "{i}Don’t{/i} call me that."
+                    show marlon disapointed
                     r "Aw, don’t be such a sour sugarplum. Be glad it was Marlon who caught you and not the others. Lord knows that {i}child{/i} couldn’t hurt a fly."
+                    show marlon nuetral
                     "He grabs my face with a gloved hand, squeezing my cheeks as he pulls me closer to him."
                     r "Oh what ever shall I do with you, pet? I can barely put you on a leash, let alone in a cage. Perhaps it’s time for more… drastic measures."
                     r "I have ways to {i}discipline{/i} my naughty pets. Isn’t that right, Marlon?"
@@ -479,6 +481,8 @@ label global_visitMarlon:
                     "Fear fills his eyes as he lifts into the air from my magic."
                     p "I’ve been thinking about this feast since the moment I got here. And that look on your face is only going to make this much sweeter."
                     "With my magic, I crack apart his jaw like a peanut shell, and almost instantly his body falls limp. Marlon winces and turns away from the scene."
+                    hide ringmaster 
+                    show marlon good
                     "As the Ringmaster’s body falls to the ground, I instantly rush over to his head, plucking out his teeth and gorging it down."
                     "When I chewed, I realized something was wrong and spat it out!"
                     "Disgusting! It's wood!"
@@ -488,7 +492,8 @@ label global_visitMarlon:
                     "I tear it away from his body and begin gorging on it."
                     "Oh, I never realized how hungry I was until now."
                     "And it’s sweet. {i}Oh so sweet{/i}."
-                    show marlon good
+                    hide marlon good
+                    show blackscreen
                     "THE END"
                     return
             "I think I hear something going on outside." if crimsonhere and not attempted:
@@ -560,8 +565,9 @@ label global_visitMarlon:
                                 hide screen countdown
                                 $ crimsonhere = False
                                 "I grab the treat and turn back to Crimson, whose eyes immediately lock onto the bag of “Steak Bites.” As I grab one treat and toss it out the open door, the lion immediately bolts out as Marlon comes back inside the trailer."
-                                show marlon surprised at right
                                 hide crimson
+                                m "Woah, what was that!"
+                                show marlon surprised at right
                                 "I quickly stash the treats away and walk over to the door to close and lock it."
                                 p "It looks like Crimson wanted some time outside."
                                 show marlon disapointed
