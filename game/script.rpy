@@ -19,15 +19,15 @@ label start:
                 #"Where should I go now?"
                 menu:
                     "The blue wooden trailer with animal cages infront of it" if marlonIsAlive :
-                        #$ marlonVisit = True
+                        
                         jump global_visitMarlon
                     "The pink and green floral trailer" if bonnieIsAlive:
                         jump global_bonnie
                     "The red, blue and yellow flashy trailer" if hugoIsAlive:
-                        #$ hugo = True
+                       
                         jump global_hugoVendetta
                     "The red and gold panneled trailer":
-                        "jump global_ringmaster"
+                        jump global_ringmaster
             
             #scene pt-courtyard
             #jump global_visitMarlon
