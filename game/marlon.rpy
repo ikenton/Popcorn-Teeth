@@ -433,8 +433,8 @@ label global_visitMarlon:
                     m "We’ll take him down, together."
                     "We shake hands as we put our plan into motion: Marlon will escort me to the Ringmaster’s trailer, pretending as if I had been captured for escaping. Then, when the Ringmaster leasts expects it, Marlon will toss me my wand."
                     "Before we leave, Marlon takes with him the portrait of Echo on the wall and a bag of Steak Bites, with Crimson following behind us as we leave his trailer."
-                    # sceme ringmaster's trailer
-                    scene blackscreen
+                    scene ringmaster-trailer
+                    
                     "We make it to the Ringmaster’s trailer, and putting on my best act yet, I pretend to be helplessly captured by Marlon."
                     "When we enter the trailer, the Ringmaster is there playing quietly with my wand."
                     #show ringmaster at right

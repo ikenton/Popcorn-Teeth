@@ -15,6 +15,7 @@ label global_ringmaster:
         label enter:
             scene pt-ringmaster-trailer
             "I take a step on the stepping stool and open the door to a poorly lit room."
+            show ringmaster
             "A man sits at his desk, writing. He doesn’t bother to raise his head, but instead reaches for his mask and slips it on."
             if not marlonIsAlive and not bonnieIsAlive and not hugoIsAlive:
                 jump goodEnding
@@ -43,6 +44,7 @@ label global_ringmaster:
                 "He catches my arm but I quickly pull away and slash at him repeatedly."
                 "With my unfathomable rage, I knock him down to the ground and pummel him senselessly."
                 "He must pay for everything he has done to me!"
+                show ringmaster dead
                 "I tear off his mask and I grins as he begins coughing and wheezing."
                 rm "Do you know how much of a dream come true that you are to me?"
                 rm "Ever since I was a kid, I worshiped you, I kept sacrificing my teeth till I got you."
@@ -74,6 +76,7 @@ label global_ringmaster:
                 rm "You have no power and you will learn your place that you’re supposed to be my perfect star."
                 rm "You’re mine forever, till death do us part!"
                 "I seethe and scratch at arms."
+                
                 "He drops me onto the ground. "
                 p "Fuck you! I’m not your pet!"
                 "I attempt to get up, yet I feel something pin my leg on the ground. He has his large foot on my shin!"
@@ -82,11 +85,14 @@ label global_ringmaster:
                 rm "You know that’s not an option, sweetheart."
                 rm "Stay still."
                 p "?!!!"
+                hide ringmaster
                 show blackscreen
 
                 #CRUNCH NOISE
 
                 p "AHH-AGH"
+                hide blackscreen                
+                show pita dead
                 "I look down at my leg and notice that it’s bleeding and that one of my bones is sticking out."
                 p "{b}NO! NO!!{/b}"
                 "My body terribly shakes in horror at the sigh of my own broken leg. "
