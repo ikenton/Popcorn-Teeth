@@ -291,12 +291,12 @@ screen navigation():
         style_prefix "navigation"
 
         xpos gui.navigation_xpos
-        yalign 0.85
+        yalign 0.5
 
         spacing gui.navigation_spacing
 
         if main_menu:
-
+            yalign 0.85
             textbutton _("Start") action Start()
 
         else:
@@ -368,11 +368,11 @@ screen main_menu():
         vbox:
             style "main_menu_vbox"
 
-            text "[config.name!t]":
-                style "main_menu_title"
+            #text "[config.name!t]":
+                #style "main_menu_title"
 
-            text "[config.version]":
-                style "main_menu_version"
+            #text "[config.version]":
+                #style "main_menu_version"
 
 
 style main_menu_frame is empty
