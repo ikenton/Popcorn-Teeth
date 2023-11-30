@@ -3,6 +3,7 @@ define p = Character("Pita")
 
 
 label global_beginning:
+    play sound  "cricket-song.mp3" fadein 1.0 volume 0.09
     show ringmaster lean
     rm "..."
     rm "You did great today, Sweetheart. The crowd loved you like always."

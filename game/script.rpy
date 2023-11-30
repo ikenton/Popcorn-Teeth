@@ -6,17 +6,17 @@ default visitedRM = False
 
 # The game starts here.
 label start:  
+    stop music fadeout 2.0
     scene trigger warning
     # shift options down  
     menu:
         "Continue":
-            #play intro
-            #RESIZE THEM
+            
             jump global_beginning
             label global_courtyard:
+            
+                play sound  "cricket-song.mp3" volume 0.09
                 scene pt-courtyard
-                #"I enter the courtyard where the main performers live. This is where I end this" #change line is bad
-                #"Where should I go now?"
                 menu:
                     "The blue wooden trailer with animal cages infront of it" if marlonIsAlive :
                         

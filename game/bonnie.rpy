@@ -20,7 +20,7 @@ label global_bonnie:
     "I take a deep breath, steeling my nerves before hurrying over to {b}her{/b} trailer."
     "The outside a faded pink, 2 large windows sat on one side, painted green and decorated with a pattern of daisies that lined the rim."
     "Stepping up to her door I turn the handle, the door clicking as I push it open. The inside is dim, lit only by the moonlight peeking through her windows, tinting the room an eerie blue hue."
-
+    stop sound fadeout 1.0
     scene pt bonnie trailer
 
     "I look around, I’ve not been in here before, but the room just screamed her name, from the posters strewn about the wall reciting her praises, flowers now wilted sat atop her vanity, and a lump in a bed decorated with the colors pink and green."
@@ -34,7 +34,7 @@ label global_bonnie:
             "Step… step… step-"
             "{i}{b}Creaaak~{/b}{/i}"
             "I stop in my tracks, the lump in the bed groans and begins getting up- I need to hide, {i}{b}now!{/i}{/b}"
-            #TIMED CHOFdiICES
+            #TIMED CHOiICES
             $ time = 5
             $ timer_range = 5
             $ timer_jump = 'direct'

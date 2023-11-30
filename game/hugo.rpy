@@ -58,6 +58,7 @@ label global_hugoVendetta:
                             hide screen countdown
                             hide pita underneath
                             scene pt-hugo-trailer
+                            stop sound fadeout 1.0
                             "I crawl out of the trailer and I stand up, hunching as I approach behind Hugo. I go up one of the steps and it creaks."
                             "!!!"
                             show hugo smoking 
@@ -79,6 +80,7 @@ label global_hugoVendetta:
                                 "I look around and find an open window. I smile and climb my way into the trailer quietly. I can hear gentle snoring coming from the bedroom area of the trailer."
                                 "I hold the hammer with both hands and slowly approach the source of the noise."
                                 scene pt-hugo-trailer
+                                stop sound fadeout 1.0
                                 "I poke my head in and view a resting Hugo with his arms behind his head and his legs crossed. It seems that he’s napping…"
                                 "Perfect"
                                 show hugo hammer
@@ -144,6 +146,7 @@ label global_hugoVendetta:
                                 "Oh! I look up and notice a trapdoor, I can see a square outline of the light coming from inside the trailer. I grin and I wait for some minutes until I can barely hear any movement coming from inside the trailer."
                                 "I slightly push up the trapdoor and it opens."
                                 scene pt-hugo-trailer
+                                stop sound fadeout 1.0
                                 hide pita underneath
                                 "I grin and I enter the trailer though the trapdoor as quietly as I can."
                                 "I scan my surroundings and see Hugo in bed, facing the wall. lowering my head, I quietly approach him. Eventually, I  get close enough to him and I look around for a weapon. I grab the base of a lamp with both of my hands."

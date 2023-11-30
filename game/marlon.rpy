@@ -73,6 +73,7 @@ label global_visitMarlon:
     show marlon happy
     m "Let’s head inside my trailer, my animals are being too noisy right now…"
     scene pt-marlon-trailer
+    stop sound fadeout 1.0
     show marlon nuetral at right
     show crimson at left
     "Marlon leads me into his trailer along with his lion. The lion looks up to me and bares its teeth, growling."
@@ -434,7 +435,6 @@ label global_visitMarlon:
                     "We shake hands as we put our plan into motion: Marlon will escort me to the Ringmaster’s trailer, pretending as if I had been captured for escaping. Then, when the Ringmaster leasts expects it, Marlon will toss me my wand."
                     "Before we leave, Marlon takes with him the portrait of Echo on the wall and a bag of Steak Bites, with Crimson following behind us as we leave his trailer."
                     scene ringmaster-trailer
-                    
                     "We make it to the Ringmaster’s trailer, and putting on my best act yet, I pretend to be helplessly captured by Marlon."
                     "When we enter the trailer, the Ringmaster is there playing quietly with my wand."
                     #show ringmaster at right

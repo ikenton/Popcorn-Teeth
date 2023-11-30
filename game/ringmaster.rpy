@@ -13,6 +13,7 @@ label global_ringmaster:
                 jump global_courtyard
     else:
         label enter:
+            stop sound fadeout 1.0
             scene pt-ringmaster-trailer
             "I take a step on the stepping stool and open the door to a poorly lit room."
             show ringmaster
