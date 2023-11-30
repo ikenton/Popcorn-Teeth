@@ -32,13 +32,16 @@ label global_visitMarlon:
     
 
     "I head towards Marlons’s trailer, which is hard to see since it’s surrounded by cages filled with other circus animals. Bears, tigers, horses, monkeys, and even sea lions… All trapped here, just like me."
-
+    if renpy.music.is_playing:
+        play music "tension.mp3"
+    else:
+        play music "tension.mp3" fadein 3
     "I guess there’s no point in being sneaky, since as soon as I get close enough to the cages, the animals start stirring and making loud noises, banging on their bars and reaching out to grab me."
 
     show marlon surprised at right
     show crimson at left
     #also have lion
-
+    
     m "I-Is someone there?"
 
     "I see Marlon, the circus’ animal trainer and performer. He’s standing in front of his trailer with a lion by his side, whip in one hand as he works with the animal."
@@ -87,7 +90,8 @@ label global_visitMarlon:
 
     "{i}Looks like I’ll have to find a way to get rid of his lion before I kill Marlon and eat his teeth.{/i}"
 
-    "As I settle myself into Marlon’s trailer, I take a moment to glance around at my surroundings. His trailer is left plain with no notable decorations. There’s nothing displayed on any of the shelves, and the only thing interesting about the trailer was the animal fur rug on the floor."
+    "As I settle myself into Marlon’s trailer, I take a moment to glance around at my surroundings." 
+    "His trailer is left plain with no notable decorations. There’s nothing displayed on any of the shelves, and the only thing interesting about the trailer was the animal fur rug on the floor."
     "One thing that caught my eye was a single portrait hanging on what is otherwise a barren wall. At a glance, I can’t help but feel like the man in the portrait looked really familiar."
 
     m "So, you said you wanted to talk to me about something…?"
@@ -356,8 +360,10 @@ label global_visitMarlon:
                     show marlon nuetral
                     m "Crimson, it’s feeding time."
                     hide marlon nuetral
+                    #play music "FEAR.mp3" noloop
+                    stop music fadeout 3.0
                     show crimson bad
-                    "The lion on top of my growls, raising its hackles to reveal large and sharp teeth. For a moment, I smile as I think about how delicious they must be…"
+                    "The lion on top of me growls, raising its hackles to reveal large and sharp teeth. For a moment, I smile as I think about how delicious they must be…"
                     "And then, I feel the lion’s jaw wrap around my neck, piercing my throat with his fangs. The lion rips my body to shreds, piece by piece, and my vision fades to black."
                     return
                 else:
@@ -371,6 +377,7 @@ label global_visitMarlon:
                     p "That’s right, beg. Beg for your life as I take it away, just like the Ringmaster and this damn Circus took away mine."
                     p "Oh, I wonder how he’ll react once he’s seen how I devoured his precious little boy."
                     show marlon bad
+                    stop music fadeout 3.0
                     $ marlonIsAlive = False
                     "My hands are thrust into his mouth cavity, as I dig my fingers into its roof and bottom jaw. I begin to stretch Marlon’s mouth wider and wider, and all he can do is cry and scream."
                     "Finally, with a sharp crack, I break his jaw as his mouth begins to fill with blood from his torn skin and muscles. He falls limp beneath me."
@@ -395,6 +402,8 @@ label global_visitMarlon:
                     show marlon angry
                     m "Crimson, get her."
                     "Before I can even react, the lion pounces on top of me."
+                    #play music "FEAR.mp3"
+                    stop music fadeout 3.0
                     show crimson bad
                     "I can feel its claws press against my body as it takes a bite out of my arm. The pain is enough to send my vision flashing white as I fall unconscious."
                     "The last thing I see is Marlon standing above me, his face warped with hurt, regret, and finally resolution."
@@ -435,6 +444,7 @@ label global_visitMarlon:
                     "We shake hands as we put our plan into motion: Marlon will escort me to the Ringmaster’s trailer, pretending as if I had been captured for escaping. Then, when the Ringmaster leasts expects it, Marlon will toss me my wand."
                     "Before we leave, Marlon takes with him the portrait of Echo on the wall and a bag of Steak Bites, with Crimson following behind us as we leave his trailer."
                     scene ringmaster-trailer
+                    #play music "tension.mp3" fadein 1.5
                     "We make it to the Ringmaster’s trailer, and putting on my best act yet, I pretend to be helplessly captured by Marlon."
                     "When we enter the trailer, the Ringmaster is there playing quietly with my wand."
                     #show ringmaster at right
@@ -492,9 +502,7 @@ label global_visitMarlon:
                     "I tear it away from his body and begin gorging on it."
                     "Oh, I never realized how hungry I was until now."
                     "And it’s sweet. {i}Oh so sweet{/i}."
-                    hide marlon good
-                    show blackscreen
-                    "THE END"
+                    
                     return
             "I think I hear something going on outside." if crimsonhere and not attempted:
                 $ attempted = True
