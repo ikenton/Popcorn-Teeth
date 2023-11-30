@@ -14,7 +14,8 @@ label global_ringmaster:
     else:
         label enter:
             stop sound fadeout 1.0
-            scene pt-ringmaster-trailer
+            play music "tension.mp3"
+            scene ringmaster-trailer
             "I take a step on the stepping stool and open the door to a poorly lit room."
             show ringmaster
             "A man sits at his desk, writing. He doesn’t bother to raise his head, but instead reaches for his mask and slips it on."
@@ -87,6 +88,7 @@ label global_ringmaster:
                 rm "Stay still."
                 p "?!!!"
                 hide ringmaster
+                #play music "FEAR.mp3"
                 show blackscreen
 
                 #CRUNCH NOISE
