@@ -17,6 +17,7 @@ screen countdown:
 label global_hugoVendetta:
     $ timer_range = 0
     $ timer_jump = 0
+    play music "tension.mp3" fadein 3.0
     "I look over and quietly approach the red and flashy trailer with many posters from past shows on it. I don’t seem to be on any of them."
     "I can see smoke coming from behind the trailer and humming. I cock my head with curiosity."
     "Who could it be?"
@@ -61,7 +62,7 @@ label global_hugoVendetta:
                             stop sound fadeout 1.0
                             "I crawl out of the trailer and I stand up, hunching as I approach behind Hugo. I go up one of the steps and it creaks."
                             "!!!"
-                            show hugo smoking 
+                            show hugo back 
                             "Hugo‘s head snaps in my direction."
                             show hugo surprised
                             h "What the?! What are you doing here?!"
@@ -87,6 +88,7 @@ label global_hugoVendetta:
                                 $ hugoIsAlive = False
                                 "I raise the hammer above my head and strike it down onto Hugo’s face repeatedly."
                                 p "Hehe—-HEHEHEH!"
+                                stop music fadeout 2.0
                                 "The adrenaline and euphoria embody my very soul to the brim as I hear his bones crack and flesh squelch every time I bring down the hammer."
                                 "I drop the hammer to the ground and begin picking at the teeth and other skull fragments from the disfigured face. I popped them into my mouth like how humans eat chips and chew with saliva and blood dripping from my jaw."
                                 hide hugo hammer
@@ -102,7 +104,7 @@ label global_hugoVendetta:
                 "Throw a pebble":
                     hide screen countdown
                     "I look down and grab a pebble off the ground. This should get 'em distracted!"
-                    show hugo smoking
+                    show hugo angry
                     h "Who’s there?!"
                     "He approaches the sound where the pebble was."
                     "Perfect! This is my chance. I approach Hugo quickly and quietly from behind. I bump into him in an attempt to knock him over but he barely budged! "
@@ -179,6 +181,7 @@ label global_hugoVendetta:
                                         "I drop the lamp."
                                         jump badending
     label badending:
+        play music "FEAR.mp3"
         show hugo bad
         "I felt my neck be grasped and my body be lifted! I gasp and hyperventilate, clawing at the hand around my neck."
         h "I’m so happy that you gave me a reason to kill you."

@@ -23,7 +23,7 @@ label start:
                         jump global_visitMarlon
                     "The pink and green floral trailer" if bonnieIsAlive:
                         jump global_bonnie
-                    "The red, blue and yellow flashy trailer" if hugoIsAlive:
+                    "The flashy red, blue and yellow trailer" if hugoIsAlive:
                        
                         jump global_hugoVendetta
                     "The red and gold panneled trailer":
