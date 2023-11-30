@@ -1,5 +1,5 @@
 define rm = Character("Ringmaster", color = "#F00040")
-define p = Character("Pita")
+define p = Character("Pita", color = "#edf4b3")
 
 label global_ringmaster:
     "I approach the trailer and notice that it’s slightly open."

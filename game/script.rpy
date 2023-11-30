@@ -14,7 +14,7 @@ label start:
             
             jump global_beginning
             label global_courtyard:
-            
+                stop music
                 play sound  "cricket-song.mp3" volume 0.09
                 scene pt-courtyard
                 menu:

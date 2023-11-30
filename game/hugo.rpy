@@ -1,5 +1,5 @@
 define h = Character("Hugo", color = "#FFFF00")
-define p = Character("Pita")
+define p = Character("Pita", color = "#edf4b3")
 
 #timer
 transform alpha_dissolve:
@@ -26,7 +26,7 @@ label global_hugoVendetta:
         "Take a peek":
             "I place my dainty hand on the trailer and slowly poke my head out."
             "Oh I know who it is."
-            show hugo smoking
+            show hugo back
             "I can see the back of that mean clown, humming and smoking."
             "Ugh, I hate Hugo… he’d press his cigarette butts onto my skin till I could smell my own skin and he’d bad mouth me backstage. I get that he never wanted me here, but I also never wanted to be here!"
             "Oh!"

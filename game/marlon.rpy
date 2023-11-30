@@ -4,7 +4,7 @@
 # name of the character.
 
 define m = Character("Marlon", color = "#281aa3")
-define p = Character("Pita")
+define p = Character("Pita", color = "#edf4b3")
 define r = Character("Ringmaster", color = "#880808")
 default crimsonhere = True
 

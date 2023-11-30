@@ -1,6 +1,6 @@
 
 define b = Character("Bonnie", color = "#9966cc")
-define p = Character("Pita")
+define p = Character("Pita", color = "#edf4b3")
 #timer
 transform alpha_dissolve:
     alpha 0.0
@@ -16,11 +16,11 @@ screen countdown:
 label global_bonnie:
     $ timer_range = 0
     $ timer_jump = 0
-    
     "I take a deep breath, steeling my nerves before hurrying over to {b}her{/b} trailer."
     "The outside a faded pink, 2 large windows sat on one side, painted green and decorated with a pattern of daisies that lined the rim."
     "Stepping up to her door I turn the handle, the door clicking as I push it open. The inside is dim, lit only by the moonlight peeking through her windows, tinting the room an eerie blue hue."
     stop sound fadeout 1.0
+    play music "tension.mp3" fadein 0.5
     scene pt bonnie trailer
 
     "I look around, I’ve not been in here before, but the room just screamed her name, from the posters strewn about the wall reciting her praises, flowers now wilted sat atop her vanity, and a lump in a bed decorated with the colors pink and green."
@@ -67,9 +67,9 @@ label global_bonnie:
                     "No… I don’t care…"
                     
                     "She’s been nothing but mean to me, she deserves this… she deserves {b}all{/b} that is coming to her…"
-                    
                     "I slowly reach forward, a large grin forming on my face."
                     "Suddenly, I grab her leg, and pulling her down, I manage to hit her head against the vanity,knocking her unconscious."
+                    stop music fadeout 1.5
                     p "I am so hungry… starved, even.."
                     show bonnie dead
                     $ bonnieIsAlive = False
@@ -88,6 +88,7 @@ label global_bonnie:
                     "I lunge at her-!!!"
                     hide bonnie excited
                 #BLACK SCREEN
+                    play music "FEAR.mp3"
                     show blackscreen
                     "{b}SLAM{/b}"
                     "I am knocked back, something incredibly heavy and hard hitting me square in the face…"
@@ -96,14 +97,13 @@ label global_bonnie:
                     show bonnie disgusted
                     "The drawer from her vanity, broken in half, held in her hands"
                     "The objects that were once inside now spilled out, decorating the floor in pink and green hair ties and makeup and other frilly things."
-                    hide bonnie disgusted
-                    
+                    show bonnie disgusted
                     "My head is spinning, a terrible, throbbing pain in my skull."
                     "Her footsteps are muffled by the ringing in my head as she walks past me to her bed, grabbing something from behind it. It was something shiny, that reflected the dim light from her vanity"
                     
                     show bonnie bad
                     "She stands above me, raising the object over her head."
-                    #show bonnie disgusted
+                    
                     b "I’ve had enough of you, little fairy…"
                     "She slams the object into my stomach, my body lurching forward in pain, tears streaming down my cheeks, the life spilling from my eyes in pitiful, salty tears"
                     b "{b}Quite{/b} enough…"
@@ -146,12 +146,13 @@ label global_bonnie:
         "She stands from her bed, walking in long strides towards me."
         "This is my only chance… I lunge at her, my hands reaching for her neck, with intent to push her down"
         "The hand behind her back suddenly shoots forward-"
+        play music "FEAR.mp3"
         p "Kch- ah.."
         "She catches me on the object, my eyes falling to her hand, in it an incredibly sharp knife, implanted in my gut."
         
         show bonnie disgusted at center
         b "Oh you poor thing… how clumsy of you, falling right onto such a dangerous object like that…"
-        
+        #play music "FEAR.mp3"
         show bonnie bad
         "I slide off, falling onto the ground."
         b "I’ve had enough of you, little fairy…"
