@@ -149,7 +149,7 @@ label global_visitMarlon:
                     show marlon angry
                     m "Don’t you think I know that?"
                     show marlon nuetral
-                    m "If I don’t figure out this act, the Ringmaster might take Nala away from me. My only friend."
+                    m "If I don’t figure out this act, the Ringmaster might take Crimson away from me. My only friend."
                     show marlon disapointed
                     m "I can’t lose her… I can’t lose anyone again. Not like…"
                     "Marlon trails off again then glances up at the photo on the wall. He then shakes his head and turns back to me."
