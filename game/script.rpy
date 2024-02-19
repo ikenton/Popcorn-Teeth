@@ -3,6 +3,7 @@ default bonnieIsAlive = True
 default marlonIsAlive = True
 default hugoIsAlive = True
 default visitedRM = False
+default escapedBonnie = False
 
 # The game starts here.
 label start:  
@@ -21,7 +22,8 @@ label start:
                     "The blue wooden trailer with animal cages infront of it" if marlonIsAlive :
                         
                         jump global_visitMarlon
-                    "The pink and green floral trailer" if bonnieIsAlive:
+                    "The pink and green floral trailer" if bonnieIsAlive and not escapedBonnie:
+                
                         jump global_bonnie
                     "The flashy red, blue and yellow trailer" if hugoIsAlive:
                        
