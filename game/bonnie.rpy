@@ -214,17 +214,21 @@ label global_bonnie:
         
     label failed:
         "I gasp and scurry beneath the bed, pressing my hands over my mouth"
+        show underbed
         "..."
         "Maybe she didn’t... hear me..?"
         "..." 
-        #insert bed creaking noise
+        #insert bed creaking noise & peak animation
+        hide underbed
+        show bonnie peak
         "Slowly, Bonnie peers under the bed, only her eyes are visible at first then, after a second upon seeing me"
         "her head lowers further, revealing a demented smile"
         p "Bon-"
         "{b}I am suddenly pulled out from under the bed-"
-        show bonnie disgusted
+        #show bonnie disgusted
         b "Wretched thing." 
         "I spin to face her, but it is too late."
+    
         show blackscreen
         "{b}SLAM{/b}"
         play music "FEAR.mp3"

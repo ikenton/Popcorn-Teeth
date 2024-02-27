@@ -1,8 +1,8 @@
 define rm = Character("Ringmaster", color = "#F00040")
 define p = Character("Pita", color = "#edf4b3")
-
-
 label global_beginning:
+    #INSERT INTRO CUTSCENE HERE!!!!
+    #$ renpy.movie_cutscene("")
     show ringmaster lean
     rm "..."
     rm "You did great today, Sweetheart. The crowd loved you like always."
