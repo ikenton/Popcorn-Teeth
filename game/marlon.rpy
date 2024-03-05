@@ -272,8 +272,8 @@ label global_visitMarlon:
             m "Yes, for a while, he and I were happy…"
             show marlon angry
             m "But then the Ringmaster took that away from me."
-            $ time = 5
-            $ timer_range = 5
+            $ time = 3
+            $ timer_range = 3
             $ timer_jump = 'lizard_wrong'
             show screen countdown
             menu:
@@ -519,8 +519,8 @@ label global_visitMarlon:
                 "{i}This is the perfect opportunity to get rid of the lion.{/i}"
                 "{i}Where are those treats again?{/i}"
                 #TIMED CHOICES
-                $ time = 5
-                $ timer_range = 5
+                $ time = 3
+                $ timer_range = 3
                 $ timer_jump = 'outOfTime'
                 show screen countdown
                 menu:
@@ -550,8 +550,8 @@ label global_visitMarlon:
                         hide screen countdown
                         "I walk over and check inside for its contents where I find dozens of other treats lining the shelves. I have to act quickly and find what I’m looking for."
                         #TIMED MENU
-                        $ time = 5
-                        $ timer_range = 5
+                        $ time = 3
+                        $ timer_range = 3
                         $ timer_jump = 'outOfTime'
                         show screen countdown
                         menu:
