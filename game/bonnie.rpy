@@ -37,8 +37,8 @@ label global_bonnie:
             "{i}{b}Creaaak~{/b}{/i}"
             "I stop in my tracks, the lump in the bed groans and begins getting up- I need to hide, {i}{b}now!{/i}{/b}"
             #TIMED CHOiICES
-            $ time = 5
-            $ timer_range = 5
+            $ time = 2
+            $ timer_range = 2
             $ timer_jump = 'failed'
             show screen countdown
             menu:
@@ -88,8 +88,8 @@ label global_bonnie:
                     "After a few moments of silence, I spot Bonnie’s legs swinging overhead, and she makes her way over to her vanity, taking a seat and peering at her reflection in the mirror."
                     "I do my best to keep in the shadows, feeling fortunate that her room was so dimly lit."
                     "She opens her drawer and begins searching for something from within, this is my chance."
-                    $ time = 5
-                    $ timer_range = 5
+                    $ time = 2
+                    $ timer_range = 2
                     $ timer_jump = 'sneak'
                     show screen countdown
                     menu:
@@ -115,14 +115,14 @@ label global_bonnie:
                                 "{b}{i}SLAM{/i}{b}"
                                 "She bashes the drawer against my face, rendering me partially unconscious"
                                 
-                                show bonnie disgusted
+                                show bonnie disgusted behind blackscreen
                                 show blackscreen:
                                     alpha .5 
                                 "Then, throwing it aside, she digs her hand into my mouth"
                                 show blackscreen:
                                     alpha .2 
                                 #crazed yet melancholic expression
-                                show bonnie excited
+                                show bonnie excited behind blackscreen
                                 b "{i}How does it feel...{/i}"
                                 show blackscreen:
                                     alpha .1
