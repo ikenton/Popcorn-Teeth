@@ -37,8 +37,8 @@ label global_hugoVendetta:
             "Hugo drops his cigarette and stomps on it."
             "Crap!"
             #timer
-            $ time = 5
-            $ timer_range = 5
+            $ time = 2
+            $ timer_range = 2
             $ timer_jump = 'badending'
             show screen countdown
             menu:
@@ -50,8 +50,8 @@ label global_hugoVendetta:
                     
                     #timed
                     
-                    $ time = 5
-                    $ timer_range = 5
+                    $ time = 2
+                    $ timer_range = 2
                     $ timer_jump = 'wait'
                     show screen countdown
                     menu:
@@ -116,8 +116,8 @@ label global_hugoVendetta:
         "Wait and listen":
             "I dare not to take any chance of making myself known yet…I wait and listen for a while. After a moment,the humming stops and I can hear footsteps approaching!"
             #timed
-            $ time = 5
-            $ timer_range = 5
+            $ time = 2
+            $ timer_range = 2
             $ timer_jump = 'prebadending'
             show screen countdown
             menu:
@@ -125,8 +125,8 @@ label global_hugoVendetta:
                     hide screen countdown
                     show pita underneath
                     "I quickly hide underneath the trailer and I pull my white dress with me so it isn’t poking out, getting it dirty in the process. I place my hand on my mouth as I watch Hugo walk to his trailer and go up the creaky steps. I can hear keys jingle."
-                    $ time = 5
-                    $ timer_range = 5
+                    $ time = 2
+                    $ timer_range = 2
                     $ timer_jump = 'wait2'
                     show screen countdown
                     menu: #timed
