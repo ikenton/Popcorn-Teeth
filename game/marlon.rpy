@@ -365,6 +365,9 @@ label global_visitMarlon:
                     show crimson bad
                     "The lion on top of me growls, raising its hackles to reveal large and sharp teeth. For a moment, I smile as I think about how delicious they must be…"
                     "And then, I feel the lion’s jaw wrap around my neck, piercing my throat with his fangs. The lion rips my body to shreds, piece by piece, and my vision fades to black."
+                    
+                    jump death_screen
+                    
                     return
                 else:
                     "I leap forward, quickly overtaking the smaller man beneath me."
@@ -407,6 +410,9 @@ label global_visitMarlon:
                     show crimson bad
                     "I can feel its claws press against my body as it takes a bite out of my arm. The pain is enough to send my vision flashing white as I fall unconscious."
                     "The last thing I see is Marlon standing above me, his face warped with hurt, regret, and finally resolution."
+
+                    jump death_screen
+
                     return
                 else:
                     #good ending

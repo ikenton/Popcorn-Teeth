@@ -46,3 +46,8 @@ label start:
     #jump global_visitMarlon
     label global_back:
         return
+
+label death_screen:
+    play music "death_screen.mp3" fadein 1.0
+    show blackscreen
+    with Fade(1.0, 4.0, 0.5)

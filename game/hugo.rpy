@@ -188,7 +188,9 @@ label global_hugoVendetta:
         p "ghh- hk!"
         "{i}Stop it! Stop it!{/i}"
         "Is what I tried to say. His grip tightened, restricting my speech. My legs shake and I flail my hand, trying to claw at his face, but my hand slowly becomes limp. I was met with a sudden darkness and warmth that felt like freedom."
-        show blackscreen
+    
+        jump death_screen
+
         return
 
     label prebadending:

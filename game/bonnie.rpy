@@ -155,6 +155,9 @@ label global_bonnie:
                                 show blackscreen:
                                     alpha 1.0
                                 "Until I finally expire"
+
+                                jump death_screen
+
                                 return
                         "Attempt an escape": #succeed but can no longer enter Bonnie's trailer
                             hide screen countdown
@@ -207,6 +210,9 @@ label global_bonnie:
                     b "{b}Quite{/b} enough..."
                     "She stabs me again, my body convulsing." 
                     "I can hear the knife being tornfrom my flesh, over and over and over again, a disgusting slick, wet sound as my own life spills from the deep wound she created…"
+                    
+                    jump death_screen
+
                     return       
         "No, I need to get out of here…":
             "I slowly step back, exiting the tent. It’s too risky, I need to escape…"
@@ -250,5 +256,8 @@ label global_bonnie:
         b "{b}Quite{/b} enough…"
         "She stabs me again, my body convulsing." 
         "I can hear the knife being torn from my flesh, over and over and over again, a disgusting slick, wet sound as my own life spills from the deep wound she created…"
+
+        jump death_screen
+
         return
     return
