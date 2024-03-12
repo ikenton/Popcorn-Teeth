@@ -9,6 +9,7 @@ transform alpha_dissolve:
         linear 0.5 alpha 0
     # This is to fade the bar in and out, and is only required once in your script
 
+#$ config.layers = ['master', 'transient','screens','top', 'overlay']
 screen countdown:
     timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
     bar value time range timer_range xalign 0.5 yalign 0.9 xmaximum 300 at alpha_dissolve 
@@ -221,27 +222,29 @@ label global_bonnie:
     label failed:
         "I gasp and scurry beneath the bed, pressing my hands over my mouth"
         show underbed
+        show bonnie peak at offscreenleft
+        show bed
         "..."
         "Maybe she didn’t... hear me..?"
+        show bonnie peak at Move((0.0, -0.8), (0.0, 0.0), 5.0, xanchor = 0, yanchor = 0)
+        show bed
         "..." 
         #insert bed creaking noise & peak animation
-        hide underbed
-        show bonnie peak
-        "Slowly, Bonnie peers under the bed, only her eyes are visible at first then, after a second upon seeing me"
-        "her head lowers further, revealing a demented smile"
+        
         p "Bon-"
         "{b}I am suddenly pulled out from under the bed-"
         #show bonnie disgusted
         b "Wretched thing." 
         "I spin to face her, but it is too late."
-    
+        hide bed
+        hide underbed
         show blackscreen
         "{b}SLAM{/b}"
         play music "FEAR.mp3"
         "I am knocked back, something incredibly heavy and hard hitting me square in the face…"
         #HIDE BLACK SCREEN
         hide blackscreen
-        show bonnie disgusted
+        show bonnie disgusted at center
         "The drawer from her vanity, broken in half, held in her hands"
         "The objects that were once inside now spilled out, decorating the floor in pink and green hair ties and makeup and other frilly things."
         #show bonnie disgusted
