@@ -15,10 +15,17 @@ transform alpha_dissolve:
         linear 0.5 alpha 0
 # This is to fade the bar in and out, and is only required once in your script
 
-screen countdown:
-    timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
-    bar value time range timer_range xalign 0.5 yalign 0.9 xmaximum 300 at alpha_dissolve 
-    #This is the timer bar.
+default time = 0
+
+screen qte(rangeD, missed_event):
+    on "hide" action SetVariable("g_time", 0)
+    hbox:
+        xalign 0.5
+        yalign 0.1
+        timer 0.1 repeat True action If(time > 0, true = SetVariable("time", time - 0.1), false = [Hide("qte"),Jump(missed_event)]) 
+        bar:
+            value AnimatedValue(value=time, range=rangeD, delay= 0.5)
+            xmaximum 300
 
 label global_visitMarlon:
     $ timer_range = 0
@@ -273,13 +280,11 @@ label global_visitMarlon:
             show marlon angry
             m "But then the Ringmaster took that away from me."
             $ time = 3
-            $ timer_range = 3
-            $ timer_jump = 'lizard_wrong'
-            show screen countdown
+            show screen qte(3, 'lizard_wrong')
             menu:
                 "His act wasn’t very good anyway.":
                     label lizard_wrong:
-                        hide screen countdown
+                        hide screen qte
                         $ bad += 1
                         p "His act wasn’t very good anyway."
                         show marlon angry
@@ -291,7 +296,7 @@ label global_visitMarlon:
                         show marlon angry
                         m "Sometimes I think you deserve that fate more than he did."
                 "He died screaming in his cage.":
-                    hide screen countdown
+                    hide screen qte
                     $ bad += 1
                     m "I wouldn’t expect you to sympathize. You’re the Ringmaster’s favorite little toy."
                     m "You’re just some fairy tale. A spectacle for others to look at."
@@ -301,7 +306,7 @@ label global_visitMarlon:
                     show marlon angry
                     m "Sometimes I think you deserve that fate more than he did."
                 "He didn’t deserve that fate.":
-                    hide screen countdown
+                    hide screen qte
                     show marlon surprised
                     m "O-oh."
                     show marlon disapointed
@@ -315,7 +320,7 @@ label global_visitMarlon:
                     "Marlon paused for a moment, taking one more glance to the portrait on the wall before smiling to himself."
                     m "Echo"
                 "Really? You and him?":
-                    hide screen countdown
+                    hide screen qte
                     $ bad += 1
                     m "I wouldn’t expect you to sympathize. You’re the Ringmaster’s favorite little toy."
                     m "You’re just some fairy tale. A spectacle for others to look at."
@@ -526,12 +531,10 @@ label global_visitMarlon:
                 "{i}Where are those treats again?{/i}"
                 #TIMED CHOICES
                 $ time = 3
-                $ timer_range = 3
-                $ timer_jump = 'outOfTime'
-                show screen countdown
+                show screen qte(3, 'outOfTime')
                 menu:
                     "Walk to the cabinet":
-                        hide screen countdown
+                        hide screen qte
                         "I walk over and check inside for its contents, except I don’t find what I’m looking for."
                         p "Damn it, where are they?!"
                         "As I frantically start searching for the treats, I hear Marlon shouting from outside as he walks back towards the trailer."
@@ -542,7 +545,7 @@ label global_visitMarlon:
                         m "What were we talking about again?"
                         jump dialogTreeEndings
                     "Walk to the drawer":
-                        hide screen countdown
+                        hide screen qte
                         "I walk over and check inside for its contents, except I don’t find what I’m looking for."
                         p "Damn it, where are they?!"
                         "As I frantically start searching for the treats, I hear Marlon shouting from outside as he walks back towards the trailer."
@@ -553,30 +556,28 @@ label global_visitMarlon:
                         m "What were we talking about again?"
                         jump dialogTreeEndings
                     "Walk to the cupboard.":
-                        hide screen countdown
+                        hide screen qte
                         "I walk over and check inside for its contents where I find dozens of other treats lining the shelves. I have to act quickly and find what I’m looking for."
                         #TIMED MENU
                         $ time = 3
-                        $ timer_range = 3
-                        $ timer_jump = 'outOfTime'
-                        show screen countdown
+                        show screen qte(3, 'outOfTime')
                         menu:
                             "Take the “Salmon Bits”":
-                                hide screen countdown
+                                hide screen qte
                                 "I grab the treat and turn back around to Crimson, but I get no reaction from him. The lion barely even looks in the treat’s direction when I throw it out the open door."
                                 show marlon surprised at right
                                 m "Woah, what was that!"
                                 "I stash away the treats and walk away as calmly as I can to avoid any suspicions as Marlon enters the trailer."
                                 jump dialogTreeEndings
                             "Take the “Stoat Bones”":
-                                hide screen countdown
+                                hide screen qte
                                 "I grab the treat and turn back around to Crimson, but I get no reaction from him. The lion barely even looks in the treat’s direction when I throw it out the open door."
                                 show marlon surprised at right
                                 m "Woah, what was that!"
                                 "I stash away the treats and walk away as calmly as I can to avoid any suspicions as Marlon enters the trailer."
                                 jump dialogTreeEndings
                             "Take the “Steak Bites”":
-                                hide screen countdown
+                                hide screen qte
                                 $ crimsonhere = False
                                 "I grab the treat and turn back to Crimson, whose eyes immediately lock onto the bag of “Steak Bites.” As I grab one treat and toss it out the open door, the lion immediately bolts out as Marlon comes back inside the trailer."
                                 hide crimson
@@ -590,7 +591,7 @@ label global_visitMarlon:
                                 m "What were we talking about again?"
                                 jump dialogTreeEndings
                 label outOfTime:
-                    hide screen countdown
+                    hide screen qte
                     "I stand there for a bit too long..."
                     show marlon disapointed at right
                     m "Looks like it was a false alarm…"

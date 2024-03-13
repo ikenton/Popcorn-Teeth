@@ -28,7 +28,7 @@ label start:
     # shift options down  
     label global_courtyard:
         stop music
-        play sound  "cricket-song.mp3" volume 0.09
+        play sound  "audio/cricket-song.mp3" volume 0.09
         scene pt-courtyard
         menu:
             "The blue wooden trailer with animal cages infront of it" if marlonIsAlive :
@@ -48,6 +48,6 @@ label start:
         return
 
 label death_screen:
-    play music "death_screen.mp3" fadein 1.0
+    play music "audio/death_screen.mp3" fadein 1.0
     show blackscreen
     with Fade(1.0, 4.0, 0.5)

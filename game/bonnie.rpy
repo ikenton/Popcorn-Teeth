@@ -29,7 +29,7 @@ label global_bonnie:
     "The outside a faded pink, 2 large windows sat on one side, painted green and decorated with a pattern of daisies that lined the rim."
     "Stepping up to her door I turn the handle, the door clicking as I push it open. The inside is dim, lit only by the moonlight peeking through her windows, tinting the room an eerie blue hue."
     stop sound fadeout 1.0
-    play music "tension.mp3" fadein 0.5
+    play music "audio/tension.mp3" fadein 0.5
     scene pt bonnie trailer
 
     "I look around, I’ve not been in here before, but the room just screamed her name," 
@@ -235,7 +235,7 @@ label global_bonnie:
         show bed
         "..." 
         #insert bed creaking noise & peak animation
-        
+        play sound "audio/bed-creaking.mp3"
         p "Bon-"
         "{b}I am suddenly pulled out from under the bed-"
         #show bonnie disgusted
@@ -245,7 +245,7 @@ label global_bonnie:
         hide underbed
         show blackscreen
         "{b}SLAM{/b}"
-        play music "FEAR.mp3"
+        play music "audio/FEAR.mp3"
         "I am knocked back, something incredibly heavy and hard hitting me square in the face…"
         #HIDE BLACK SCREEN
         hide blackscreen

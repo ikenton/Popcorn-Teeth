@@ -8,11 +8,18 @@ transform alpha_dissolve:
     on hide:
         linear 0.5 alpha 0
     # This is to fade the bar in and out, and is only required once in your script
-screen countdown:
-    timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
-    bar value time range timer_range xalign 0.5 yalign 0.9 xmaximum 300 at alpha_dissolve 
-    #This is the timer bar.
 
+default time = 0
+
+screen qte(rangeD, missed_event):
+    on "hide" action SetVariable("g_time", 0)
+    hbox:
+        xalign 0.5
+        yalign 0.1
+        timer 0.1 repeat True action If(time > 0, true = SetVariable("time", time - 0.1), false = [Hide("qte"),Jump(missed_event)]) 
+        bar:
+            value AnimatedValue(value=time, range=rangeD, delay= 0.5)
+            xmaximum 300
 
 label global_hugoVendetta:
     $ timer_range = 0
@@ -38,12 +45,10 @@ label global_hugoVendetta:
             "Crap!"
             #timer
             $ time = 2
-            $ timer_range = 2
-            $ timer_jump = 'badending'
-            show screen countdown
+            show screen qte(2, badending)
             menu:
                 "Hide!":
-                    hide screen countdown
+                    hide screen qte
                     hide hugo angry
                     show pita underneath
                     "I quickly hide underneath the trailer and I pull my white dress with me so it isn’t poking out, getting it dirty in the process. I place my hand on my mouth as I watch Hugo walk to his trailer and go up the creaky steps. I can hear keys jingle."
@@ -51,12 +56,10 @@ label global_hugoVendetta:
                     #timed
                     
                     $ time = 2
-                    $ timer_range = 2
-                    $ timer_jump = 'wait'
-                    show screen countdown
+                    show screen qte(2,'wait')
                     menu:
                         "Go Now":
-                            hide screen countdown
+                            hide screen qte
                             hide pita underneath
                             scene pt-hugo-trailer
                             stop sound fadeout 1.0
@@ -69,7 +72,7 @@ label global_hugoVendetta:
                             p "Hugo?!-"
                             jump badending
                         "Wait":
-                            hide screen countdown
+                            hide screen qte
                             label wait:
                                 "I lay there under the trailer. I could hear Hugo walking inside the trailer."
                                 "I remember seeing the toolbox behind the trailer. Maybe there’s something in there that I can use. I crawl out from under the trailer and I stand up. I don't bother dusting off my dress and I quietly go behind the trailer."
@@ -102,7 +105,7 @@ label global_hugoVendetta:
                                 "I leave the trailer and head back to the courtyard."
                                 jump global_courtyard
                 "Throw a pebble":
-                    hide screen countdown
+                    hide screen qte
                     "I look down and grab a pebble off the ground. This should get 'em distracted!"
                     show hugo angry
                     h "Who’s there?!"
@@ -117,21 +120,17 @@ label global_hugoVendetta:
             "I dare not to take any chance of making myself known yet…I wait and listen for a while. After a moment,the humming stops and I can hear footsteps approaching!"
             #timed
             $ time = 2
-            $ timer_range = 2
-            $ timer_jump = 'prebadending'
-            show screen countdown
+            show screen qte(2, 'prebadending')
             menu:
                 "Hide!":
-                    hide screen countdown
+                    hide screen qte
                     show pita underneath
                     "I quickly hide underneath the trailer and I pull my white dress with me so it isn’t poking out, getting it dirty in the process. I place my hand on my mouth as I watch Hugo walk to his trailer and go up the creaky steps. I can hear keys jingle."
                     $ time = 2
-                    $ timer_range = 2
-                    $ timer_jump = 'wait2'
-                    show screen countdown
+                    show screen qte(2, 'wait2')
                     menu: #timed
                         "Go Now":
-                            hide screen countdown
+                            hide screen qte
                             hide pita underneath
                             "I crawl out of the trailer and I stand up, hunching as I approach behind Hugo. I go up one of the steps."
                             "Creeeak"
@@ -142,7 +141,7 @@ label global_hugoVendetta:
                             p "Hugo?!-"
                             jump badending
                         "Wait":
-                            hide screen countdown
+                            hide screen qte
                             label wait2:
                                 "I lay there under the trailer. I could hear Hugo walking inside the trailer."
                                 "Oh! I look up and notice a trapdoor, I can see a square outline of the light coming from inside the trailer. I grin and I wait for some minutes until I can barely hear any movement coming from inside the trailer."
