@@ -9,11 +9,19 @@ transform alpha_dissolve:
         linear 0.5 alpha 0
     # This is to fade the bar in and out, and is only required once in your script
 
-#$ config.layers = ['master', 'transient','screens','top', 'overlay']
-screen countdown:
-    timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
-    bar value time range timer_range xalign 0.5 yalign 0.9 xmaximum 300 at alpha_dissolve 
-    #This is the timer bar.
+
+default time = 0
+
+screen qte(rangeD, missed_event):
+    on "hide" action SetVariable("g_time", 0)
+    hbox:
+        xalign 0.5
+        yalign 0.1
+        timer 0.1 repeat True action If(time > 0, true = SetVariable("time", time - 0.1), false = [Hide("qte"),Jump(missed_event)]) 
+        bar:
+            value AnimatedValue(value=time, range=rangeD, delay= 0.5)
+            xmaximum 300
+
 label global_bonnie:
     $ timer_range = 0
     $ timer_jump = 0
@@ -39,12 +47,10 @@ label global_bonnie:
             "I stop in my tracks, the lump in the bed groans and begins getting up- I need to hide, {i}{b}now!{/i}{/b}"
             #TIMED CHOiICES
             $ time = 2
-            $ timer_range = 2
-            $ timer_jump = 'failed'
-            show screen countdown
+            show screen qte(2, 'failed')
             menu:
                 "Hide behind the vanity":
-                    hide screen countdown
+                    hide screen qte
                     show bonnie hidden
                     "I dash towards the vanity, hiding behind the old, rotted wood, white paint peeling off at every nook and cranny."
                     #show bonnie excited
@@ -83,20 +89,18 @@ label global_bonnie:
                     "Bits of veins and strings of tattered flesh now decorate the crevice with which once held her teeth in place, filling my stomach, regaining my power…"
                     jump global_courtyard
                 "Hide under the bed":
-                    hide screen countdown
+                    hide screen qte
                     "I keep my hand pressed over my mouth, biting my tongue as the shuffling goes quiet."
                     "..."
                     "After a few moments of silence, I spot Bonnie’s legs swinging overhead, and she makes her way over to her vanity, taking a seat and peering at her reflection in the mirror."
                     "I do my best to keep in the shadows, feeling fortunate that her room was so dimly lit."
                     "She opens her drawer and begins searching for something from within, this is my chance."
                     $ time = 2
-                    $ timer_range = 2
-                    $ timer_jump = 'sneak'
-                    show screen countdown
+                    show screen qte(2, 'sneak')
                     menu:
                         "Sneak up to her from behind": #fail
                             label sneak:
-                                hide screen countdown
+                                hide screen qte
                                 "I step out from under the bed, remaining as low to the floor as I can..."
                                 "Step."
                                 "Step.."
@@ -161,7 +165,8 @@ label global_bonnie:
 
                                 return
                         "Attempt an escape": #succeed but can no longer enter Bonnie's trailer
-                            hide screen countdown
+                           
+                            hide screen qte
                             "No..."
                             "This as a bad idea, and now she's awake."
                             "I need to focus on getting out of here."
@@ -169,7 +174,7 @@ label global_bonnie:
                             $ escapedBonnie = True
                             jump global_courtyard
                 "Attempt a direct approach":
-                    hide screen countdown
+                    hide screen qte
                     "No… I’m done hiding. I’m taking her on here and now."
                     "I stand my ground, balling my hands into tight fists as Bonnie rises from her slumber."
                 
