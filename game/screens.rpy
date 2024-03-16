@@ -308,7 +308,6 @@ screen navigation():
 
         textbutton _("Preferences") action ShowMenu("preferences")
 
-        #textbutton _("Art Showcase") action Sh vowMenu("showcase")
 
         if _in_replay:
 
@@ -1151,7 +1150,7 @@ screen confirm(message, yes_action, no_action):
     add "gui/overlay/confirm.png"
 
     frame:
-
+        
         vbox:
             xalign .5
             yalign .5
