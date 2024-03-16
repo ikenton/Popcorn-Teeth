@@ -554,13 +554,13 @@ screen about():
         vbox:
 
             label "[config.name!t]"
-            text _("Version [config.version!t]\n")
+            #text _("Version [config.version!t]\n")
 
             ## gui.about is usually set in options.rpy.
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("One night, Striking Light Circus’s main attraction, Pita the tooth fairy, finally breaks free from her cage. Being in a weakened state from abuse and wandless, she must regain her strength by feasting on the teeth of her abusers and retrieving her wand from the ringmaster’s grasp, so she can magically get back home. Play as Pita to help her escape this prison safely, and you must do this sharply so she doesn’t get captured or punished.{p}{p}Popcorn Teeth is a student run project made by the lovely students in the CPP Game Development Club.{p}{p}{b}CREDITS{/b}{p}{p}Aren/Amaiyah A. Cortez (Artist and Writer, Insta: Aren5ei){p}{p}Collin/Sammi Bernardino (Musician and Sound, Insta: sammi.calibrated){p}{p}Cordial W. (Writer){p}{p}Isabella Kenton (Background Artist and Programmer){p}{p}Janice L. / Lupiz (Programmer){p}{p}Sam M. (Writer)")
 
 
 style about_label is gui_label
