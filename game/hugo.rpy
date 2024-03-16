@@ -9,7 +9,7 @@ transform alpha_dissolve:
         linear 0.5 alpha 0
     # This is to fade the bar in and out, and is only required once in your script
 
-default time = 0
+$ time = 0
 
 screen qte(rangeD, missed_event):
     on "hide" action SetVariable("g_time", 0)
