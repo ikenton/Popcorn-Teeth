@@ -16,8 +16,10 @@ label global_ringmaster:
             stop sound fadeout 1.0
             play music "tension.mp3"
             scene ringmaster-trailer
+            $ persistent.ringmasterTrailer_unlocked = True
             "I take a step on the stepping stool and open the door to a poorly lit room."
             show ringmaster
+            $ persistent.ringmaster_unlocked = True
             "A man sits at his desk, writing. He doesn’t bother to raise his head, but instead reaches for his mask and slips it on."
             if not marlonIsAlive and not bonnieIsAlive and not hugoIsAlive:
                 jump goodEnding
@@ -47,6 +49,7 @@ label global_ringmaster:
                 "With my unfathomable rage, I knock him down to the ground and pummel him senselessly."
                 "He must pay for everything he has done to me!"
                 show ringmaster dead
+                $ persistent.ringmasterDead_unlocked = True
                 "I tear off his mask and I grins as he begins coughing and wheezing."
                 rm "Do you know how much of a dream come true that you are to me?"
                 rm "Ever since I was a kid, I worshiped you, I kept sacrificing my teeth till I got you."
@@ -96,6 +99,7 @@ label global_ringmaster:
                 p "AHH-AGH"
                 hide blackscreen                
                 show pita dead
+                $ persistent.pitaDead_unlocked = True
                 "I look down at my leg and notice that it’s bleeding and that one of my bones is sticking out."
                 p "{b}NO! NO!!{/b}"
                 "My body terribly shakes in horror at the sigh of my own broken leg. "

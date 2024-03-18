@@ -48,6 +48,14 @@ label global_visitMarlon:
     show marlon surprised at right
     show crimson at left
     #also have lion
+
+    $ persistent.marlonNuetral_unlocked = True
+    $ persistent.marlonHappy_unlocked = True
+    $ persistent.marlonSuprised_unlocked = True
+    $ persistent.marlonSad_unlocked = True
+    $ persistent.marlonDisapointed_unlocked = True
+    $ persistent.marlonAngry_unlocked = True
+    $ persistent.crimson_unlocked = True
     
     m "I-Is someone there?"
 
@@ -83,6 +91,7 @@ label global_visitMarlon:
     show marlon happy
     m "Let’s head inside my trailer, my animals are being too noisy right now…"
     scene pt-marlon-trailer
+    $ persistent.marlonTrailer_unlocked = True
     stop sound fadeout 1.0
     show marlon nuetral at right
     show crimson at left
@@ -368,6 +377,7 @@ label global_visitMarlon:
                     #play music "FEAR.mp3" noloop
                     stop music fadeout 3.0
                     show crimson bad
+                    $ persistent.crimsonBad_unlocked = True
                     "The lion on top of me growls, raising its hackles to reveal large and sharp teeth. For a moment, I smile as I think about how delicious they must be…"
                     "And then, I feel the lion’s jaw wrap around my neck, piercing my throat with his fangs. The lion rips my body to shreds, piece by piece, and my vision fades to black."
                     
@@ -385,6 +395,7 @@ label global_visitMarlon:
                     p "That’s right, beg. Beg for your life as I take it away, just like the Ringmaster and this damn Circus took away mine."
                     p "Oh, I wonder how he’ll react once he’s seen how I devoured his precious little boy."
                     show marlon bad
+                    $ persistent.marlonBad_unlocked = True
                     stop music fadeout 3.0
                     $ marlonIsAlive = False
                     "My hands are thrust into his mouth cavity, as I dig my fingers into its roof and bottom jaw. I begin to stretch Marlon’s mouth wider and wider, and all he can do is cry and scream."
@@ -413,6 +424,7 @@ label global_visitMarlon:
                     #play music "FEAR.mp3"
                     stop music fadeout 3.0
                     show crimson bad
+                    $ persistent.crimsonBad_unlocked = True
                     "I can feel its claws press against my body as it takes a bite out of my arm. The pain is enough to send my vision flashing white as I fall unconscious."
                     "The last thing I see is Marlon standing above me, his face warped with hurt, regret, and finally resolution."
 
@@ -455,6 +467,7 @@ label global_visitMarlon:
                     "We shake hands as we put our plan into motion: Marlon will escort me to the Ringmaster’s trailer, pretending as if I had been captured for escaping. Then, when the Ringmaster leasts expects it, Marlon will toss me my wand."
                     "Before we leave, Marlon takes with him the portrait of Echo on the wall and a bag of Steak Bites, with Crimson following behind us as we leave his trailer."
                     scene ringmaster-trailer
+                    $ persistent.ringmasterTrailer_unlocked = True
                     #play music "tension.mp3" fadein 1.5
                     "We make it to the Ringmaster’s trailer, and putting on my best act yet, I pretend to be helplessly captured by Marlon."
                     "When we enter the trailer, the Ringmaster is there playing quietly with my wand."
@@ -504,6 +517,7 @@ label global_visitMarlon:
                     "With my magic, I crack apart his jaw like a peanut shell, and almost instantly his body falls limp. Marlon winces and turns away from the scene."
                     hide ringmaster 
                     show marlon good
+                    $ persistent.marlonGood_unlocked = True
                     "As the Ringmaster’s body falls to the ground, I instantly rush over to his head, plucking out his teeth and gorging it down."
                     "When I chewed, I realized something was wrong and spat it out!"
                     "Disgusting! It's wood!"

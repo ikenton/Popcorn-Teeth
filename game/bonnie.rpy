@@ -31,6 +31,7 @@ label global_bonnie:
     stop sound fadeout 1.0
     play music "audio/tension.mp3" fadein 0.5
     scene pt bonnie trailer
+    $ persistent.bonnieTrailer_unlocked = True
 
     "I look around, I’ve not been in here before, but the room just screamed her name," 
     "from the posters strewn about the wall reciting her praises, flowers now wilted sat atop her vanity," 
@@ -39,8 +40,13 @@ label global_bonnie:
     
     "..."
     "I need to stay quiet... but..."
+
     menu:
         "I am still rather hungry…":
+            $ persistent.bonnieExcited_unlocked = True
+            $ persistent.bonnieSad_unlocked = True
+            $ persistent.bonnieDisgust_unlocked = True
+            $ persistent.bonnieShocked_unlocked = True
             "I approach the bed, stepping carefully through the mess of fallen posters and petals. The floor is dangerously creaky."
             "Step… step… step-"
             "{i}{b}Creaaak~{/b}{/i}"
@@ -52,6 +58,7 @@ label global_bonnie:
                 "Hide behind the vanity":
                     hide screen qte
                     show bonnie hidden
+                    $ persistent.bonnieHidden_unlocked = True
                     "I dash towards the vanity, hiding behind the old, rotted wood, white paint peeling off at every nook and cranny."
                     #show bonnie excited
                     b "*Yawn…*"
@@ -81,6 +88,7 @@ label global_bonnie:
                     stop music fadeout 1.5
                     p "I am so hungry… starved, even.."
                     show bonnie dead
+                    $ persistent.bonnieDead_unlocked = True
                     $ bonnieIsAlive = False
                     # INSERT CG'S HERE
                     "{b}{i}Crunch. Crunch. Crunch.{/b}{/i}"
@@ -179,15 +187,18 @@ label global_bonnie:
                     "I stand my ground, balling my hands into tight fists as Bonnie rises from her slumber."
                 
                     show bonnie shocked 
+
                     b "What- Pita?  What are you doing in here?!"
                     
                     p "..."
                     "I can feel my heart racing, my mouth sticky and sweat dripping from every pore. I clench my fists, stepping towards her."
                     "She slips her hand behind her bed, glaring at me."
                     show bonnie disgusted
+
                     b "What are you getting at, little fairy… come to kill me, have you?"
                     "I stumble, taking in a sharp breath, but I continue on my way towards her."
                     show bonnie excited
+
                     b "Oh I see.. Lords aren’t you just…"
                     "She pauses, pressing a finger to her lips in contemplation"
                     show bonnie disgusted
@@ -210,6 +221,7 @@ label global_bonnie:
                     b "Oh you poor thing… how clumsy of you, falling right onto such a dangerous object like that…"
                     #play music "FEAR.mp3"
                     show bonnie bad
+                    $ persistent.bonnie_unlocked = True
                     "I slide off, falling onto the ground."
                     b "I’ve had enough of you, little fairy…"
                     "She slams the object into my stomach, my body lurching forward in pain, tears streaming down my cheeks, the life spilling from my eyes in pitiful, salty tears."
@@ -229,6 +241,8 @@ label global_bonnie:
         show underbed
         show bonnie peak at offscreenleft
         show bed
+        $ persistent.bonniePeak_unlocked = True
+        $ persistent.underBed_unlocked = True
         "..."
         "Maybe she didn’t... hear me..?"
         show bonnie peak at Move((0.0, -0.8), (0.0, 0.0), 5.0, xanchor = 0, yanchor = 0)
@@ -250,6 +264,7 @@ label global_bonnie:
         #HIDE BLACK SCREEN
         hide blackscreen
         show bonnie disgusted at center
+
         "The drawer from her vanity, broken in half, held in her hands"
         "The objects that were once inside now spilled out, decorating the floor in pink and green hair ties and makeup and other frilly things."
         #show bonnie disgusted
@@ -257,6 +272,7 @@ label global_bonnie:
         "Her footsteps are muffled by the ringing in my head as she walks past me to her bed, grabbing something from behind it. It was something shiny, that reflected the dim light from her vanity"
         
         show bonnie bad
+        $ persistent.bonnieBad_unlocked = True
         "She stands above me, raising the object over her head."
         
         b "I’ve had enough of you, little fairy…"

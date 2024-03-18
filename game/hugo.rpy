@@ -28,13 +28,24 @@ label global_hugoVendetta:
     "I look over and quietly approach the red and flashy trailer with many posters from past shows on it. I don’t seem to be on any of them."
     "I can see smoke coming from behind the trailer and humming. I cock my head with curiosity."
     "Who could it be?"
+
     menu:
         "Leave":
             jump global_courtyard
         "Take a peek":
+            $ persistent.hugoNuetral_unlocked = True
+            $ persistent.hugoSmile_unlocked = True
+            $ persistent.hugoSmoking_unlocked = True
+            $ persistent.hugoSuprised_unlocked = True
+            $ persistent.hugoUpset_unlocked = True
+            $ persistent.hugoAngry_unlocked = True
+            $ persistent.hugoBack_unlocked = True
+
             "I place my dainty hand on the trailer and slowly poke my head out."
             "Oh I know who it is."
             show hugo back
+            $ persistent.hugoChad_unlocked = True
+            $ persistent.hugoPoster_unlocked = True
             "I can see the back of that mean clown, humming and smoking."
             "Ugh, I hate Hugo… he’d press his cigarette butts onto my skin till I could smell my own skin and he’d bad mouth me backstage. I get that he never wanted me here, but I also never wanted to be here!"
             "Oh!"
@@ -45,7 +56,7 @@ label global_hugoVendetta:
             "Crap!"
             #timer
             $ time = 2
-            show screen qte(2, badending)
+            show screen qte(2, 'badending')
             menu:
                 "Hide!":
                     hide screen qte
@@ -62,6 +73,7 @@ label global_hugoVendetta:
                             hide screen qte
                             hide pita underneath
                             scene pt-hugo-trailer
+                            $ persistent.hugoTrailer_unlocked = True
                             stop sound fadeout 1.0
                             "I crawl out of the trailer and I stand up, hunching as I approach behind Hugo. I go up one of the steps and it creaks."
                             "!!!"
@@ -84,10 +96,12 @@ label global_hugoVendetta:
                                 "I look around and find an open window. I smile and climb my way into the trailer quietly. I can hear gentle snoring coming from the bedroom area of the trailer."
                                 "I hold the hammer with both hands and slowly approach the source of the noise."
                                 scene pt-hugo-trailer
+                                $ persistent.hugoTrailer_unlocked = True
                                 stop sound fadeout 1.0
                                 "I poke my head in and view a resting Hugo with his arms behind his head and his legs crossed. It seems that he’s napping…"
                                 "Perfect"
                                 show hugo hammer
+                                $ persistent.hugoHammer_unlocked = True
                                 $ hugoIsAlive = False
                                 "I raise the hammer above my head and strike it down onto Hugo’s face repeatedly."
                                 p "Hehe—-HEHEHEH!"
@@ -117,6 +131,14 @@ label global_hugoVendetta:
                     p "Hugo?!-"
                     jump badending
         "Wait and listen":
+            $ persistent.hugoNuetral_unlocked = True
+            $ persistent.hugoSmile_unlocked = True
+            $ persistent.hugoSmoking_unlocked = True
+            $ persistent.hugoSuprised_unlocked = True
+            $ persistent.hugoUpset_unlocked = True
+            $ persistent.hugoAngry_unlocked = True
+            $ persistent.hugoBack_unlocked = True
+
             "I dare not to take any chance of making myself known yet…I wait and listen for a while. After a moment,the humming stops and I can hear footsteps approaching!"
             #timed
             $ time = 2
@@ -125,6 +147,7 @@ label global_hugoVendetta:
                 "Hide!":
                     hide screen qte
                     show pita underneath
+                    $ persistent.underTrailer_unlocked = True
                     "I quickly hide underneath the trailer and I pull my white dress with me so it isn’t poking out, getting it dirty in the process. I place my hand on my mouth as I watch Hugo walk to his trailer and go up the creaky steps. I can hear keys jingle."
                     $ time = 2
                     show screen qte(2, 'wait2')
@@ -147,6 +170,7 @@ label global_hugoVendetta:
                                 "Oh! I look up and notice a trapdoor, I can see a square outline of the light coming from inside the trailer. I grin and I wait for some minutes until I can barely hear any movement coming from inside the trailer."
                                 "I slightly push up the trapdoor and it opens."
                                 scene pt-hugo-trailer
+                                $ persistent.hugoTrailer_unlocked = True
                                 stop sound fadeout 1.0
                                 hide pita underneath
                                 "I grin and I enter the trailer though the trapdoor as quietly as I can."
@@ -182,6 +206,7 @@ label global_hugoVendetta:
     label badending:
         play music "FEAR.mp3"
         show hugo bad
+        $ persistent.hugoBad_unlocked = True
         "I felt my neck be grasped and my body be lifted! I gasp and hyperventilate, clawing at the hand around my neck."
         h "I’m so happy that you gave me a reason to kill you."
         p "ghh- hk!"
