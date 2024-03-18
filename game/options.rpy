@@ -29,7 +29,7 @@ define config.version = "1.0"
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _p("""
+define gui.about = _p("""One night, Striking Light Circus’s main attraction, Pita the tooth fairy, finally breaks free from her cage. Being in a weakened state from abuse and wandless, she must regain her strength by feasting on the teeth of her abusers and retrieving her wand from the ringmaster’s grasp, so she can magically get back home. Play as Pita to help her escape this prison safely, and you must do this sharply so she doesn’t get captured or punished.{p}{p}Popcorn Teeth is a student run project made by the lovely students in the CPP Game Development Club.{p}{p}{b}CREDITS{/b}{p}{p}Aren/Amaiyah A. Cortez (Artist and Writer, Insta: Aren5ei){p}{p}Collin/Sammi Bernardino (Musician and Sound, Insta: sammi.calibrated){p}{p}Cordial W. (Writer){p}{p}Isabella Kenton (Background Artist and Programmer){p}{p}Janice L. / Lupiz (Programmer){p}{p}Sam M. (Writer)
 """)
 
 
@@ -62,7 +62,7 @@ define config.has_voice = True
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-define config.main_menu_music = "main-menu-theme.mp3"
+define config.main_menu_music = "audio/main-menu-theme.mp3"
 
 
 ## Transitions #################################################################
