@@ -98,6 +98,7 @@ label global_bonnie:
                     jump global_courtyard
                 "Hide under the bed":
                     hide screen qte
+                    show full underbed
                     "I keep my hand pressed over my mouth, biting my tongue as the shuffling goes quiet."
                     "..."
                     "After a few moments of silence, I spot Bonnie’s legs swinging overhead, and she makes her way over to her vanity, taking a seat and peering at her reflection in the mirror."
@@ -109,6 +110,7 @@ label global_bonnie:
                         "Sneak up to her from behind": #fail
                             label sneak:
                                 hide screen qte
+                                hide full underbed
                                 "I step out from under the bed, remaining as low to the floor as I can..."
                                 "Step."
                                 "Step.."
@@ -178,6 +180,7 @@ label global_bonnie:
                             "No..."
                             "This as a bad idea, and now she's awake."
                             "I need to focus on getting out of here."
+                            hide full underbed
                             "I pull myself across the floor, keeping low as to avoid Bonnie’s sight, and glance at Bonnie one last time before slipping through the door."
                             $ escapedBonnie = True
                             jump global_courtyard
