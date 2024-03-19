@@ -290,12 +290,11 @@ screen navigation():
         style_prefix "navigation"
 
         xpos gui.navigation_xpos
-        yalign 0.5
+        yalign 0.85
 
         spacing gui.navigation_spacing
 
         if main_menu:
-            yalign 0.85
             textbutton _("Start") action Start()
 
         else:
@@ -308,8 +307,8 @@ screen navigation():
 
         textbutton _("Preferences") action ShowMenu("preferences")
 
-        if renpy.get_screen("main_menu"):
-            textbutton _("Gallery") action ShowMenu("gallery_characters")
+        #if renpy.get_screen("main_menu"):
+        textbutton _("Gallery") action ShowMenu("gallery_characters")
 
         if _in_replay:
 
