@@ -2,6 +2,7 @@ define rm = Character("Ringmaster", color = "#F00040")
 define p = Character("Pita", color = "#edf4b3")
 
 label global_ringmaster:
+    show ringmaster door
     "I approach the trailer and notice that it’s slightly open."
     if marlonIsAlive or bonnieIsAlive or hugoIsAlive:
         "Should I enter?"
@@ -10,9 +11,11 @@ label global_ringmaster:
                 jump enter
             "No":
                 "I slowly back away from the open door and my immense dread fades."
+                hide door
                 jump global_courtyard
     else:
         label enter:
+            hide door
             stop sound fadeout 1.0
             play music "tension.mp3"
             scene ringmaster-trailer
