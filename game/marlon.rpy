@@ -328,6 +328,8 @@ label global_visitMarlon:
                     p "What was his name?"
                     "Marlon paused for a moment, taking one more glance to the portrait on the wall before smiling to himself."
                     m "Echo"
+                    $ persistent.marlonEchoKiss_unlocked = True
+                    $ persistent.echo_unlocked = True
                 "Really? You and him?":
                     hide screen qte
                     $ bad += 1
