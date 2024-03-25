@@ -192,6 +192,10 @@ init python:
     gallery.button("hugoPoster")
     gallery.image("hugo poster")
     gallery.condition("persistent.hugoPoster_unlocked")
+    
+    gallery.button("marlonPregante")
+    gallery.image("marlon pregante")
+    gallery.condition("persistent.marlonPregante_unlocked")
 
 transform gallery_transform_full:
     zoom 0.35
@@ -348,6 +352,7 @@ screen gallery_other:
             xalign 0.5
             yalign 0.5
             spacing 30
-            grid 2 1:
+            grid 2 2:
                 add gallery.make_button(name="hugoChad", unlocked=At("images/chad hugo.png",  gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="hugoPoster", unlocked=im.Scale("images/hugoposter.png", 360, 415.9), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="marlonPregante", unlocked=im.Scale("images/marlon pregante.png", 519,415.3), locked=At("images/blackscreen.png", gallery_transform_locked))
