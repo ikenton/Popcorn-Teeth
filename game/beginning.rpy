@@ -55,5 +55,6 @@ label global_beginning:
     hide pita sad
     scene pt-courtyard
     $ persistent.ptCourtyard_unlocked = True
+    $ persistent.pitapita_unlocked = True
     "This must be where they sleep. I wonder which one’s The Ringmaster’s?"
     jump global_courtyard

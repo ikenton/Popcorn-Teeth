@@ -197,6 +197,10 @@ init python:
     gallery.image("marlon pregante")
     gallery.condition("persistent.marlonPregante_unlocked")
 
+    gallery.button("pitapita")
+    gallery.image("pita pita")
+    gallery.condition("persistent.pitapita_unlocked")
+
 transform gallery_transform_full:
     zoom 0.35
 
@@ -356,3 +360,4 @@ screen gallery_other:
                 add gallery.make_button(name="hugoChad", unlocked=At("images/chad hugo.png",  gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="hugoPoster", unlocked=im.Scale("images/hugoposter.png", 360, 415.9), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="marlonPregante", unlocked=im.Scale("images/marlon pregante.png", 519,415.3), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="pitapita", unlocked=At("images/pita pita.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
