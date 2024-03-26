@@ -392,11 +392,11 @@ screen gallery_other:
             xalign 0.5
             yalign 0.5
             spacing 30
-            grid 2 7:
-                add gallery.make_button(name="pitaInCage", unlocked=At("images/pita in cage.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+            grid 3 5:
                 add gallery.make_button(name="hugoPoster", unlocked=At("images/hugo poster.png",gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
-                add gallery.make_button(name="marlonEchoKiss", unlocked=At("images/marlon echo kiss.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="echoPoster", unlocked=At("images/echo poster.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="pitaInCage", unlocked=At("images/pita in cage.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="marlonEchoKiss", unlocked=im.Scale("images/marlon echo kiss.png", 400,279), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="echoImage", unlocked=At("images/echo.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="pitaChibi", unlocked=At("images/pita chibi.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="marlonChibi", unlocked=At("images/marlon chibi.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
@@ -404,6 +404,6 @@ screen gallery_other:
                 add gallery.make_button(name="hugoChibi", unlocked=At("images/hugo chibi.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="ringmasterChibi", unlocked=At("images/ringmaster chibi.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="hugoChad", unlocked=At("images/chad hugo.png",  gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
-                add gallery.make_button(name="marlonPregante", unlocked=im.Scale("images/marlon pregante.png", 519,415.3), locked=At("images/blackscreen.png", gallery_transform_locked))
-                add gallery.make_button(name="pitapita", unlocked=At("images/pita pita.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="marlonPregante", unlocked=im.Scale("images/marlon pregante.png", 400,311), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="pitapita", unlocked=im.Scale("images/pita pita.png", 400, 291), locked=At("images/blackscreen.png", gallery_transform_locked))
                 
