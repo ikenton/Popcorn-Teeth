@@ -209,6 +209,34 @@ init python:
     gallery.image("echo")
     gallery.condition("persistent.echo_unlocked")
 
+    gallery.button("pitaInCage")
+    gallery.image("pita in cage")
+    gallery.condition("persistent.pitaInCage_unlocked")
+
+    gallery.button("echoPoster")
+    gallery.image("echo poster")
+    gallery.condition("persistent.echoPoster_unlocked")
+
+    gallery.button("hugoChibi")
+    gallery.image("hugo chibi")
+    gallery.condition("persistent.hugoChibi_unlocked")
+    
+    gallery.button("marlonChibi")
+    gallery.image("marlon chibi")
+    gallery.condition("persistent.marlonChibi_unlocked")
+
+    gallery.button("bonnieChibi")
+    gallery.image("bonnie chibi")
+    gallery.condition("persistent.bonnieChibi_unlocked")
+
+    gallery.button("ringmasterChibi")
+    gallery.image("ringmaster chibi")
+    gallery.condition("persistent.ringmasterChibi_unlocked")
+
+    gallery.button("pitaChibi")
+    gallery.image("pita chibi")
+    gallery.condition("persistent.pitaChibi_unlocked")
+
 transform gallery_transform_full:
     zoom 0.35
 
@@ -364,10 +392,18 @@ screen gallery_other:
             xalign 0.5
             yalign 0.5
             spacing 30
-            grid 2 4:
-                add gallery.make_button(name="hugoChad", unlocked=At("images/chad hugo.png",  gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+            grid 2 7:
+                add gallery.make_button(name="pitaInCage", unlocked=At("images/pita in cage.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="hugoPoster", unlocked=At("images/hugo poster.png",gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="marlonEchoKiss", unlocked=At("images/marlon echo kiss.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="echoPoster", unlocked=At("images/echo poster.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="echoImage", unlocked=At("images/echo.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="pitaChibi", unlocked=At("images/pita chibi.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="marlonChibi", unlocked=At("images/marlon chibi.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="bonnieChibi", unlocked=At("images/bonnie chibi.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="hugoChibi", unlocked=At("images/hugo chibi.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="ringmasterChibi", unlocked=At("images/ringmaster chibi.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="hugoChad", unlocked=At("images/chad hugo.png",  gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="marlonPregante", unlocked=im.Scale("images/marlon pregante.png", 519,415.3), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="pitapita", unlocked=At("images/pita pita.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
-                add gallery.make_button(name="marlonEchoKiss", unlocked=At("images/marlon echo kiss.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
-                add gallery.make_button(name="echoImage", unlocked=At("images/echo.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+                
