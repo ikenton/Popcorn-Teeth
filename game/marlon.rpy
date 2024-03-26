@@ -331,6 +331,7 @@ label global_visitMarlon:
                     $ persistent.marlonEchoKiss_unlocked = True
                     $ persistent.echoPoster_unlocked = True
                     $ persistent.echo_unlocked = True
+                    $ persistent.marlonPregante_unlocked = True
                 "Really? You and him?":
                     hide screen qte
                     $ bad += 1
@@ -530,7 +531,6 @@ label global_visitMarlon:
                     "I tear it away from his body and begin gorging on it."
                     "Oh, I never realized how hungry I was until now."
                     "And it’s sweet. {i}Oh so sweet{/i}."
-                    $ persistent.marlonPregante_unlocked = True
 
                     return
             "I think I hear something going on outside." if crimsonhere and not attempted:
