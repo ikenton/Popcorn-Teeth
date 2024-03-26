@@ -47,6 +47,7 @@ label global_bonnie:
             $ persistent.bonnieSad_unlocked = True
             $ persistent.bonnieDisgust_unlocked = True
             $ persistent.bonnieShocked_unlocked = True
+            $ persistent.bonnieChibi_unlocked = True
             "I approach the bed, stepping carefully through the mess of fallen posters and petals. The floor is dangerously creaky."
             "Step… step… step-"
             "{i}{b}Creaaak~{/b}{/i}"

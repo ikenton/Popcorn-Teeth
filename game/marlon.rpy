@@ -56,7 +56,7 @@ label global_visitMarlon:
     $ persistent.marlonDisapointed_unlocked = True
     $ persistent.marlonAngry_unlocked = True
     $ persistent.crimson_unlocked = True
-    
+    $ persistent.marlonChibi_unlocked = True
     m "I-Is someone there?"
 
     "I see Marlon, the circus’ animal trainer and performer. He’s standing in front of his trailer with a lion by his side, whip in one hand as he works with the animal."
@@ -329,6 +329,7 @@ label global_visitMarlon:
                     "Marlon paused for a moment, taking one more glance to the portrait on the wall before smiling to himself."
                     m "Echo"
                     $ persistent.marlonEchoKiss_unlocked = True
+                    $ persistent.echoPoster_unlocked = True
                     $ persistent.echo_unlocked = True
                 "Really? You and him?":
                     hide screen qte

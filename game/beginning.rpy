@@ -5,6 +5,7 @@ label global_beginning:
     #$ renpy.movie_cutscene("")
     show ringmaster lean
     $ persistent.ringmasterLean_unlocked = True
+    $ persistent.ringmasterChibi_unlocked = True
     rm "..."
     rm "You did great today, Sweetheart. The crowd loved you like always."
     rm "Continue to be my good girl and I’ll get you a treat at the end of this week."
@@ -15,6 +16,7 @@ label global_beginning:
     rm "See you tomorrow."
     show cage int
     $ persistent.cageInt_unlocked = True
+    $ persistent.pitaInCage_unlocked = True
     #footsteps sound
     p "Finally he's gone"
     "2 hours pass as I wait until I felt everyone leave the tent."
@@ -22,7 +24,7 @@ label global_beginning:
     "Aha! I got it. Finally!"
     show pita happy
     $ persistent.pitaHappy_unlocked = True
-    
+    $ persistent.pitaChibi_unlocked = True
     "I crawl out of the cage and crack my back. After tonight, I'm never going to perform again."
     "I look at the bone in the lock’s keyhole. I reach out and take it."
     "I immediately shove it in my mouth."

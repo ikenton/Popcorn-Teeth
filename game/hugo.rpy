@@ -40,7 +40,7 @@ label global_hugoVendetta:
             $ persistent.hugoUpset_unlocked = True
             $ persistent.hugoAngry_unlocked = True
             $ persistent.hugoBack_unlocked = True
-
+            $ persistent.hugoChibi_unlocked = True
             "I place my dainty hand on the trailer and slowly poke my head out."
             "Oh I know who it is."
             show hugo back
