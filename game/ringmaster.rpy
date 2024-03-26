@@ -1,6 +1,11 @@
 define rm = Character("Ringmaster", color = "#F00040")
 define p = Character("Pita", color = "#edf4b3")
-
+image ringmaster_looks_slideshow:
+    "ringmaster maskless 2"
+    pause 1.0
+    "ringmaster maskless"
+    pause 1.0
+        
 label global_ringmaster:
     show ringmaster door
     "I approach the trailer and notice that it’s slightly open."
@@ -18,12 +23,14 @@ label global_ringmaster:
             hide door
             stop sound fadeout 1.0
             play music "tension.mp3"
-            scene ringmaster-trailer
+            #scene ringmaster-trailer
             $ persistent.ringmasterTrailer_unlocked = True
             "I take a step on the stepping stool and open the door to a poorly lit room."
-            show ringmaster
+            scene ringmaster_looks_slideshow
             $ persistent.ringmaster_unlocked = True
             "A man sits at his desk, writing. He doesn’t bother to raise his head, but instead reaches for his mask and slips it on."
+            scene ringmaster-trailer
+            show ringmaster
             if not marlonIsAlive and not bonnieIsAlive and not hugoIsAlive:
                 jump goodEnding
             else:

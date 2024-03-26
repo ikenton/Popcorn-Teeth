@@ -22,6 +22,7 @@ screen warning():
             
 # The game starts here.
 label start:  
+    jump global_ringmaster
     stop music fadeout 2.0
     scene trigger warning
     call screen warning
