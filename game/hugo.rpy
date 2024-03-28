@@ -76,6 +76,7 @@ label global_hugoVendetta:
                             stop channel1
                             $ persistent.hugoTrailer_unlocked = True
                             stop sound fadeout 1.0
+                            play sound "wood-creak-single-v2.mp3" fadein 0.5
                             "I crawl out of the trailer and I stand up, hunching as I approach behind Hugo. I go up one of the steps and it creaks."
                             "!!!"
                             show hugo back 
@@ -150,6 +151,7 @@ label global_hugoVendetta:
                     hide screen qte
                     show pita underneath
                     $ persistent.underTrailer_unlocked = True
+                    play sound "wood-creak-single-v2.mp3" fadein 0.5
                     "I quickly hide underneath the trailer and I pull my white dress with me so it isn’t poking out, getting it dirty in the process. I place my hand on my mouth as I watch Hugo walk to his trailer and go up the creaky steps. I can hear keys jingle."
                     stop channel2 fadeout 1.0
                     $ time = 5
@@ -160,6 +162,7 @@ label global_hugoVendetta:
                             hide pita underneath
                             "I crawl out of the trailer and I stand up, hunching as I approach behind Hugo. I go up one of the steps."
                             #play creak sound
+                            play sound "wood-creak-single-v3.mp3"
                             "Creeeak"
                             "!!!"
                             "Hugo suddenly turns around"
