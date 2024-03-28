@@ -73,6 +73,7 @@ label global_hugoVendetta:
                             hide screen qte
                             hide pita underneath
                             scene pt-hugo-trailer
+                            stop channel1
                             $ persistent.hugoTrailer_unlocked = True
                             stop sound fadeout 1.0
                             "I crawl out of the trailer and I stand up, hunching as I approach behind Hugo. I go up one of the steps and it creaks."
@@ -96,6 +97,7 @@ label global_hugoVendetta:
                                 "I look around and find an open window. I smile and climb my way into the trailer quietly. I can hear gentle snoring coming from the bedroom area of the trailer."
                                 "I hold the hammer with both hands and slowly approach the source of the noise."
                                 scene pt-hugo-trailer
+                                stop channel1
                                 $ persistent.hugoTrailer_unlocked = True
                                 stop sound fadeout 1.0
                                 "I poke my head in and view a resting Hugo with his arms behind his head and his legs crossed. It seems that he’s napping…"
@@ -138,7 +140,7 @@ label global_hugoVendetta:
             $ persistent.hugoUpset_unlocked = True
             $ persistent.hugoAngry_unlocked = True
             $ persistent.hugoBack_unlocked = True
-
+            play channel2 ("audio/footsteps-dirt-gravel.mp3")
             "I dare not to take any chance of making myself known yet…I wait and listen for a while. After a moment,the humming stops and I can hear footsteps approaching!"
             #timed
             $ time = 5
@@ -149,6 +151,7 @@ label global_hugoVendetta:
                     show pita underneath
                     $ persistent.underTrailer_unlocked = True
                     "I quickly hide underneath the trailer and I pull my white dress with me so it isn’t poking out, getting it dirty in the process. I place my hand on my mouth as I watch Hugo walk to his trailer and go up the creaky steps. I can hear keys jingle."
+                    stop channel2 fadeout 1.0
                     $ time = 5
                     show screen qte(5, 'wait2')
                     menu: #timed
@@ -156,6 +159,7 @@ label global_hugoVendetta:
                             hide screen qte
                             hide pita underneath
                             "I crawl out of the trailer and I stand up, hunching as I approach behind Hugo. I go up one of the steps."
+                            #play creak sound
                             "Creeeak"
                             "!!!"
                             "Hugo suddenly turns around"
@@ -167,11 +171,12 @@ label global_hugoVendetta:
                             hide screen qte
                             label wait2:
                                 "I lay there under the trailer. I could hear Hugo walking inside the trailer."
+                                stop channel2 fadeout 1.0
                                 "Oh! I look up and notice a trapdoor, I can see a square outline of the light coming from inside the trailer. I grin and I wait for some minutes until I can barely hear any movement coming from inside the trailer."
                                 "I slightly push up the trapdoor and it opens."
                                 scene pt-hugo-trailer
+                                stop channel1
                                 $ persistent.hugoTrailer_unlocked = True
-                                stop sound fadeout 1.0
                                 hide pita underneath
                                 "I grin and I enter the trailer though the trapdoor as quietly as I can."
                                 "I scan my surroundings and see Hugo in bed, facing the wall. lowering my head, I quietly approach him. Eventually, I  get close enough to him and I look around for a weapon. I grab the base of a lamp with both of my hands."
@@ -204,6 +209,7 @@ label global_hugoVendetta:
                                         "I drop the lamp."
                                         jump badending
     label badending:
+        stop channel1
         play music "FEAR.mp3"
         show hugo bad
         $ persistent.hugoBad_unlocked = True

@@ -7,7 +7,6 @@ image pullaway_slideshow:
     pause 1.0
 label global_beginning:
     #INSERT INTRO CUTSCENE HERE!!!!
-    #$ renpy.movie_cutscene("")
     show ringmaster lean
     $ persistent.ringmasterLean_unlocked = True
     $ persistent.ringmasterChibi_unlocked = True
@@ -67,6 +66,8 @@ label global_beginning:
     "I look up and see the yellow dim light coming from outside. I approach it."
     hide pita sad
     scene pt-courtyard
+    play channel1(  "audio/cricket-song.mp3") volume 0.09
+
     $ persistent.ptCourtyard_unlocked = True
     $ persistent.pitapita_unlocked = True
     "This must be where they sleep. I wonder which one’s The Ringmaster’s?"

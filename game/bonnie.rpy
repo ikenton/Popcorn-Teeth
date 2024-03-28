@@ -31,6 +31,7 @@ label global_bonnie:
     stop sound fadeout 1.0
     play music "audio/tension.mp3" fadein 0.5
     scene pt bonnie trailer
+    stop channel1
     $ persistent.bonnieTrailer_unlocked = True
 
     "I look around, I’ve not been in here before, but the room just screamed her name," 
@@ -50,6 +51,7 @@ label global_bonnie:
             $ persistent.bonnieChibi_unlocked = True
             "I approach the bed, stepping carefully through the mess of fallen posters and petals. The floor is dangerously creaky."
             "Step… step… step-"
+            play sound "wood-creak-single-v2.mp3"
             "{i}{b}Creaaak~{/b}{/i}"
             "I stop in my tracks, the lump in the bed groans and begins getting up- I need to hide, {i}{b}now!{/i}{/b}"
             #TIMED CHOiICES
@@ -241,6 +243,7 @@ label global_bonnie:
             jump global_courtyard
         
     label failed:
+        play sound "wood-creak-single-v3.mp3"
         "I gasp and scurry beneath the bed, pressing my hands over my mouth"
         show underbed
         show bonnie peak at offscreenleft
@@ -248,13 +251,15 @@ label global_bonnie:
         $ persistent.bonniePeak_unlocked = True
         $ persistent.underBed_unlocked = True
         "..."
+        stop sound
         "Maybe she didn’t... hear me..?"
+        play sound "audio/door-creek.mp3" 
         show bonnie peak at Move((0.0, -0.8), (0.0, 0.0), 5.0, xanchor = 0, yanchor = 0)
         show bed
         "..." 
         #insert bed creaking noise & peak animation
-        play sound "audio/bed-creaking.mp3"
         p "Bon-"
+        stop sound
         "{b}I am suddenly pulled out from under the bed-"
         #show bonnie disgusted
         b "Wretched thing." 
@@ -262,8 +267,8 @@ label global_bonnie:
         hide bed
         hide underbed
         show blackscreen
-        "{b}SLAM{/b}"
         play music "audio/FEAR.mp3"
+        "{b}SLAM{/b}"
         "I am knocked back, something incredibly heavy and hard hitting me square in the face…"
         #HIDE BLACK SCREEN
         hide blackscreen

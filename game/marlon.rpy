@@ -33,7 +33,7 @@ label global_visitMarlon:
     $ bad = 0
 
     #if pita has already visited
-
+    
     
     "I think it’s time to stop by Marlon’s trailer."
     
@@ -91,6 +91,7 @@ label global_visitMarlon:
     show marlon happy
     m "Let’s head inside my trailer, my animals are being too noisy right now…"
     scene pt-marlon-trailer
+    stop channel1
     $ persistent.marlonTrailer_unlocked = True
     stop sound fadeout 1.0
     show marlon nuetral at right
