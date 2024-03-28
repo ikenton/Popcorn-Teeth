@@ -26,11 +26,17 @@ label global_ringmaster:
             #scene ringmaster-trailer
             $ persistent.ringmasterTrailer_unlocked = True
             "I take a step on the stepping stool and open the door to a poorly lit room."
+            "A man sits at his desk."
             scene ringmaster_looks_slideshow
+            $ persistent.ringmasterMaskless2_unlocked = True
+            $ persistent.ringmasterMaskless_unlocked = True
+            "!!!"
             $ persistent.ringmaster_unlocked = True
-            "A man sits at his desk, writing. He doesn’t bother to raise his head, but instead reaches for his mask and slips it on."
+            "He reaches for his mask and slips it on."
+            
             scene ringmaster-trailer
             show ringmaster
+            "He stands up and fully faces me."
             if not marlonIsAlive and not bonnieIsAlive and not hugoIsAlive:
                 jump goodEnding
             else:

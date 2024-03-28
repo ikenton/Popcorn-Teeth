@@ -241,6 +241,14 @@ init python:
     gallery.image("ringmaster taunt")
     gallery.condition("persistent.ringmasterTaunt_unlocked")
 
+    gallery.button("ringmasterMaskless")
+    gallery.image("ringmaster maskless")
+    gallery.condition("persistent.ringmasterMaskless_unlocked")
+
+    gallery.button("ringmasterMaskless2")
+    gallery.image("ringmaster maskless 2")
+    gallery.condition("persistent.ringmasterMaskless2_unlocked")
+
 transform gallery_transform_full:
     zoom 0.35
 
@@ -351,7 +359,7 @@ screen gallery_cgs:
             xalign 0.5
             yalign 0.5
             spacing 30
-            grid 2 12:
+            grid 2 13:
                 add gallery.make_button(name="ringmasterLean", unlocked=At("images/ringmaster lean.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="ringmasterPull", unlocked=At("images/ringmaster pullaway.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="ringmasterTaunt", unlocked=At("images/ringmaster taunt.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
@@ -377,6 +385,8 @@ screen gallery_cgs:
                 add gallery.make_button(name="marlonGood", unlocked=At("images/marlon good.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
 
                 add gallery.make_button(name="ringmasterTrailer", unlocked=At("images/ringmaster-trailer.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
+                add gallery.make_button(name="ringmasterMaskless2", unlocked=At("images/ringmaster maskless 2.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
+                add gallery.make_button(name="ringmasterMaskless", unlocked=At("images/ringmaster maskless.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="pitaDead", unlocked=At("images/pita dead.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="ringmasterDead", unlocked=At("images/ringmaster dead.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
 
