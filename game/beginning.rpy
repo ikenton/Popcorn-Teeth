@@ -1,19 +1,30 @@
 define rm = Character("Ringmaster", color = "#F00040")
 define p = Character("Pita", color = "#edf4b3")
+image pullaway_slideshow:
+    "ringmaster lean"
+    pause 1.0
+    "ringmaster pullaway"
+    pause 1.0
 label global_beginning:
     #INSERT INTRO CUTSCENE HERE!!!!
     #$ renpy.movie_cutscene("")
     show ringmaster lean
     $ persistent.ringmasterLean_unlocked = True
     $ persistent.ringmasterChibi_unlocked = True
+    $ persistent.ringmasterTaunt_unlocked = True
     rm "..."
     rm "You did great today, Sweetheart. The crowd loved you like always."
+    show ringmaster taunt
     rm "Continue to be my good girl and I’ll get you a treat at the end of this week."
-    rm "Goodnight"
+    
+    rm "You wouldn’t want to starve now would you?"
+    "He lets out a gleeful chortle, the same one that I heard when he first caught me."
+    "{i}This creep!{/i}"
+    show pullaway_slideshow
     "He rubs one of his fingers against my knuckles and immediately pull away."
-    show ringmaster pullaway
     $ persistent.ringmasterPull_unlocked = True
-    rm "See you tomorrow."
+    rm "Goodnight. See you tomorrow, Sweetheart"
+    hide pullaway_slideshow
     show cage int
     $ persistent.cageInt_unlocked = True
     $ persistent.pitaInCage_unlocked = True

@@ -236,6 +236,10 @@ init python:
     gallery.button("pitaChibi")
     gallery.image("pita chibi")
     gallery.condition("persistent.pitaChibi_unlocked")
+    
+    gallery.button("ringmasterTaunt")
+    gallery.image("ringmaster taunt")
+    gallery.condition("persistent.ringmasterTaunt_unlocked")
 
 transform gallery_transform_full:
     zoom 0.35
@@ -347,9 +351,10 @@ screen gallery_cgs:
             xalign 0.5
             yalign 0.5
             spacing 30
-            grid 2 11:
+            grid 2 12:
                 add gallery.make_button(name="ringmasterLean", unlocked=At("images/ringmaster lean.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="ringmasterPull", unlocked=At("images/ringmaster pullaway.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
+                add gallery.make_button(name="ringmasterTaunt", unlocked=At("images/ringmaster taunt.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="cageInt", unlocked=At("images/cage int.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="ptCageTent", unlocked=At("images/pt-cage-tent.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="ptCourtyard", unlocked=At("images/pt-courtyard.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
