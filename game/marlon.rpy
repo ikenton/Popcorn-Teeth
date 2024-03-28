@@ -288,8 +288,8 @@ label global_visitMarlon:
             m "Yes, for a while, he and I were happy…"
             show marlon angry
             m "But then the Ringmaster took that away from me."
-            $ time = 3
-            show screen qte(3, 'lizard_wrong')
+            $ time = 5
+            show screen qte(5, 'lizard_wrong')
             menu:
                 "His act wasn’t very good anyway.":
                     label lizard_wrong:
@@ -548,8 +548,8 @@ label global_visitMarlon:
                 "{i}This is the perfect opportunity to get rid of the lion.{/i}"
                 "{i}Where are those treats again?{/i}"
                 #TIMED CHOICES
-                $ time = 3
-                show screen qte(3, 'outOfTime')
+                $ time = 5
+                show screen qte(5, 'outOfTime')
                 menu:
                     "Walk to the cabinet":
                         hide screen qte
@@ -577,8 +577,8 @@ label global_visitMarlon:
                         hide screen qte
                         "I walk over and check inside for its contents where I find dozens of other treats lining the shelves. I have to act quickly and find what I’m looking for."
                         #TIMED MENU
-                        $ time = 3
-                        show screen qte(3, 'outOfTime')
+                        $ time = 5
+                        show screen qte(5, 'outOfTime')
                         menu:
                             "Take the “Salmon Bits”":
                                 hide screen qte

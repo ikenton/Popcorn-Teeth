@@ -55,8 +55,8 @@ label global_hugoVendetta:
             "Hugo drops his cigarette and stomps on it."
             "Crap!"
             #timer
-            $ time = 2
-            show screen qte(2, 'badending')
+            $ time = 5
+            show screen qte(5, 'badending')
             menu:
                 "Hide!":
                     hide screen qte
@@ -66,8 +66,8 @@ label global_hugoVendetta:
                     
                     #timed
                     
-                    $ time = 2
-                    show screen qte(2,'wait')
+                    $ time = 5
+                    show screen qte(5,'wait')
                     menu:
                         "Go Now":
                             hide screen qte
@@ -141,16 +141,16 @@ label global_hugoVendetta:
 
             "I dare not to take any chance of making myself known yet…I wait and listen for a while. After a moment,the humming stops and I can hear footsteps approaching!"
             #timed
-            $ time = 2
-            show screen qte(2, 'prebadending')
+            $ time = 5
+            show screen qte(5, 'prebadending')
             menu:
                 "Hide!":
                     hide screen qte
                     show pita underneath
                     $ persistent.underTrailer_unlocked = True
                     "I quickly hide underneath the trailer and I pull my white dress with me so it isn’t poking out, getting it dirty in the process. I place my hand on my mouth as I watch Hugo walk to his trailer and go up the creaky steps. I can hear keys jingle."
-                    $ time = 2
-                    show screen qte(2, 'wait2')
+                    $ time = 5
+                    show screen qte(5, 'wait2')
                     menu: #timed
                         "Go Now":
                             hide screen qte

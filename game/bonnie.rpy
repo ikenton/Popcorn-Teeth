@@ -53,8 +53,8 @@ label global_bonnie:
             "{i}{b}Creaaak~{/b}{/i}"
             "I stop in my tracks, the lump in the bed groans and begins getting up- I need to hide, {i}{b}now!{/i}{/b}"
             #TIMED CHOiICES
-            $ time = 2
-            show screen qte(2, 'failed')
+            $ time = 5
+            show screen qte(5, 'failed')
             menu:
                 "Hide behind the vanity":
                     hide screen qte
@@ -105,8 +105,8 @@ label global_bonnie:
                     "After a few moments of silence, I spot Bonnie’s legs swinging overhead, and she makes her way over to her vanity, taking a seat and peering at her reflection in the mirror."
                     "I do my best to keep in the shadows, feeling fortunate that her room was so dimly lit."
                     "She opens her drawer and begins searching for something from within, this is my chance."
-                    $ time = 2
-                    show screen qte(2, 'sneak')
+                    $ time = 5
+                    show screen qte(5, 'sneak')
                     menu:
                         "Sneak up to her from behind": #fail
                             label sneak:
