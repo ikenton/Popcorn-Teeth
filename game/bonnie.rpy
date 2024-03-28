@@ -78,14 +78,14 @@ label global_bonnie:
                     #hide bonnie sad
                     
                     "Is she… crying…?"
-                    "Now that I think about it… ever since my arrival, she’s been undermined by the ring leader, wasn’t she originally his favorite…? Is she really… to blame?"
+                    "Now that I think about it… ever since my arrival, she’s been undermined by the Ringmaster, wasn’t she originally his favorite…? Is she really… to blame?"
                     
                     "..."
                     "No… I don’t care…"
                     
                     "She’s been nothing but mean to me, she deserves this… she deserves {b}all{/b} that is coming to her…"
                     "I slowly reach forward, a large grin forming on my face."
-                    "Suddenly, I grab her leg, and pulling her down, I manage to hit her head against the vanity,knocking her unconscious."
+                    "Suddenly, I grab her leg, and pulling her down, I manage to hit her head against the vanity, knocking her unconscious."
                     stop music fadeout 1.5
                     p "I am so hungry… starved, even.."
                     show bonnie dead
@@ -116,25 +116,25 @@ label global_bonnie:
                                 "Step."
                                 "Step.."
                                 "Step..."
-                                "Each hoof gently sliding across the ground, now wary of the creaky floor boards"
+                                "Each hoof gently sliding across the ground, now wary of the creaky floor boards."
                                 #back of bonnie OR bonnie sitting at vanity png
                                 "I finally reach her, and begin to stand, my hands lifting and reaching towards her neck.."
                                 "Finally... I press my hands against her neck-"
                                 "{b}HNGK-{/b}"
                                 "Bonnie slides her chair back as hard as she can, easily knocking me onto my back as I was caught off guard."
-                                "I hear something crash onto the floor as I try to get back on my feet, but it’s in vain"
+                                "I hear something crash onto the floor as I try to get back on my feet, but it’s in vain."
                                 show bonnie disgusted
-                                "Bonnie kneels down and pressed her knee into my stomach, holding her vanity drawer over her head, and without a word"
+                                "Bonnie kneels down and pressed her knee into my stomach, holding her vanity drawer over her head, and without a word."
                                 hide bonnie disgusted
                                 show blackscreen
                                 
                                 "{b}{i}SLAM{/i}{b}"
-                                "She bashes the drawer against my face, rendering me partially unconscious"
+                                "She bashes the drawer against my face, rendering me partially unconscious."
                                 
                                 show bonnie disgusted behind blackscreen
                                 show blackscreen:
                                     alpha .5 
-                                "Then, throwing it aside, she digs her hand into my mouth"
+                                "Then, throwing it aside, she digs her hand into my mouth."
                                 show blackscreen:
                                     alpha .2 
                                 #crazed yet melancholic expression
@@ -144,7 +144,7 @@ label global_bonnie:
                                     alpha .1
                                 
                                 "She rips one of my teeth from its socket, the initial shock saves me from most of the pain, but it doesn’t take long for it to  catch up with me, and I groan in pain, my breaths shallow."
-                                b "Tell me... is the pain truly unbearable..?"
+                                b "Tell me... is the pain truly unbearable...?"
                                 #TODO: PUT BLACKSCREEN ONTOP OF BONNIE SPRITE
                                 show blackscreen:
                                     alpha .5 
@@ -153,24 +153,24 @@ label global_bonnie:
                                 show blackscreen:
                                     alpha .6 
                                 
-                                b "Already..? That’s no fun..."
+                                b "Already...? That’s no fun..."
                                 show blackscreen:
                                     alpha .7
                                 
-                                "Another tooth"
+                                "Another tooth."
                                 show blackscreen:
                                     alpha .8
                                 
-                                "And another"
+                                "And another."
                                 show blackscreen:
                                     alpha .85 
                                 "..."
                                 show blackscreen:
                                     alpha .9 
-                                "She continues pulling out teeth"
+                                "She continues pulling out teeth..."
                                 show blackscreen:
                                     alpha 1.0
-                                "Until I finally expire"
+                                "Until I finally expire."
 
                                 jump death_screen
 
@@ -204,7 +204,7 @@ label global_bonnie:
                     show bonnie excited
 
                     b "Oh I see.. Lords aren’t you just…"
-                    "She pauses, pressing a finger to her lips in contemplation"
+                    "She pauses, pressing a finger to her lips in contemplation."
                     show bonnie disgusted
                     b "Bothersome"
                     p "Shut it, Bonnie… I’ve had enough of your incessant whining."
@@ -280,7 +280,7 @@ label global_bonnie:
         "She stands above me, raising the object over her head."
         
         b "I’ve had enough of you, little fairy…"
-        "She slams the object into my stomach, my body lurching forward in pain, tears streaming down my cheeks, the life spilling from my eyes in pitiful, salty tears"
+        "She slams the object into my stomach, my body lurching forward in pain, tears streaming down my cheeks, the life spilling from my eyes in pitiful, salty tears."
         b "{b}Quite{/b} enough…"
         "She stabs me again, my body convulsing." 
         "I can hear the knife being torn from my flesh, over and over and over again, a disgusting slick, wet sound as my own life spills from the deep wound she created…"
