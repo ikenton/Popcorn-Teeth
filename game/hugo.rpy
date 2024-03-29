@@ -1,4 +1,4 @@
-define h = Character("Hugo", color = "#FFFF00")
+define h = Character("Hugo", color = "#5d0124")
 define p = Character("Pita", color = "#edf4b3")
 
 #timer
@@ -62,6 +62,7 @@ label global_hugoVendetta:
                     hide screen qte
                     hide hugo angry
                     show pita underneath
+                    play sound "audio/footsteps-dirt-gravel.mp3"
                     "I quickly hide underneath the trailer and I pull my white dress with me so it isn’t poking out, getting it dirty in the process. I place my hand on my mouth as I watch Hugo walk to his trailer and go up the creaky steps. I can hear keys jingle."
                     
                     #timed
@@ -84,6 +85,8 @@ label global_hugoVendetta:
                             show hugo surprised
                             h "What the?! What are you doing here?!"
                             p "Hugo?!-"
+                            play music "FEAR.mp3"
+
                             jump badending
                         "Wait":
                             hide screen qte
@@ -132,6 +135,8 @@ label global_hugoVendetta:
                     "Hugo turns around and looks down at me."
                     h "What the?! What are you doing here?!"
                     p "Hugo?!-"
+                    play music "FEAR.mp3"
+
                     jump badending
         "Wait and listen":
             $ persistent.hugoNuetral_unlocked = True
@@ -151,7 +156,6 @@ label global_hugoVendetta:
                     hide screen qte
                     show pita underneath
                     $ persistent.underTrailer_unlocked = True
-                    play sound "wood-creak-single-v2.mp3" fadein 0.5
                     "I quickly hide underneath the trailer and I pull my white dress with me so it isn’t poking out, getting it dirty in the process. I place my hand on my mouth as I watch Hugo walk to his trailer and go up the creaky steps. I can hear keys jingle."
                     stop channel2 fadeout 1.0
                     $ time = 5
@@ -169,10 +173,14 @@ label global_hugoVendetta:
                             show hugo surprised
                             h "What the?! What are you doing here?!"
                             p "Hugo?!-"
+                            play music "FEAR.mp3"
+
                             jump badending
                         "Wait":
                             hide screen qte
                             label wait2:
+                                play sound "wood-creak-single-v2.mp3" fadein 0.5
+
                                 "I lay there under the trailer. I could hear Hugo walking inside the trailer."
                                 stop channel2 fadeout 1.0
                                 "Oh! I look up and notice a trapdoor, I can see a square outline of the light coming from inside the trailer. I grin and I wait for some minutes until I can barely hear any movement coming from inside the trailer."
@@ -194,6 +202,8 @@ label global_hugoVendetta:
                                         "Desperate, I strike at his face with my fingernails, drawing some blood. He recoils and screams. He wipes his face and notices the blood on his fingertips. He then looks at me with a sinister grin."
                                         h "Look what we have here. The fairy’s giving me an opportunity of a lifetime!"
                                         "He swings the lamp towards me-"
+                                        play music "FEAR.mp3"
+                                        
                                         show blackscreen
                                         "..."
                                         "I was met with a sudden darkness and warmth that felt like freedom."
@@ -205,15 +215,18 @@ label global_hugoVendetta:
                                         "I hesitantly lower the lamp that’s in my hands."
                                         "Awkward…"
                                         p "Uhh, I was simply inspecting it"
+                                        show hugo smile
                                         h "Ha! You’re a bad liar! You had an opportunity and you flopped. I wonder how the Ringmaster favored such an idiot over me. It pisses me off"
+                                        show hugo angry
                                         "He gets off the bed and towers over me. "
                                         show hugo smile
                                         h "The circus will be mine again!"
                                         "I drop the lamp."
+                                        play music "FEAR.mp3"
                                         jump badending
     label badending:
+        hide blackscreen
         stop channel1
-        play music "FEAR.mp3"
         show hugo bad
         $ persistent.hugoBad_unlocked = True
         "I felt my neck be grasped and my body be lifted! I gasp and hyperventilate, clawing at the hand around my neck."
@@ -230,6 +243,7 @@ label global_hugoVendetta:
         show hugo surprised
         h "What the?! What are you doing here?!"
         p "Hugo?!-"
+        play music "FEAR.mp3"
         jump badending
 
     
