@@ -59,33 +59,34 @@ label global_ringmaster:
                 "He puts out his hand towards me."
                 rm "Whaddya say?"
                 p "No."
-                p "I never wanted to be here to begin with!"
-                "I fly towards him at great speed with my claws ready to tear at his flesh."
-                "He catches my arm but I quickly pull away and slash at him repeatedly."
-                "With my unfathomable rage, I knock him down to the ground and pummel him senselessly."
-                "He must pay for everything he has done to me!"
-                show ringmaster dead
-                $ persistent.ringmasterDead_unlocked = True
-                "I tear off his mask and I grins as he begins coughing and wheezing."
-                rm "Do you know how much of a dream come true that you are to me?"
-                rm "Ever since I was a kid, I worshiped you, I kept sacrificing my teeth till I got you."
-                rm "You were my will to live,"
-                rm "you were my most prized possession,"
-                rm "you were a perfect and beautiful star."
-                rm "{b}You made me the man that I am today.{/b}"
-                "He places a hand on mine."
-                "I recoil and slap him."
-                p "I don’t care."
-                "I break his jaw and he goes still."
-                "I pluck a tooth from his lower jaw and chew."
-                "I gag and spit it out."
-                "He wasn’t kidding."
-                "His teeth were wooden..."
-                "I stand up and I rummage every nook and cranny of his trailer."
-                "I find my wand in one of his desk’s drawers and I grin."
-                "Holding it in my hands finally made me feel complete and content."
-                "It’s time to go home."
-                return
+                label global_killing_rm:
+                    p "I never wanted to be here to begin with!"
+                    "I fly towards him at great speed with my claws ready to tear at his flesh."
+                    "He catches my arm but I quickly pull away and slash at him repeatedly."
+                    "With my unfathomable rage, I knock him down to the ground and pummel him senselessly."
+                    "He must pay for everything he has done to me!"
+                    show ringmaster dead
+                    $ persistent.ringmasterDead_unlocked = True
+                    "I tear off his mask and I grins as he begins coughing and wheezing."
+                    rm "Do you know how much of a dream come true that you are to me?"
+                    rm "Ever since I was a kid, I worshiped you, I kept sacrificing my teeth till I got you."
+                    rm "You were my will to live,"
+                    rm "you were my most prized possession,"
+                    rm "you were a perfect and beautiful star."
+                    rm "{b}You made me the man that I am today.{/b}"
+                    "He places a hand on mine."
+                    "I recoil and slap him."
+                    p "I don’t care."
+                    "I break his jaw and he goes still."
+                    "I pluck a tooth from his lower jaw and chew."
+                    "I gag and spit it out."
+                    "He wasn’t kidding."
+                    "His teeth were wooden..."
+                    "I stand up and I rummage every nook and cranny of his trailer."
+                    "I find my wand in one of his desk’s drawers and I grin."
+                    "Holding it in my hands finally made me feel complete and content."
+                    "It’s time to go home."
+                    return
             label rmbadending:
                 rm "My, my, my little Princess is trying to fly away! "
                 rm "You got a nerve to be out of your cage."
@@ -138,6 +139,8 @@ label global_ringmaster:
                 "I performed and performed and performed in front of millions of crowds with only my arms and wings."
                 "I never got to go home ever again."
                 return
-
+    label global_rm_teamup:
+        "Team up"
+        return
 
             
