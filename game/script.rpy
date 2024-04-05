@@ -25,12 +25,13 @@ screen warning():
             
 # The game starts here.
 label start:  
-    $ config.rollback_enabled = False    
     stop music fadeout 2.0
     scene trigger warning
     call screen warning
     # shift options down  
     label global_courtyard:
+        $ config.rollback_enabled = False    
+
         stop music
         play channel1(  "audio/cricket-song.mp3") volume 0.09
         #play channel2("audio/footsteps-dirt-gravel.mp3")

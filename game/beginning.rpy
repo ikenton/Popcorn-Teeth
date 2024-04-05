@@ -6,7 +6,7 @@ image pullaway_slideshow:
     "ringmaster pullaway"
     pause 1.0
 label global_beginning:
-    #INSERT INTRO CUTSCENE HERE!!!!
+    $ renpy.movie_cutscene("videos/pt-intro-cutscene.webm")
     show ringmaster lean
     $ persistent.ringmasterLean_unlocked = True
     $ persistent.ringmasterChibi_unlocked = True
