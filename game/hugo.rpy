@@ -325,6 +325,7 @@ label global_hugoVendetta:
                 show screen qte(5, 'doNothing')
                 menu:
                     "Plea for help!":
+                        hide screen qte
                         p "Help me! Ringmaster! Please, I’m in here!"
                         "I didn’t want to do this but I felt like I didn’t have much of a choice…"
                         rm "Pita?!"
@@ -366,7 +367,7 @@ label global_hugoVendetta:
                         $ hugoIsAlive = False
                         "..."
                         hide chest with Dissolve(1.0)
-                        show courtyard
+                        show pt-courtyard
                         show ringmaster #temp until rm cg is done
                         "I gasp. His mask is broken…And he’s bloody. Did he… Kill Hugo?"
                         rm "Hello, sweetheart."
@@ -383,9 +384,9 @@ label global_hugoVendetta:
                                 "Ah, that’s wonderful. I’m glad he didn’t hurt you as bad as I thought."
                                 jump resume
                             "Screw you!":
-                                rm "Ah, well that’s no way on how to treat your savior."
+                                rm "Ah, well that’s no way to treat your savior."
                                 jump resume
-                            "I’m fine…But,how did you do it?":
+                            "I’m fine… But,how did you do it?":
                                 rm "Remember the cane that I sometimes carry around? It has a built-in sword."
                                 jump resume
                         label resume:
@@ -409,7 +410,7 @@ label global_hugoVendetta:
                             # play chest closing sound
                             hide ringmaster
                             show chest darkness
-                            show blackscreen Dissolve(1.0)
+                            show blackscreen with Dissolve(1.0)
                             "I felt the chest I’m inside of being lifted and moved somewhere else."
                             "..."
                             "I’m in a new area now."
@@ -424,7 +425,8 @@ label global_hugoVendetta:
                             "Eventually, he came back."
                             "I thought he was going to harm me when he opened the chest, but he just ended up putting me back in my cage."
                             "My cage is in his trailer now…"
-                            show cage ringmasterTrailer Dissolve(1.0)
+                            scene cage-trailer with Dissolve(1.0)
+                            show ringmaster
                             rm "Here’s your treat. To be honest, I feel awful for letting you get hurt like that."
                             rm "Take it as an apology gift."
                             "He hands me over Hugo’s severed head."
@@ -434,10 +436,11 @@ label global_hugoVendetta:
                             "Delicious and a little smoky."
                             "..."
                             "I can feel his gaze on me as I eat."
-                            P "It's rude to stare."
+                            p "It's rude to stare."
                             "He stares at me for a brief moment longer."
                             "..."
                             "He turns away from me and he walks towards his desk."
+                            hide ringmaster
                             rm "I know what you did. What you tried to do."
                             "He stares at the posters on his wall, having his back towards me."
                             if marlonIsAlive or bonnieIsAlive:
@@ -461,6 +464,8 @@ label global_hugoVendetta:
                                     "No.":
                                         
                                         "I swing open the cage and I step out of it as I scowl at him."
+                                        scene ringmaster-trailer
+                                        show ringmaster
                                         rm "How?-"
                                         p "I’ll never work with you!"
                                         jump global_killing_rm
@@ -481,6 +486,7 @@ label global_hugoVendetta:
                                 with Fade(1.0, 4.0, 0.5)
                     "Do Nothing":
                         label doNothing:
+                            hide screen qte
                             h "She’s most likely gone by now if she escaped last night, and well c’mon you didn’t mean that."
                             h "We were doing just fine before she showed up and ruined everything. We don’t need her."
                             rm "Wow, don’t be so daft…Without my Pita, we are nothing. You’re nothing!"
@@ -519,8 +525,8 @@ label global_hugoVendetta:
                             show chest dropped
                             "I groaned as the impact made my body ache."
                             "I peek out of the keyhole, in search of my whereabouts, but all I could see was dirt."
-                            h "Thanks again for easily giving me the chance of avenging my brother and myself, little fairy. (Weak chuckle) All you did was ruin everything... Goodbye."
-                            h "I can hear something being thrown at the chest I’m in. It smells like dirt."
+                            h "Thanks again for easily giving me the chance of avenging my brother and myself, little fairy. All you did was ruin everything... Goodbye."
+                            "I can hear something being thrown at the chest I’m in. It smells like dirt."
                             show chest dirt
                             "My vision eventually goes dark and I can’t breathe as much anymore."
                             show chest darkness with Dissolve(1.0)

@@ -65,9 +65,9 @@ label global_ringmaster:
                     "He catches my arm but I quickly pull away and slash at him repeatedly."
                     "With my unfathomable rage, I knock him down to the ground and pummel him senselessly."
                     "He must pay for everything he has done to me!"
+                    "I tear off his mask and I grins as he begins coughing and wheezing."
                     show ringmaster dead
                     $ persistent.ringmasterDead_unlocked = True
-                    "I tear off his mask and I grins as he begins coughing and wheezing."
                     rm "Do you know how much of a dream come true that you are to me?"
                     rm "Ever since I was a kid, I worshiped you, I kept sacrificing my teeth till I got you."
                     rm "You were my will to live,"
