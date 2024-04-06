@@ -38,6 +38,7 @@ label global_hugoVendetta:
     $ timer_range = 0
     $ timer_jump = 0
     play music "tension.mp3" fadein 3.0
+    scene hugo-trailerdoor
     "I look over and quietly approach the red and flashy trailer with many posters from past shows on it. I don’t seem to be on any of them."
     "I can see smoke coming from behind the trailer and humming. I cock my head with curiosity."
     "Who could it be?"
@@ -64,7 +65,6 @@ label global_hugoVendetta:
             "Oh!"
             "I look beside him and I spot a rusty foldable table next to him that has a toolbox and a half eaten sandwich on top of it. hmm…"
             "!!!"
-            show hugo angry
             "Hugo drops his cigarette and stomps on it."
             "Crap!"
             #timer
@@ -73,7 +73,7 @@ label global_hugoVendetta:
             menu:
                 "Hide!":
                     hide screen qte
-                    hide hugo angry
+                    hide hugo
                     show pita underneath
                     play sound "audio/footsteps-dirt-gravel.mp3"
                     "I quickly hide underneath the trailer and I pull my white dress with me so it isn’t poking out, getting it dirty in the process." 
@@ -94,9 +94,8 @@ label global_hugoVendetta:
                             play sound "wood-creak-single-v2.mp3" fadein 0.5
                             "I crawl out of the trailer and I stand up, hunching as I approach behind Hugo. I go up one of the steps and it creaks."
                             "!!!"
-                            show hugo back 
-                            "Hugo‘s head snaps in my direction."
                             show hugo surprised
+                            "Hugo‘s head snaps in my direction."
                             h "What the?! What are you doing here?!"
                             p "Hugo?!-"
                             play music "FEAR.mp3"
@@ -108,13 +107,17 @@ label global_hugoVendetta:
                                 "I lay there under the trailer. I could hear Hugo walking inside the trailer."
                                 "I remember seeing the toolbox behind the trailer. Maybe there’s something in there that I can use. I crawl out from under the trailer and I stand up. I don't bother dusting off my dress and I quietly go behind the trailer."
                                 hide pita underneath
+                                hide hugo
+                                show  toolbox
                                 "I open the toolbox and go through it. I find a rusty hammer, or is that blood on it? I hold it in my hand and it feels oddly heavy."
                                 "I didn’t realize I’ve become this weak…"
                                 "*Sighs*"
                                 "I’ll regain all my strength soon. C’mon, I got this, Pita!"
                                 "I look around and find an open window. I smile and climb my way into the trailer quietly. I can hear gentle snoring coming from the bedroom area of the trailer."
                                 "I hold the hammer with both hands and slowly approach the source of the noise."
+                                
                                 scene pt-hugo-trailer
+                                hide hugo
                                 stop channel1
                                 $ persistent.hugoTrailer_unlocked = True
                                 stop sound fadeout 1.0
@@ -141,10 +144,11 @@ label global_hugoVendetta:
                 "Throw a pebble":
                     hide screen qte
                     "I look down and grab a pebble off the ground. This should get 'em distracted!"
-                    show hugo angry
                     h "Who’s there?!"
+                    show hugo pebble
                     "He approaches the sound where the pebble was."
                     "Perfect! This is my chance. I approach Hugo quickly and quietly from behind. I bump into him in an attempt to knock him over but he barely budged! "
+                    #scene toolbox
                     show hugo surprised
                     "Hugo turns around and looks down at me."
                     h "What the?! What are you doing here?!"
