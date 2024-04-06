@@ -57,6 +57,7 @@ label global_visitMarlon:
     $ persistent.marlonAngry_unlocked = True
     $ persistent.crimson_unlocked = True
     $ persistent.marlonChibi_unlocked = True
+    $ persistent.marlonPoster_unlocked = True
     m "I-Is someone there?"
 
     "I see Marlon, the circus’ animal trainer and performer. He’s standing in front of his trailer with a lion by his side, whip in one hand as he works with the animal."

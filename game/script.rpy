@@ -32,7 +32,7 @@ label start:
     # shift options down  
     label global_courtyard:
         
-        $ config.rollback_enabled = True    
+        $ config.rollback_enabled = False    
 
         stop music
         play channel1(  "audio/cricket-song.mp3") volume 0.09

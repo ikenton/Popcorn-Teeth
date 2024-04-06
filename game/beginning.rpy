@@ -7,10 +7,15 @@ image pullaway_slideshow:
     pause 1.0
 label global_beginning:
     $ renpy.movie_cutscene("videos/pt-intro-cutscene.webm")
+    $ persistent.pitaIntroDark_unlocked = True
+    $ persistent.pitaIntroSpotlight_unlocked = True
+    $ persistent.daysOne_unlocked = True
+    $ persistent.daysTallymarks_unlocked = True
     show ringmaster lean 
     $ persistent.ringmasterLean_unlocked = True
     $ persistent.ringmasterChibi_unlocked = True
     $ persistent.ringmasterTaunt_unlocked = True
+    $ persistent.ringmasterPoster_unlocked = True
     pause 1.0
     rm "..."
     rm "You did great today, Sweetheart. The crowd loved you like always."

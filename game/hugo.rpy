@@ -87,12 +87,11 @@ label global_hugoVendetta:
                         "Go Now":
                             hide screen qte
                             hide pita underneath
-                            scene pt-hugo-trailer
-                            stop channel1
-                            $ persistent.hugoTrailer_unlocked = True
+                            
                             stop sound fadeout 1.0
                             play sound "wood-creak-single-v2.mp3" fadein 0.5
                             "I crawl out of the trailer and I stand up, hunching as I approach behind Hugo. I go up one of the steps and it creaks."
+                            stop sound 
                             "!!!"
                             show hugo surprised
                             "Hugo‘s head snaps in my direction."
@@ -117,6 +116,7 @@ label global_hugoVendetta:
                                 "I hold the hammer with both hands and slowly approach the source of the noise."
                                 
                                 scene pt-hugo-trailer
+                                $ persistent.hugoTrailer_unlocked = True
                                 hide hugo
                                 stop channel1
                                 $ persistent.hugoTrailer_unlocked = True
@@ -146,9 +146,11 @@ label global_hugoVendetta:
                     "I look down and grab a pebble off the ground. This should get 'em distracted!"
                     h "Who’s there?!"
                     show hugo pebble
+                    $ persistent.hugoPebble_unlocked = True
                     "He approaches the sound where the pebble was."
                     "Perfect! This is my chance. I approach Hugo quickly and quietly from behind. I bump into him in an attempt to knock him over but he barely budged! "
-                    #scene toolbox
+                    scene toolbox
+                    $ persistent.toolbox_unlocked = True
                     show hugo surprised
                     "Hugo turns around and looks down at me."
                     h "What the?! What are you doing here?!"

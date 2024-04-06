@@ -138,7 +138,7 @@ init python:
     gallery.condition("persistent.bonniePeak_unlocked")
 
     gallery.button("underBed")
-    gallery.image("underbed")
+    gallery.image("full underbed")
     gallery.condition("persistent.underBed_unlocked")
 
     gallery.button("hugoTrailer")
@@ -249,6 +249,41 @@ init python:
     gallery.image("ringmaster maskless 2")
     gallery.condition("persistent.ringmasterMaskless2_unlocked")
 
+    gallery.button("marlonPoster")
+    gallery.image("marlon poster")
+    gallery.condition("persistent.marlonPoster_unlocked")
+
+    gallery.button("ringmasterPoster")
+    gallery.image("ringmaster poster")
+    gallery.condition("persistent.ringmasterPoster_unlocked")
+
+    gallery.button("pitaIntroDark")
+    gallery.image("pita introDark")
+    gallery.condition("persistent.pitaIntroDark_unlocked")
+    
+    gallery.button("pitaIntroSpotlight")
+    gallery.image("pita introSpotlight")
+    gallery.condition("persistent.pitaIntroSpotlight_unlocked")
+
+    gallery.button("daysOne")
+    gallery.image("days one")
+    gallery.condition("persistent.daysOne_unlocked")
+
+    gallery.button("daysTallymarks")
+    gallery.image("days tallymarks")
+    gallery.condition("persistent.daysTallymarks_unlocked")
+
+    gallery.button("hugoBack")
+    gallery.image("hugo back")
+    gallery.condition("persistent.hugoBack_unlocked")
+    
+    gallery.button("hugoPebble")
+    gallery.image("hugo pebble")
+    gallery.condition("persistent.hugoPebble_unlocked")
+
+    gallery.button("toolbox")
+    gallery.image("toolbox")
+    gallery.condition("persistent.toolbox_unlocked")
 transform gallery_transform_full:
     zoom 0.35
 
@@ -312,14 +347,14 @@ screen gallery_characters:
             xalign 0.5
             yalign 0.5
             spacing 30
-            grid 4 2:
+            grid 3 2:
                 add gallery.make_button(name="hugoNuetral", unlocked=At("images/hugo nuetral.png", gallery_transform_large), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="hugoSmile", unlocked=At("images/hugo smile.png",  gallery_transform_large), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="hugoSmoking", unlocked=At("images/hugo smoking.png",  gallery_transform_large), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="hugoSuprised", unlocked=At("images/hugo surprised.png",  gallery_transform_large), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="hugoUpset", unlocked=At("images/hugo upset.png",  gallery_transform_large), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="hugoAngry", unlocked=At("images/hugo angry.png",  gallery_transform_large), locked=At("images/blackscreen.png", gallery_transform_locked))
-                add gallery.make_button(name="hugoBack", unlocked=At("images/hugo back.png", gallery_transform_crop1), locked=At("images/blackscreen.png", gallery_transform_locked))
+                #add gallery.make_button(name="hugoBack", unlocked=At("images/hugo back.png", gallery_transform_crop1), locked=At("images/blackscreen.png", gallery_transform_locked))
                 spacing 15
 
         hbox:
@@ -359,7 +394,12 @@ screen gallery_cgs:
             xalign 0.5
             yalign 0.5
             spacing 30
-            grid 2 13:
+            grid 2 17:
+                add gallery.make_button(name="pitaIntroDark", unlocked=At("images/pita introDark.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
+                add gallery.make_button(name="pitaIntroSpotlight", unlocked=At("images/pita introSpotlight.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
+                add gallery.make_button(name="daysOne", unlocked=At("images/days one.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
+                add gallery.make_button(name="daysTallymarks", unlocked=At("images/days tallymarks.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
+
                 add gallery.make_button(name="ringmasterLean", unlocked=At("images/ringmaster lean.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="ringmasterPull", unlocked=At("images/ringmaster pullaway.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="ringmasterTaunt", unlocked=At("images/ringmaster taunt.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
@@ -369,7 +409,7 @@ screen gallery_cgs:
 
                 add gallery.make_button(name="bonnieTrailer", unlocked=At("images/pt bonnie trailer.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="bonniePeak", unlocked=At("images/bonnie peak.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
-                add gallery.make_button(name="underBed", unlocked=At("images/underbed.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
+                add gallery.make_button(name="underBed", unlocked=At("images/full underbed.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="bonnieBad", unlocked=At("images/bonnie bad.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="bonnieHidden", unlocked=At("images/bonnie hidden.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="bonnieDead", unlocked=At("images/bonnie dead.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
@@ -378,7 +418,10 @@ screen gallery_cgs:
                 add gallery.make_button(name="hugoBad", unlocked=At("images/hugo bad.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="underTrailer", unlocked=At("images/pita underneath.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="hugoHammer", unlocked=At("images/hugo hammer.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
-
+                add gallery.make_button(name="hugoBack", unlocked=At("images/hugo back.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
+                add gallery.make_button(name="hugoPebble", unlocked=At("images/hugo pebble.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
+                add gallery.make_button(name="toolbox", unlocked=At("images/toolbox.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
+                
                 add gallery.make_button(name="marlonTrailer", unlocked=At("images/pt-marlon-trailer.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="crimsonBad", unlocked=At("images/crimson bad.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="marlonBad", unlocked=At("images/marlon bad.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
@@ -407,9 +450,11 @@ screen gallery_other:
             xalign 0.5
             yalign 0.5
             spacing 30
-            grid 3 5:
-                add gallery.make_button(name="hugoPoster", unlocked=At("images/hugo poster.png",gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+            grid 3 8:
+                add gallery.make_button(name="ringmasterPoster", unlocked=At("images/ringmaster poster.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="echoPoster", unlocked=At("images/echo poster.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="marlonPoster", unlocked=At("images/marlon poster.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="hugoPoster", unlocked=At("images/hugo poster.png",gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="pitaInCage", unlocked=At("images/pita in cage.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="marlonEchoKiss", unlocked=im.Scale("images/marlon echo kiss.png", 400,279), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="echoImage", unlocked=At("images/echo.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
