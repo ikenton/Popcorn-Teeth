@@ -12,9 +12,9 @@ label global_ringmaster:
     if marlonIsAlive or bonnieIsAlive or hugoIsAlive:
         "Should I enter?"
         menu:
-            "Yes":
+            "Yes.":
                 jump enter
-            "No":
+            "No.":
                 "I slowly back away from the open door and my immense dread fades."
                 hide door
                 jump global_courtyard
@@ -58,8 +58,12 @@ label global_ringmaster:
                 rm "We can even get a new crew if we wanted to, but we’ll both be the bosses, we’ll be equal partners."
                 "He puts out his hand towards me."
                 rm "Whaddya say?"
-                p "No."
-                label global_killing_rm:
+                menu:
+                    "No.":
+                        jump killing_rm
+                    "Yes.":
+                        jump rm_teamup
+                label killing_rm:
                     p "I never wanted to be here to begin with!"
                     "I fly towards him at great speed with my claws ready to tear at his flesh."
                     "He catches my arm but I quickly pull away and slash at him repeatedly."
@@ -138,9 +142,34 @@ label global_ringmaster:
                 "He chained me up every night and put me in that cage."
                 "I performed and performed and performed in front of millions of crowds with only my arms and wings."
                 "I never got to go home ever again."
+                jump death_screen
+            label rm_teamup:
+                "I reach past his hand and grab him by the collar, dragging him in."
+                p "Fine... but we need to establish some ground rules."
+                p "First, we’re not equals. If you try anything funny, I’ll kill you."
+                rm "You don’t trust me? I’m hurt! How you wound me so, my beautiful princess…"
+                "I slam him against the caravan wall and snarl."
+                rm "Very well, as you wish."
+                p "Second, tell me where my wand is. I’m not taking any other chances."
+                "He points at one of his drawers"
+                rm "In there, sweetheart, I kept it close to remind me of you at night."
+                "I slam him again out of disgust."
+                p "Finally, I’m never getting back into that damn cage. Thankfully, a few trailers are now vacant, so I’ll be taking one for my own."
+                p "Now, are we clear?"
+                rm "Crystalline."
+                "I loosen my grip. He tenderly grabs my hand and leans in to kiss it, but I slap him away."
+                p "Quit it!"
+                "But he just cackles in glee."
+                rm "Oh how I look forward to our new partnership!"
+                scene blackscreen
+                "Several weeks later…"
+                rm "Welcome, one and all, to the Striking Light Circus! We have a wonderful performance for you tonight, led by the one!"
+                rm "the only!"
+                rm "Pita the Tooth Fairy!"
+                #play applause sound effects
+                "A roar of cheers and applause rings through the tent."
+                "I walk up the stage and give a great wave and a wide smile"
+                p "Thank you all for coming to the show! I hope you’ll enjoy this performance as I will performing it!"
+                "I spot a nice target in the crowd and I lick my lips in enthusiasm. The afterparty will be fantastic once more."
                 return
-    label global_rm_teamup:
-        "Team up"
-        return
-
             

@@ -35,7 +35,6 @@ image chest death_slideshow:
     "blackscreen" with Dissolve(1.0)
 
 label global_hugoVendetta:
-    $ config.rollback_enabled = True
     $ timer_range = 0
     $ timer_jump = 0
     play music "tension.mp3" fadein 3.0
@@ -468,12 +467,14 @@ label global_hugoVendetta:
                                         show ringmaster
                                         rm "How?-"
                                         p "I’ll never work with you!"
-                                        jump global_killing_rm
+                                        jump killing_rm
                                         
                                     "Yes.":
                                         "I swing open the cage and I step out of it while grinning at him."
+                                        scene ringmaster-trailer
+                                        show ringmaster
                                         "He gasps" #Temp line
-                                        jump global_rm_teamup
+                                        jump rm_teamup
                             else:
                                 "My hands are shaking…"
                                 "I don’t feel strong enough to go up against him." 
