@@ -284,6 +284,26 @@ init python:
     gallery.button("toolbox")
     gallery.image("toolbox")
     gallery.condition("persistent.toolbox_unlocked")
+
+    gallery.button("ringmasterCrackedMask")
+    gallery.image("ringmaster crackedmask")
+    gallery.condition("persistent.ringmasterCrackedMask_unlocked")
+    
+    gallery.button("ringmasterHugoHead")
+    gallery.image("ringmaster hugohead")
+    gallery.condition("persistent.ringmasterHugoHead_unlocked")
+        
+    gallery.button("ringmasterHugoTeeth")
+    gallery.image("ringmaster hugoteeth")
+    gallery.condition("persistent.ringmasterHugoTeeth_unlocked")
+
+    gallery.button("pitaRMTeamUp")
+    gallery.image("pita rm_teamup")
+    gallery.condition("persistent.pitaRMTeamUp_unlocked")
+
+    gallery.button("pitaPush")
+    gallery.image("pita push")
+    gallery.condition("persistent.pitaPush_unlocked")
 transform gallery_transform_full:
     zoom 0.35
 
@@ -394,7 +414,7 @@ screen gallery_cgs:
             xalign 0.5
             yalign 0.5
             spacing 30
-            grid 2 17:
+            grid 2 21:
                 add gallery.make_button(name="pitaIntroDark", unlocked=At("images/pita introDark.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="pitaIntroSpotlight", unlocked=At("images/pita introSpotlight.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="daysOne", unlocked=At("images/days one.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
@@ -432,7 +452,11 @@ screen gallery_cgs:
                 add gallery.make_button(name="ringmasterMaskless", unlocked=At("images/ringmaster maskless.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="pitaDead", unlocked=At("images/pita dead.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="ringmasterDead", unlocked=At("images/ringmaster dead.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
-
+                add gallery.make_button(name="ringmasterCrackedMask", unlocked=At("images/ringmaster crackedmask.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
+                add gallery.make_button(name="ringmasterHugoHead", unlocked=At("images/ringmaster hugohead.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
+                add gallery.make_button(name="ringmasterHugoTeeth", unlocked=At("images/ringmaster hugoteeth.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
+                add gallery.make_button(name="pitaPush", unlocked=At("images/pita push.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
+            
 
 screen gallery_other:
     tag menu

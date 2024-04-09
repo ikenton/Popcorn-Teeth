@@ -145,6 +145,7 @@ label global_ringmaster:
                 jump death_screen
             label rm_teamup:
                 show pita push
+                $ persistent.pitaPush_unlocked = True
                 "I reach past his hand and grab him by the collar, dragging him in."
                 p "Fine... but we need to establish some ground rules."
                 p "First, we’re not equals. If you try anything funny, I’ll kill you."
@@ -168,6 +169,7 @@ label global_ringmaster:
                 rm "Welcome, one and all, to the Striking Light Circus! We have a wonderful performance for you tonight, led by the one!"
                 rm "the only!"
                 show pita rm_teamup with dissolve
+                $ persistent.pitaRMTeamUp_unlocked = True
                 rm "Pita the Tooth Fairy!"
                 #play applause sound effects
                 "A roar of cheers and applause rings through the tent."

@@ -374,6 +374,7 @@ label global_hugoVendetta:
                         hide chest with Dissolve(1.0)
                         
                         show ringmaster crackedmask #temp until rm cg is done
+                        $ persistent.ringmasterCrackedMask_unlocked = True
                         "I gasp. His mask is broken…And he’s bloody. Did he… Kill Hugo?"
                         rm "Hello, sweetheart."
                         rm "I apologize for the wait."
@@ -399,11 +400,13 @@ label global_hugoVendetta:
                             rm "Who knows who else would treat you just like how Hugo did." 
                             rm "Hugo is gone, but I won’t have his death go to waste."
                             show ringmaster hugohead
+                            $ persistent.ringmasterHugoHead_unlocked = True
                             "He holds up Hugo's decapitated head" #TEMPORARY LINE UNTIL CG IS DONE
                             "!!!"
                             "Oh my…"
                             "I can’t breathe."
                             show ringmaster hugoteeth
+                            $ persistent.ringmasterHugoTeeth_unlocked = True
                             rm "Look at all of those teeth! Aren’t they just delicious looking?"
                             "He places a finger on the decapitated head’s upper lip and he lifts it, revealing the upper teeth and gums better."
                             rm "Well, they’re a little yellow from smoking but they’re surely edible."
