@@ -600,9 +600,9 @@ label global_visitMarlon:
                                 hide screen qte
                                 $ crimsonhere = False
                                 "I grab the treat and turn back to Crimson, whose eyes immediately lock onto the bag of “Steak Bites.” As I grab one treat and toss it out the open door, the lion immediately bolts out as Marlon comes back inside the trailer."
-                                hide crimson
+                                hide crimson with moveoutleft
+                                show marlon surprised at center
                                 m "Woah, what was that!"
-                                show marlon surprised at right
                                 "I quickly stash the treats away and walk over to the door to close and lock it."
                                 p "It looks like Crimson wanted some time outside."
                                 show marlon disapointed
