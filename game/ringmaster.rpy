@@ -144,6 +144,7 @@ label global_ringmaster:
                 "I never got to go home ever again."
                 jump death_screen
             label rm_teamup:
+                show pita push
                 "I reach past his hand and grab him by the collar, dragging him in."
                 p "Fine... but we need to establish some ground rules."
                 p "First, we’re not equals. If you try anything funny, I’ll kill you."
@@ -162,9 +163,11 @@ label global_ringmaster:
                 "But he just cackles in glee."
                 rm "Oh how I look forward to our new partnership!"
                 scene blackscreen
+                
                 "Several weeks later…"
                 rm "Welcome, one and all, to the Striking Light Circus! We have a wonderful performance for you tonight, led by the one!"
                 rm "the only!"
+                show pita rm_teamup with dissolve
                 rm "Pita the Tooth Fairy!"
                 #play applause sound effects
                 "A roar of cheers and applause rings through the tent."

@@ -372,8 +372,8 @@ label global_hugoVendetta:
                         $ hugoIsAlive = False
                         "..."
                         hide chest with Dissolve(1.0)
-                        show pt-courtyard
-                        show ringmaster #temp until rm cg is done
+                        
+                        show ringmaster crackedmask #temp until rm cg is done
                         "I gasp. His mask is broken…And he’s bloody. Did he… Kill Hugo?"
                         rm "Hello, sweetheart."
                         rm "I apologize for the wait."
@@ -398,10 +398,12 @@ label global_hugoVendetta:
                             rm "After what’s happened, I promise I’ll protect you." 
                             rm "Who knows who else would treat you just like how Hugo did." 
                             rm "Hugo is gone, but I won’t have his death go to waste."
+                            show ringmaster hugohead
                             "He holds up Hugo's decapitated head" #TEMPORARY LINE UNTIL CG IS DONE
                             "!!!"
                             "Oh my…"
                             "I can’t breathe."
+                            show ringmaster hugoteeth
                             rm "Look at all of those teeth! Aren’t they just delicious looking?"
                             "He places a finger on the decapitated head’s upper lip and he lifts it, revealing the upper teeth and gums better."
                             rm "Well, they’re a little yellow from smoking but they’re surely edible."
@@ -409,6 +411,7 @@ label global_hugoVendetta:
                             "I reach towards the teeth but he smacks my hand away!"
                             rm "Nah-ah-ahh~."
                             rm "You cannot have any of this yet."
+                            show ringmaster crackedmask
                             "He lowers the head."
                             rm "I need to move you and clean up some things first."
                             rm "You’re going to be staying with me from now on."
