@@ -456,6 +456,7 @@ screen gallery_cgs:
                 add gallery.make_button(name="ringmasterHugoHead", unlocked=At("images/ringmaster hugohead.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="ringmasterHugoTeeth", unlocked=At("images/ringmaster hugoteeth.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="pitaPush", unlocked=At("images/pita push.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
+                add gallery.make_button(name="pitaRMTeamUp", unlocked=At("images/pita rm_teamup.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
             
 
 screen gallery_other:
