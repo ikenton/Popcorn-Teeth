@@ -28,7 +28,7 @@ label start:
     
     stop music fadeout 2.0
     scene trigger warning
-    jump rm_teamup    
+       
 
     call screen warning
     # shift options down  
