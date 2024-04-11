@@ -90,6 +90,7 @@ label global_ringmaster:
                     "I find my wand in one of his desk’s drawers and I grin."
                     "Holding it in my hands finally made me feel complete and content."
                     "It’s time to go home."
+                    $ persistent.ringmasterShirtless_unlocked = True
                     return
             label rmbadending:
                 rm "My, my, my little Princess is trying to fly away! "
@@ -176,5 +177,6 @@ label global_ringmaster:
                 "I walk up the stage and give a great wave and a wide smile"
                 p "Thank you all for coming to the show! I hope you’ll enjoy this performance as I will performing it!"
                 "I spot a nice target in the crowd and I lick my lips in enthusiasm. The afterparty will be fantastic once more."
+                $ persistent.ringmasterShirtless_unlocked = True
                 return
             

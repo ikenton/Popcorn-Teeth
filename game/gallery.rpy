@@ -134,7 +134,7 @@ init python:
     gallery.condition("persistent.bonnieHidden_unlocked")
 
     gallery.button("bonniePeak")
-    gallery.image("bonnie peak")
+    gallery.image("bonnie peaksunderbed")
     gallery.condition("persistent.bonniePeak_unlocked")
 
     gallery.button("underBed")
@@ -304,6 +304,10 @@ init python:
     gallery.button("pitaPush")
     gallery.image("pita push")
     gallery.condition("persistent.pitaPush_unlocked")
+
+    gallery.button("ringmasterShirtless")
+    gallery.image("ringmaster shirtless")
+    gallery.condition("persistent.ringmasterShirtless_unlocked")
 transform gallery_transform_full:
     zoom 0.35
 
@@ -428,7 +432,7 @@ screen gallery_cgs:
                 add gallery.make_button(name="ptCourtyard", unlocked=At("images/pt-courtyard.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
 
                 add gallery.make_button(name="bonnieTrailer", unlocked=At("images/pt bonnie trailer.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
-                add gallery.make_button(name="bonniePeak", unlocked=At("images/bonnie peak.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
+                add gallery.make_button(name="bonniePeak", unlocked=At("images/bonnie peaksunderbed.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="underBed", unlocked=At("images/full underbed.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="bonnieBad", unlocked=At("images/bonnie bad.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
                 add gallery.make_button(name="bonnieHidden", unlocked=At("images/bonnie hidden.png", gallery_transform_full), locked=At("images/blackscreen.png", gallery_transform_full))
@@ -490,5 +494,6 @@ screen gallery_other:
                 add gallery.make_button(name="ringmasterChibi", unlocked=At("images/ringmaster chibi.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="hugoChad", unlocked=At("images/chad hugo.png",  gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="marlonPregante", unlocked=im.Scale("images/marlon pregante.png", 400,311), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="ringmasterShirtless", unlocked=im.Scale("images/ringmaster shirtless.png",  400,435), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="pitapita", unlocked=im.Scale("images/pita pita.png", 400, 291), locked=At("images/blackscreen.png", gallery_transform_locked))
                 
