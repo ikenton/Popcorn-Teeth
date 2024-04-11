@@ -169,8 +169,8 @@ label global_hugoVendetta:
             play channel2 ("audio/footsteps-dirt-gravel.mp3")
             "I dare not to take any chance of making myself known yet…I wait and listen for a while. After a moment,the humming stops and I can hear footsteps approaching!"
             #timed
-            $ time = 5
-            show screen qte(5, 'prebadending')
+            $ time = 2
+            show screen qte(2, 'prebadending')
             menu:
                 "Hide!":
                     hide screen qte
