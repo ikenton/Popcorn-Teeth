@@ -290,8 +290,8 @@ label global_visitMarlon:
             m "Yes, for a while, he and I were happy…"
             show marlon angry
             m "But then the Ringmaster took that away from me."
-            $ time = 5
-            show screen qte(5, 'lizard_wrong')
+            $ time = 7
+            show screen qte(7, 'lizard_wrong')
             menu:
                 "His act wasn’t very good anyway.":
                     label lizard_wrong:
