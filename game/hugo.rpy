@@ -454,7 +454,7 @@ label global_hugoVendetta:
                             hide ringmaster
                             rm "I know what you did. What you tried to do."
                             "He stares at the posters on his wall, having his back towards me."
-                            if marlonIsAlive or bonnieIsAlive:
+                            if not marlonIsAlive or  not bonnieIsAlive:
                                 rm "You escaped your cage and ate their teeth. Hugo was right."
                                 "He must’ve checked the trailers…"
                             else:
