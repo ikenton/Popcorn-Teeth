@@ -28,13 +28,13 @@ label global_beginning:
     show pullaway_slideshow
     "He rubs one of his fingers against my knuckles and immediately pull away."
     $ persistent.ringmasterPull_unlocked = True
-    rm "Goodnight. See you tomorrow, Sweetheart"
+    rm "Goodnight. See you tomorrow, Sweetheart."
     hide pullaway_slideshow
     show cage int
     $ persistent.cageInt_unlocked = True
     $ persistent.pitaInCage_unlocked = True
     #footsteps sound
-    p "Finally he's gone"
+    p "Finally he's gone."
     "Two hours passed as I waited until everyone left the tent."
     "Now it's time for my escape."
     "Aha! I got it. Finally!"
