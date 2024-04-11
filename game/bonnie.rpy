@@ -60,11 +60,12 @@ label global_bonnie:
             menu:
                 "Hide behind the vanity":
                     hide screen qte
-                    show bonnie hidden
-                    $ persistent.bonnieHidden_unlocked = True
+                    
                     "I dash towards the vanity, hiding behind the old, rotted wood, white paint peeling off at every nook and cranny."
                     #show bonnie excited
                     b "*Yawn…*"
+                    show bonnie hidden
+                    $ persistent.bonnieHidden_unlocked = True
                     "She steps over to the vanity, sitting down on the cushioned chair."
                     #show bonnie sad
                     b "My lord, have I not been getting enough beauty sleep…?"
@@ -220,20 +221,19 @@ label global_bonnie:
                     "This is my only chance… I lunge at her, my hands reaching for her neck, with intent to push her down"
                     "The hand behind her back suddenly shoots forward-"
                     play music "FEAR.mp3"
+                    show bonnie bad at center
+                    $ persistent.bonnie_unlocked = True
                     p "Kch- ah.."
                     "She catches me on the object, my eyes falling to her hand, in it an incredibly sharp knife, implanted in my gut."
-                    
-                    show bonnie disgusted at center
                     b "Oh you poor thing… how clumsy of you, falling right onto such a dangerous object like that…"
                     #play music "FEAR.mp3"
-                    show bonnie bad
-                    $ persistent.bonnie_unlocked = True
+                    
                     "I slide off, falling onto the ground."
                     b "I’ve had enough of you, little fairy…"
                     "She slams the object into my stomach, my body lurching forward in pain, tears streaming down my cheeks, the life spilling from my eyes in pitiful, salty tears."
                     b "{b}Quite{/b} enough..."
                     "She stabs me again, my body convulsing." 
-                    "I can hear the knife being tornfrom my flesh, over and over and over again, a disgusting slick, wet sound as my own life spills from the deep wound she created…"
+                    "I can hear the knife being torn from my flesh, over and over and over again, a disgusting slick, wet sound as my own life spills from the deep wound she created…"
                     
                     jump death_screen
 

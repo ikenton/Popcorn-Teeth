@@ -35,7 +35,7 @@ label global_beginning:
     $ persistent.pitaInCage_unlocked = True
     #footsteps sound
     p "Finally he's gone"
-    "2 hours pass as I wait until I felt everyone leave the tent."
+    "Two hours passed as I waited until everyone left the tent."
     "Now it's time for my escape."
     "Aha! I got it. Finally!"
     show pita happy
