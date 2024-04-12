@@ -2,7 +2,7 @@ define rm = Character("Ringmaster", color = "#F00040")
 define p = Character("Pita", color = "#edf4b3")
 image pullaway_slideshow:
     "ringmaster lean"
-    pause 1.0
+    pause 2.3
     "ringmaster pullaway"
     pause 1.0
 label global_beginning:
@@ -26,7 +26,7 @@ label global_beginning:
     "He lets out a gleeful chortle, the same one that I heard when he first caught me."
     "{i}This creep!{/i}"
     show pullaway_slideshow
-    "He rubs one of his fingers against my knuckles and immediately pull away."
+    "He rubs one of his fingers against my knuckles and I immediately pull away."
     $ persistent.ringmasterPull_unlocked = True
     rm "Goodnight. See you tomorrow, Sweetheart."
     hide pullaway_slideshow

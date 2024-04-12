@@ -545,7 +545,7 @@ label global_hugoVendetta:
                             show chest darkness with Dissolve(1.0)
                             "I thrash at the chest from the inside."
                             "I need to get out!"
-                            "I need to get out! I need to get out!"
+                            "I need to get out!"
                             "I need…to get…"
                             "Out…"
                             jump death_screen

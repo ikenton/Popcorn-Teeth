@@ -26,7 +26,7 @@ label global_bonnie:
     $ timer_range = 0
     $ timer_jump = 0
     "I take a deep breath, steeling my nerves before hurrying over to {b}her{/b} trailer."
-    "The outside a faded pink, 2 large windows sat on one side, painted green and decorated with a pattern of daisies that lined the rim."
+    "The outside a faded pink, two large windows sat on one side, painted green and decorated with a pattern of tulips that lined the rim."
     "Stepping up to her door I turn the handle, the door clicking as I push it open. The inside is dim, lit only by the moonlight peeking through her windows, tinting the room an eerie blue hue."
     stop sound fadeout 1.0
     play music "audio/tension.mp3" fadein 0.5
@@ -136,15 +136,13 @@ label global_bonnie:
                                 
                                 show bonnie disgusted behind blackscreen
                                 show blackscreen:
-                                    alpha .5 
+                                    alpha 0
                                 "Then, throwing it aside, she digs her hand into my mouth."
-                                show blackscreen:
-                                    alpha .2 
+                                
                                 #crazed yet melancholic expression
                                 show bonnie excited behind blackscreen
                                 b "{i}How does it feel...{/i}"
-                                show blackscreen:
-                                    alpha .1
+                                
                                 
                                 "She rips one of my teeth from its socket, the initial shock saves me from most of the pain, but it doesn’t take long for it to  catch up with me, and I groan in pain, my breaths shallow."
                                 b "Tell me... is the pain truly unbearable...?"
