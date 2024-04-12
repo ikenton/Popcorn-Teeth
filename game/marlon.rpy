@@ -37,7 +37,7 @@ label global_visitMarlon:
     
     "I think it’s time to stop by Marlon’s trailer."
     
-
+    play channel2("audio/animal-sounds.mp3") volume 0.1
     "I head towards Marlons’s trailer, which is hard to see since it’s surrounded by cages filled with other circus animals. Bears, tigers, horses, monkeys, and even sea lions… All trapped here, just like me."
     if renpy.music.is_playing:
         play music "tension.mp3"
@@ -93,6 +93,7 @@ label global_visitMarlon:
     m "Let’s head inside my trailer, my animals are being too noisy right now…"
     scene pt-marlon-trailer
     stop channel1
+    stop channel2
     $ persistent.marlonTrailer_unlocked = True
     stop sound fadeout 1.0
     show marlon nuetral at right

@@ -22,11 +22,12 @@ label global_ringmaster:
         label enter:
             hide door
             stop sound fadeout 1.0
-            play music "tension.mp3"
+            play music "tension.mp3" fadein 1.5
             #scene ringmaster-trailer
             $ persistent.ringmasterTrailer_unlocked = True
             "I take a step on the stepping stool and open the door to a poorly lit room."
             "A man sits at his desk."
+            play sound "audio/wood-creak-single-v3.mp3"
             scene ringmaster_looks_slideshow
             $ persistent.ringmasterMaskless2_unlocked = True
             $ persistent.ringmasterMaskless_unlocked = True
