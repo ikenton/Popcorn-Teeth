@@ -22,6 +22,68 @@ screen qte(rangeD, missed_event):
             value AnimatedValue(value=time, range=rangeD, delay= 0.5)
             xmaximum 300
 
+image flashing_red_effect:
+    "images/redscreen.png"
+    alpha 0.13
+    pause 0.1
+    "images/redscreen.png"
+    alpha 0.14
+    pause 0.1
+    "images/redscreen.png"
+    alpha 0.15
+    pause 0.1
+    "images/redscreen.png"
+    alpha 0.16
+    pause 0.1
+    "images/redscreen.png"
+    alpha 0.17
+    pause 0.1
+    "images/redscreen.png"
+    alpha 0.18
+    pause 0.1
+    "images/redscreen.png"
+    alpha 0.19
+    pause 0.1
+    "images/redscreen.png"
+    alpha 0.20
+    pause 0.1
+    "images/redscreen.png"
+    alpha 0.21
+    pause 0.1
+    "images/redscreen.png"
+    alpha 0.22
+    pause 0.1
+    "images/redscreen.png"
+    alpha 0.23
+    pause 0.1
+    "images/redscreen.png"
+    alpha 0.22
+    pause 0.1
+    "images/redscreen.png"
+    alpha 0.21
+    pause 0.1
+    "images/redscreen.png"
+    alpha 0.20
+    pause 0.1
+    "images/redscreen.png"
+    alpha 0.19
+    pause 0.1
+    "images/redscreen.png"
+    alpha 0.18
+    pause 0.1
+    "images/redscreen.png"
+    alpha 0.17
+    pause 0.1
+    "images/redscreen.png"
+    alpha 0.16
+    pause 0.1
+    "images/redscreen.png"
+    alpha 0.15
+    pause 0.1
+    "images/redscreen.png"
+    alpha 0.14
+    pause 0.1
+    repeat
 label global_bonnie:
     $ timer_range = 0
     $ timer_jump = 0
@@ -133,44 +195,35 @@ label global_bonnie:
                                 
                                 "{b}{i}SLAM{/i}{b}"
                                 "She bashes the drawer against my face, rendering me partially unconscious."
-                                
-                                show bonnie disgusted behind blackscreen
-                                show blackscreen:
-                                    alpha 0
+                                hide blackscreen with Dissolve(0.5)
+                                show bonnie disgusted 
                                 "Then, throwing it aside, she digs her hand into my mouth."
+                                
                                 
                                 #crazed yet melancholic expression
                                 show bonnie excited behind blackscreen
                                 b "{i}How does it feel...{/i}"
                                 
-                                
+                                #show flashing_red_effect
                                 "She rips one of my teeth from its socket, the initial shock saves me from most of the pain, but it doesn’t take long for it to  catch up with me, and I groan in pain, my breaths shallow."
                                 b "Tell me... is the pain truly unbearable...?"
                                 #TODO: PUT BLACKSCREEN ONTOP OF BONNIE SPRITE
-                                show blackscreen:
-                                    alpha .5 
-                                
+                                                               
                                 "Another tooth is pulled, my mouth tastes like iron, and my vision begins to dim, I choke on my own fluids, unable to utter even a single sound more."
-                                show blackscreen:
-                                    alpha .6 
+                                
                                 
                                 b "Already...? That’s no fun..."
-                                show blackscreen:
-                                    alpha .7
+                                
                                 
                                 "Another tooth."
-                                show blackscreen:
-                                    alpha .8
+                               
                                 
                                 "And another."
-                                show blackscreen:
-                                    alpha .85 
+                                
                                 "..."
-                                show blackscreen:
-                                    alpha .9 
+                                
                                 "She continues pulling out teeth..."
-                                show blackscreen:
-                                    alpha 1.0
+                                
                                 "Until I finally expire."
 
                                 jump death_screen
@@ -207,25 +260,24 @@ label global_bonnie:
                     b "Oh I see.. Lords aren’t you just…"
                     "She pauses, pressing a finger to her lips in contemplation."
                     show bonnie disgusted
-                    b "Bothersome"
+                    b "Bothersome."
                     p "Shut it, Bonnie… I’ve had enough of your incessant whining."
                     show bonnie excited
                     "She laughs, no.. she giggles. She’s giddy and excited, her hand hidden behind her back."
                     "I pause, my eyes catching something glinting from behind her, something metal…"
-                    "something sharp…"
-                    "She seems to notice my hesitance"
+                    "Something sharp…"
+                    "She seems to notice my hesitance."
                     b "Getting cold feet, are we?"
                     "She stands from her bed, walking in long strides towards me."
-                    "This is my only chance… I lunge at her, my hands reaching for her neck, with intent to push her down"
+                    "This is my only chance… I lunge at her, my hands reaching for her neck, with intent to push her down."
                     "The hand behind her back suddenly shoots forward-"
                     play music "FEAR.mp3"
                     show bonnie bad at center
                     $ persistent.bonnie_unlocked = True
+                    show flashing_red_effect
                     p "Kch- ah.."
                     "She catches me on the object, my eyes falling to her hand, in it an incredibly sharp knife, implanted in my gut."
                     b "Oh you poor thing… how clumsy of you, falling right onto such a dangerous object like that…"
-                    #play music "FEAR.mp3"
-                    
                     "I slide off, falling onto the ground."
                     b "I’ve had enough of you, little fairy…"
                     "She slams the object into my stomach, my body lurching forward in pain, tears streaming down my cheeks, the life spilling from my eyes in pitiful, salty tears."

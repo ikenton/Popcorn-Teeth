@@ -59,6 +59,6 @@ label start:
         return
 
 label death_screen:
-    play music "audio/death_screen.mp3" fadein 1.0
+    play music "audio/death_screen.mp3" fadein 0.5
     show blackscreen
     with Fade(1.0, 4.0, 0.5)
