@@ -22,67 +22,13 @@ screen qte(rangeD, missed_event):
             value AnimatedValue(value=time, range=rangeD, delay= 0.5)
             xmaximum 300
 
-image flashing_red_effect:
+image redflash:
     "images/redscreen.png"
-    alpha 0.13
-    pause 0.1
-    "images/redscreen.png"
-    alpha 0.14
-    pause 0.1
-    "images/redscreen.png"
-    alpha 0.15
-    pause 0.1
-    "images/redscreen.png"
-    alpha 0.16
-    pause 0.1
-    "images/redscreen.png"
-    alpha 0.17
-    pause 0.1
-    "images/redscreen.png"
-    alpha 0.18
-    pause 0.1
-    "images/redscreen.png"
-    alpha 0.19
-    pause 0.1
-    "images/redscreen.png"
-    alpha 0.20
-    pause 0.1
-    "images/redscreen.png"
-    alpha 0.21
-    pause 0.1
-    "images/redscreen.png"
-    alpha 0.22
-    pause 0.1
-    "images/redscreen.png"
-    alpha 0.23
-    pause 0.1
-    "images/redscreen.png"
-    alpha 0.22
-    pause 0.1
-    "images/redscreen.png"
-    alpha 0.21
-    pause 0.1
-    "images/redscreen.png"
-    alpha 0.20
-    pause 0.1
-    "images/redscreen.png"
-    alpha 0.19
-    pause 0.1
-    "images/redscreen.png"
-    alpha 0.18
-    pause 0.1
-    "images/redscreen.png"
-    alpha 0.17
-    pause 0.1
-    "images/redscreen.png"
-    alpha 0.16
-    pause 0.1
-    "images/redscreen.png"
-    alpha 0.15
-    pause 0.1
-    "images/redscreen.png"
-    alpha 0.14
-    pause 0.1
+    alpha 0.0
+    linear 1.0 alpha 0.30
+    linear 0.5 alpha 0.0
+    #linear 0.0 alpha 0.30
+    
     repeat
 label global_bonnie:
     $ timer_range = 0
@@ -273,8 +219,8 @@ label global_bonnie:
                     "The hand behind her back suddenly shoots forward-"
                     play music "FEAR.mp3"
                     show bonnie bad at center
-                    $ persistent.bonnie_unlocked = True
-                    show flashing_red_effect
+                    $ persistent.bonnie_unlocked = True                    
+                    show redflash
                     p "Kch- ah.."
                     "She catches me on the object, my eyes falling to her hand, in it an incredibly sharp knife, implanted in my gut."
                     b "Oh you poor thing… how clumsy of you, falling right onto such a dangerous object like that…"
