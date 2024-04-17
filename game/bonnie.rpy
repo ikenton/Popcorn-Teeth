@@ -35,9 +35,9 @@ label global_bonnie:
     $ timer_jump = 0
     "I take a deep breath, steeling my nerves before hurrying over to the trailer."
     "The outside a faded pink, two large windows sat on one side, painted green and decorated with a pattern of tulips that lined the rim."
-    "Stepping up to the door I turn the handle, the door clicking as I push it open. The inside is dim, lit only by the moonlight peeking through her windows, tinting the room an eerie blue hue."
+    "Stepping up to the door I turn the handle, the door clicking as I push it open. The inside is dim, lit only by the moonlight peeking through the windows, tinting the room an eerie blue hue."
     stop sound fadeout 1.0
-    play music "audio/tension.mp3" fadein 0.5
+    play music "audio/tension.mp3" fadein 1.0
     scene pt bonnie trailer
     stop channel1
     $ persistent.bonnieTrailer_unlocked = True
@@ -144,7 +144,7 @@ label global_bonnie:
                                         "Bonnie kneels down and pressed her knee into my stomach, holding her vanity drawer over her head, and without a word."
                                         hide bonnie disgusted
                                         show blackscreen
-                                        stop music fadeout 1.0
+                                        stop music 
                                         "{b}{i}SLAM{/i}{b}"
                                         "She bashes the drawer against my face, rendering me partially unconscious."
                                         hide blackscreen with Dissolve(0.5)
@@ -202,8 +202,8 @@ label global_bonnie:
                             
                             p "..."
                             "I can feel my heart racing, my mouth sticky and sweat dripping from every pore. I clench my fists, stepping towards her."
-                            "She slips her hand behind her bed, glaring at me."
                             show bonnie disgusted
+                            "She slips her hand behind her bed, glaring at me."
 
                             b "What are you getting at, little fairy… come to kill me, have you?"
                             "I stumble, taking in a sharp breath, but I continue on my way towards her."
