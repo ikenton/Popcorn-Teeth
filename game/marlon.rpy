@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define m = Character("Marlon", color = "#281aa3")
+define m = Character("Marlon", color = "#6380e0")
 define p = Character("Pita", color = "#edf4b3")
 define r = Character("Ringmaster", color = "#880808")
 default crimsonhere = True
@@ -37,7 +37,6 @@ label global_visitMarlon:
     
     "I think it’s time to stop by Marlon’s trailer."
     
-    play channel2("audio/animal-sounds.mp3") volume 0.06
     "I head towards Marlons’s trailer, which is hard to see since it’s surrounded by cages filled with other circus animals. Bears, tigers, horses, monkeys, and even sea lions… All trapped here, just like me."
     if renpy.music.is_playing:
         play music "tension.mp3"
