@@ -37,7 +37,7 @@ label global_visitMarlon:
     
     "I think it’s time to stop by Marlon’s trailer."
     
-    play channel2("audio/animal-sounds.mp3") volume 0.1
+    play channel2("audio/animal-sounds.mp3") volume 0.06
     "I head towards Marlons’s trailer, which is hard to see since it’s surrounded by cages filled with other circus animals. Bears, tigers, horses, monkeys, and even sea lions… All trapped here, just like me."
     if renpy.music.is_playing:
         play music "tension.mp3"
@@ -47,8 +47,6 @@ label global_visitMarlon:
 
     show marlon surprised at right
     show crimson at left
-    #also have lion
-
     $ persistent.marlonNuetral_unlocked = True
     $ persistent.marlonHappy_unlocked = True
     $ persistent.marlonSuprised_unlocked = True
@@ -378,13 +376,13 @@ label global_visitMarlon:
                     m "Argh, you were trying to kill me!"
                     show marlon disapointed
                     m "And I thought I liked you…"
+                    stop music 
                     show marlon nuetral
-                    m "Crimson, it’s feeding time."
+                    m "Crimson, it’s feeding time." #he's an icon
                     hide marlon nuetral
-                    #play music "FEAR.mp3" noloop
-                    stop music fadeout 3.0
                     show crimson bad
                     $ persistent.crimsonBad_unlocked = True
+                    play music "FEAR.mp3"
                     "The lion on top of me growls, raising its hackles to reveal large and sharp teeth. For a moment, I smile as I think about how delicious they must be…"
                     "And then, I feel the lion’s jaw wrap around my neck, piercing my throat with his fangs. The lion rips my body to shreds, piece by piece, and my vision fades to black."
                     

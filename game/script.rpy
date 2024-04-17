@@ -4,6 +4,8 @@ default marlonIsAlive = True
 default hugoIsAlive = True
 default visitedRM = False
 default escapedBonnie = False
+default visitedBon = False
+default visitedHugo = False
 
 init:
     $ renpy.music.register_channel("channel1", loop=True)
@@ -59,6 +61,6 @@ label start:
         return
 
 label death_screen:
-    play music "audio/death_screen.mp3" fadein 0.5
+    play music "audio/death_screen.mp3" 
     show blackscreen
     with Fade(1.0, 4.0, 0.5)

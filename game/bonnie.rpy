@@ -33,210 +33,216 @@ image redflash:
 label global_bonnie:
     $ timer_range = 0
     $ timer_jump = 0
-    "I take a deep breath, steeling my nerves before hurrying over to {b}her{/b} trailer."
+    "I take a deep breath, steeling my nerves before hurrying over to the trailer."
     "The outside a faded pink, two large windows sat on one side, painted green and decorated with a pattern of tulips that lined the rim."
-    "Stepping up to her door I turn the handle, the door clicking as I push it open. The inside is dim, lit only by the moonlight peeking through her windows, tinting the room an eerie blue hue."
+    "Stepping up to the door I turn the handle, the door clicking as I push it open. The inside is dim, lit only by the moonlight peeking through her windows, tinting the room an eerie blue hue."
     stop sound fadeout 1.0
     play music "audio/tension.mp3" fadein 0.5
     scene pt bonnie trailer
     stop channel1
     $ persistent.bonnieTrailer_unlocked = True
+    if visitedBon:
+        "I find myself back in Bonnie's trailer again."
+        "I'm still rather hungry..."
+        jump hungry
+    else:
+        $ visitedBon = True
+        "I look around, I’ve not been in here before, but the room just screamed her name," 
+        "from the posters strewn about the wall reciting her praises, flowers now wilted sat atop her vanity," 
+        "and a lump in a bed decorated with the colors pink and green."
+        "I was in Bonnie’s room."
+        
+        "..."
+        "I need to stay quiet... but..."
 
-    "I look around, I’ve not been in here before, but the room just screamed her name," 
-    "from the posters strewn about the wall reciting her praises, flowers now wilted sat atop her vanity," 
-    "and a lump in a bed decorated with the colors pink and green."
-    "I was in Bonnie’s room."
-    
-    "..."
-    "I need to stay quiet... but..."
-
-    menu:
-        "I am still rather hungry…":
-            $ persistent.bonnieExcited_unlocked = True
-            $ persistent.bonnieSad_unlocked = True
-            $ persistent.bonnieDisgust_unlocked = True
-            $ persistent.bonnieShocked_unlocked = True
-            $ persistent.bonnieChibi_unlocked = True
-            "I approach the bed, stepping carefully through the mess of fallen posters and petals. The floor is dangerously creaky."
-            "Step… step… step-"
-            play sound "wood-creak-single-v2.mp3"
-            "{i}{b}Creaaak~{/b}{/i}"
-            "I stop in my tracks, the lump in the bed groans and begins getting up- I need to hide, {i}{b}now!{/i}{/b}"
-            #TIMED CHOiICES
-            $ time = 5
-            show screen qte(5, 'failed')
-            menu:
-                "Hide behind the vanity":
-                    hide screen qte
-                    
-                    "I dash towards the vanity, hiding behind the old, rotted wood, white paint peeling off at every nook and cranny."
-                    #show bonnie excited
-                    b "*Yawn…*"
-                    show bonnie hidden
-                    $ persistent.bonnieHidden_unlocked = True
-                    "She steps over to the vanity, sitting down on the cushioned chair."
-                    #show bonnie sad
-                    b "My lord, have I not been getting enough beauty sleep…?"
-                    "She presses a finger to her cheek, pulling at her taut skin. Deep red circles are under her eyes."
-                    #hide bonnie hidden
-                    #show bonnie disgusted
-                    b "Damned fairy…" 
-                    "I flinch, holding my breath."
-                    b "I’ve hardly any attention from the ringmaster since she’s been here… not any good attention at least…"
-                    "She opens her drawer, grabbing some pink face paint. She begins repainting her cheeks, applying some cream below her eye, all done quickly, methodically. She’s been here for a long time, her routine makes that much clear."
-                    #show bonnie sad
-                    b "{b}Sniffle...{/b}"
-                    #hide bonnie sad
-                    
-                    "Is she… crying…?"
-                    "Now that I think about it… ever since my arrival, she’s been undermined by the Ringmaster, wasn’t she originally his favorite…? Is she really… to blame?"
-                    
-                    "..."
-                    "No… I don’t care…"
-                    
-                    "She’s been nothing but mean to me, she deserves this… she deserves {b}all{/b} that is coming to her…"
-                    "I slowly reach forward, a large grin forming on my face."
-                    "Suddenly, I grab her leg, and pulling her down, I manage to hit her head against the vanity, knocking her unconscious."
-                    stop music fadeout 1.5
-                    p "I am so hungry… starved, even.."
-                    show bonnie dead
-                    $ persistent.bonnieDead_unlocked = True
-                    $ bonnieIsAlive = False
-                    # INSERT CG'S HERE
-                    "{b}{i}Crunch. Crunch. Crunch.{/b}{/i}"
-                    "Her teeth taste divine, heavenly after being starved for so long… more… I want more."
-                    "My claws dig into the flesh, tearing at cheek and gum, a mess of red staining my hands, spilling from her defiled mouth."
-                    "Bits of veins and strings of tattered flesh now decorate the crevice with which once held her teeth in place, filling my stomach, regaining my power…"
-                    jump global_courtyard
-                "Hide under the bed":
-                    hide screen qte
-                    show full underbed
-                    "I keep my hand pressed over my mouth, biting my tongue as the shuffling goes quiet."
-                    "..."
-                    "After a few moments of silence, I spot Bonnie’s legs swinging overhead, and she makes her way over to her vanity, taking a seat and peering at her reflection in the mirror."
-                    "I do my best to keep in the shadows, feeling fortunate that her room was so dimly lit."
-                    "She opens her drawer and begins searching for something from within, this is my chance."
+        menu:
+            "I am still rather hungry…":
+                $ persistent.bonnieExcited_unlocked = True
+                $ persistent.bonnieSad_unlocked = True
+                $ persistent.bonnieDisgust_unlocked = True
+                $ persistent.bonnieShocked_unlocked = True
+                $ persistent.bonnieChibi_unlocked = True
+                label hungry:
+                    "I approach the bed, stepping carefully through the mess of fallen posters and petals. The floor is dangerously creaky."
+                    "Step… step… step-"
+                    play sound "wood-creak-single-v2.mp3"
+                    "{i}{b}Creaaak~{/b}{/i}"
+                    "I stop in my tracks, the lump in the bed groans and begins getting up- I need to hide, {i}{b}now!{/i}{/b}"
+                    #TIMED CHOiICES
                     $ time = 5
-                    show screen qte(5, 'sneak')
+                    show screen qte(5, 'failed')
                     menu:
-                        "Sneak up to her from behind": #fail
-                            label sneak:
-                                hide screen qte
-                                hide full underbed
-                                "I step out from under the bed, remaining as low to the floor as I can..."
-                                "Step."
-                                "Step.."
-                                "Step..."
-                                "Each hoof gently sliding across the ground, now wary of the creaky floor boards."
-                                #back of bonnie OR bonnie sitting at vanity png
-                                "I finally reach her, and begin to stand, my hands lifting and reaching towards her neck.."
-                                "Finally... I press my hands against her neck-"
-                                "{b}HNGK-{/b}"
-                                "Bonnie slides her chair back as hard as she can, easily knocking me onto my back as I was caught off guard."
-                                "I hear something crash onto the floor as I try to get back on my feet, but it’s in vain."
-                                show bonnie disgusted
-                                "Bonnie kneels down and pressed her knee into my stomach, holding her vanity drawer over her head, and without a word."
-                                hide bonnie disgusted
-                                show blackscreen
-                                
-                                "{b}{i}SLAM{/i}{b}"
-                                "She bashes the drawer against my face, rendering me partially unconscious."
-                                hide blackscreen with Dissolve(0.5)
-                                show bonnie disgusted 
-                                "Then, throwing it aside, she digs her hand into my mouth."
-                                
-                                
-                                #crazed yet melancholic expression
-                                show bonnie excited behind blackscreen
-                                b "{i}How does it feel...{/i}"
-                                
-                                #show flashing_red_effect
-                                "She rips one of my teeth from its socket, the initial shock saves me from most of the pain, but it doesn’t take long for it to  catch up with me, and I groan in pain, my breaths shallow."
-                                b "Tell me... is the pain truly unbearable...?"
-                                #TODO: PUT BLACKSCREEN ONTOP OF BONNIE SPRITE
-                                                               
-                                "Another tooth is pulled, my mouth tastes like iron, and my vision begins to dim, I choke on my own fluids, unable to utter even a single sound more."
-                                
-                                
-                                b "Already...? That’s no fun..."
-                                
-                                
-                                "Another tooth."
-                               
-                                
-                                "And another."
-                                
-                                "..."
-                                
-                                "She continues pulling out teeth..."
-                                
-                                "Until I finally expire."
-
-                                jump death_screen
-
-                                return
-                        "Attempt an escape": #succeed but can no longer enter Bonnie's trailer
-                           
+                        "Hide behind the vanity":
                             hide screen qte
-                            "No..."
-                            "This as a bad idea, and now she's awake."
-                            "I need to focus on getting out of here."
-                            hide full underbed
-                            "I pull myself across the floor, keeping low as to avoid Bonnie’s sight, and glance at Bonnie one last time before slipping through the door."
-                            $ escapedBonnie = True
+                            
+                            "I dash towards the vanity, hiding behind the old, rotted wood, white paint peeling off at every nook and cranny."
+                            #show bonnie excited
+                            b "*Yawn…*"
+                            show bonnie hidden
+                            $ persistent.bonnieHidden_unlocked = True
+                            "She steps over to the vanity, sitting down on the cushioned chair."
+                            #show bonnie sad
+                            b "My lord, have I not been getting enough beauty sleep…?"
+                            "She presses a finger to her cheek, pulling at her taut skin. Deep red circles are under her eyes."
+                            #hide bonnie hidden
+                            #show bonnie disgusted
+                            b "Damned fairy…" 
+                            "I flinch, holding my breath."
+                            b "I’ve hardly any attention from the ringmaster since she’s been here… not any good attention at least…"
+                            "She opens her drawer, grabbing some pink face paint. She begins repainting her cheeks, applying some cream below her eye, all done quickly, methodically. She’s been here for a long time, her routine makes that much clear."
+                            #show bonnie sad
+                            b "{b}Sniffle...{/b}"
+                            #hide bonnie sad
+                            
+                            "Is she… crying…?"
+                            "Now that I think about it… ever since my arrival, she’s been undermined by the Ringmaster, wasn’t she originally his favorite…? Is she really… to blame?"
+                            
+                            "..."
+                            "No… I don’t care…"
+                            
+                            "She’s been nothing but mean to me, she deserves this… she deserves {b}all{/b} that is coming to her…"
+                            "I slowly reach forward, a large grin forming on my face."
+                            "Suddenly, I grab her leg, and pulling her down, I manage to hit her head against the vanity, knocking her unconscious."
+                            stop music fadeout 1.5
+                            p "I am so hungry… starved, even.."
+                            show bonnie dead
+                            $ persistent.bonnieDead_unlocked = True
+                            $ bonnieIsAlive = False
+                            # INSERT CG'S HERE
+                            "{b}{i}Crunch. Crunch. Crunch.{/b}{/i}"
+                            "Her teeth taste divine, heavenly after being starved for so long… more… I want more."
+                            "My claws dig into the flesh, tearing at cheek and gum, a mess of red staining my hands, spilling from her defiled mouth."
+                            "Bits of veins and strings of tattered flesh now decorate the crevice with which once held her teeth in place, filling my stomach, regaining my power…"
                             jump global_courtyard
-                "Attempt a direct approach":
-                    hide screen qte
-                    "No… I’m done hiding. I’m taking her on here and now."
-                    "I stand my ground, balling my hands into tight fists as Bonnie rises from her slumber."
-                
-                    show bonnie shocked 
+                        "Hide under the bed":
+                            hide screen qte
+                            show full underbed
+                            "I keep my hand pressed over my mouth, biting my tongue as the shuffling goes quiet."
+                            "..."
+                            "After a few moments of silence, I spot Bonnie’s legs swinging overhead, and she makes her way over to her vanity, taking a seat and peering at her reflection in the mirror."
+                            "I do my best to keep in the shadows, feeling fortunate that her room was so dimly lit."
+                            "She opens her drawer and begins searching for something from within, this is my chance."
+                            $ time = 5
+                            show screen qte(5, 'sneak')
+                            menu:
+                                "Sneak up to her from behind": #fail
+                                    label sneak:
+                                        hide screen qte
+                                        hide full underbed
+                                        "I step out from under the bed, remaining as low to the floor as I can..."
+                                        "Step."
+                                        "Step.."
+                                        "Step..."
+                                        "Each hoof gently sliding across the ground, now wary of the creaky floor boards."
+                                        #back of bonnie OR bonnie sitting at vanity png
+                                        "I finally reach her, and begin to stand, my hands lifting and reaching towards her neck.."
+                                        "Finally... I press my hands against her neck-"
+                                        "{b}HNGK-{/b}"
+                                        "Bonnie slides her chair back as hard as she can, easily knocking me onto my back as I was caught off guard."
+                                        "I hear something crash onto the floor as I try to get back on my feet, but it’s in vain."
+                                        show bonnie disgusted
+                                        "Bonnie kneels down and pressed her knee into my stomach, holding her vanity drawer over her head, and without a word."
+                                        hide bonnie disgusted
+                                        show blackscreen
+                                        stop music fadeout 1.0
+                                        "{b}{i}SLAM{/i}{b}"
+                                        "She bashes the drawer against my face, rendering me partially unconscious."
+                                        hide blackscreen with Dissolve(0.5)
+                                        show bonnie disgusted 
+                                        "Then, throwing it aside, she digs her hand into my mouth."
+                                        
+                                        
+                                        #crazed yet melancholic expression
+                                        show bonnie excited behind blackscreen
+                                        b "{i}How does it feel...{/i}"
+                                        
+                                        #show flashing_red_effect
+                                        "She rips one of my teeth from its socket, the initial shock saves me from most of the pain, but it doesn’t take long for it to  catch up with me, and I groan in pain, my breaths shallow."
+                                        b "Tell me... is the pain truly unbearable...?"
+                                        #TODO: PUT BLACKSCREEN ONTOP OF BONNIE SPRITE
+                                                                    
+                                        "Another tooth is pulled, my mouth tastes like iron, and my vision begins to dim, I choke on my own fluids, unable to utter even a single sound more."
+                                        
+                                        
+                                        b "Already...? That’s no fun..."
+                                        
+                                        
+                                        "Another tooth."
+                                    
+                                        
+                                        "And another."
+                                        
+                                        "..."
+                                        
+                                        "She continues pulling out teeth..."
+                                        
+                                        "Until I finally expire."
 
-                    b "What- Pita?  What are you doing in here?!"
-                    
-                    p "..."
-                    "I can feel my heart racing, my mouth sticky and sweat dripping from every pore. I clench my fists, stepping towards her."
-                    "She slips her hand behind her bed, glaring at me."
-                    show bonnie disgusted
+                                        jump death_screen
 
-                    b "What are you getting at, little fairy… come to kill me, have you?"
-                    "I stumble, taking in a sharp breath, but I continue on my way towards her."
-                    show bonnie excited
+                                        return
+                                "Attempt an escape": #succeed but can no longer enter Bonnie's trailer
+                                
+                                    hide screen qte
+                                    "No..."
+                                    "This as a bad idea, and now she's awake."
+                                    "I need to focus on getting out of here."
+                                    hide full underbed
+                                    "I pull myself across the floor, keeping low as to avoid Bonnie’s sight, and glance at Bonnie one last time before slipping through the door."
+                                    $ escapedBonnie = True
+                                    jump global_courtyard
+                        "Attempt a direct approach":
+                            hide screen qte
+                            "No… I’m done hiding. I’m taking her on here and now."
+                            "I stand my ground, balling my hands into tight fists as Bonnie rises from her slumber."
+                        
+                            show bonnie shocked 
 
-                    b "Oh I see.. Lords aren’t you just…"
-                    "She pauses, pressing a finger to her lips in contemplation."
-                    show bonnie disgusted
-                    b "Bothersome."
-                    p "Shut it, Bonnie… I’ve had enough of your incessant whining."
-                    show bonnie excited
-                    "She laughs, no.. she giggles. She’s giddy and excited, her hand hidden behind her back."
-                    "I pause, my eyes catching something glinting from behind her, something metal…"
-                    "Something sharp…"
-                    "She seems to notice my hesitance."
-                    b "Getting cold feet, are we?"
-                    "She stands from her bed, walking in long strides towards me."
-                    "This is my only chance… I lunge at her, my hands reaching for her neck, with intent to push her down."
-                    "The hand behind her back suddenly shoots forward-"
-                    play music "FEAR.mp3"
-                    show bonnie bad at center
-                    $ persistent.bonnie_unlocked = True                    
-                    show redflash
-                    p "Kch- ah.."
-                    "She catches me on the object, my eyes falling to her hand, in it an incredibly sharp knife, implanted in my gut."
-                    b "Oh you poor thing… how clumsy of you, falling right onto such a dangerous object like that…"
-                    "I slide off, falling onto the ground."
-                    b "I’ve had enough of you, little fairy…"
-                    "She slams the object into my stomach, my body lurching forward in pain, tears streaming down my cheeks, the life spilling from my eyes in pitiful, salty tears."
-                    b "{b}Quite{/b} enough..."
-                    "She stabs me again, my body convulsing." 
-                    "I can hear the knife being torn from my flesh, over and over and over again, a disgusting slick, wet sound as my own life spills from the deep wound she created…"
-                    
-                    jump death_screen
+                            b "What- Pita?  What are you doing in here?!"
+                            
+                            p "..."
+                            "I can feel my heart racing, my mouth sticky and sweat dripping from every pore. I clench my fists, stepping towards her."
+                            "She slips her hand behind her bed, glaring at me."
+                            show bonnie disgusted
 
-                    return       
-        "No, I need to get out of here…":
-            "I slowly step back, exiting the tent. It’s too risky, I need to escape…"
-            jump global_courtyard
+                            b "What are you getting at, little fairy… come to kill me, have you?"
+                            "I stumble, taking in a sharp breath, but I continue on my way towards her."
+                            show bonnie excited
+
+                            b "Oh I see.. Lords aren’t you just…"
+                            "She pauses, pressing a finger to her lips in contemplation."
+                            show bonnie disgusted
+                            b "Bothersome."
+                            p "Shut it, Bonnie… I’ve had enough of your incessant whining."
+                            show bonnie excited
+                            "She laughs, no.. she giggles. She’s giddy and excited, her hand hidden behind her back."
+                            "I pause, my eyes catching something glinting from behind her, something metal…"
+                            "Something sharp…"
+                            "She seems to notice my hesitance."
+                            b "Getting cold feet, are we?"
+                            "She stands from her bed, walking in long strides towards me."
+                            "This is my only chance… I lunge at her, my hands reaching for her neck, with intent to push her down."
+                            "The hand behind her back suddenly shoots forward-"
+                            play music "FEAR.mp3"
+                            show bonnie bad at center
+                            $ persistent.bonnie_unlocked = True                    
+                            show redflash
+                            p "Kch- ah.."
+                            "She catches me on the object, my eyes falling to her hand, in it an incredibly sharp knife, implanted in my gut."
+                            b "Oh you poor thing… how clumsy of you, falling right onto such a dangerous object like that…"
+                            "I slide off, falling onto the ground."
+                            b "I’ve had enough of you, little fairy…"
+                            "She slams the object into my stomach, my body lurching forward in pain, tears streaming down my cheeks, the life spilling from my eyes in pitiful, salty tears."
+                            b "{b}Quite{/b} enough..."
+                            "She stabs me again, my body convulsing." 
+                            "I can hear the knife being torn from my flesh, over and over and over again, a disgusting slick, wet sound as my own life spills from the deep wound she created…"
+                            
+                            jump death_screen
+
+                            return       
+            "No, I need to get out of here…":
+                "I slowly step back, exiting the tent. It’s too risky, I need to escape…"
+                jump global_courtyard
         
     label failed:
         play sound "wood-creak-single-v3.mp3"
@@ -263,7 +269,6 @@ label global_bonnie:
         hide bed
         hide underbed
         show blackscreen
-        play music "audio/FEAR.mp3"
         "{b}SLAM{/b}"
         "I am knocked back, something incredibly heavy and hard hitting me square in the face…"
         #HIDE BLACK SCREEN
@@ -276,6 +281,7 @@ label global_bonnie:
         "My head is spinning, a terrible, throbbing pain in my skull."
         "Her footsteps are muffled by the ringing in my head as she walks past me to her bed, grabbing something from behind it. It was something shiny, that reflected the dim light from her vanity"
         
+        play music "audio/FEAR.mp3"
         show bonnie bad
         $ persistent.bonnieBad_unlocked = True
         "She stands above me, raising the object over her head."

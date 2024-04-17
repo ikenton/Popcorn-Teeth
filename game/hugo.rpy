@@ -34,14 +34,24 @@ image chest death_slideshow:
     pause 2.0
     "blackscreen" with Dissolve(1.0)
 
+image hugo smile_action:
+    "hugo surprised"
+    pause 4.0
+    "hugo smile"
+
 label global_hugoVendetta:
     $ timer_range = 0
     $ timer_jump = 0
-    play music "tension.mp3" fadein 3.0
     scene hugo-trailerdoor
-    "I look over and quietly approach the red and flashy trailer with many posters from past shows on it. I don’t seem to be on any of them."
-    "I can see smoke coming from behind the trailer and humming. I cock my head with curiosity."
-    "Who could it be?"
+    if visitedHugo:
+        "I quietly approach the colorful and flashy trailer again."
+        "I can see smoke coming from behind the trailer and humming."
+        "Who could it be?"
+    else: 
+        "I look over and quietly approach the colorful and flashy trailer with many posters from past shows on it. I don’t seem to be on any of them."
+        "I can see smoke coming from behind the trailer and humming. I cock my head with curiosity."
+        "Who could it be?"
+    $ visitedHugo = True
 
     menu:
         "Leave":
@@ -57,6 +67,7 @@ label global_hugoVendetta:
             $ persistent.hugoChibi_unlocked = True
             "I place my dainty hand on the trailer and slowly poke my head out."
             "Oh I know who it is."
+            play music "tension.mp3" fadein 1.0
             show hugo back
             $ persistent.hugoChad_unlocked = True
             $ persistent.hugoPoster_unlocked = True
@@ -189,11 +200,11 @@ label global_hugoVendetta:
                             play sound "wood-creak-single-v3.mp3"
                             "Creeeak"
                             "!!!"
+                            play music "tension.mp3" fadein 3.0
                             "Hugo suddenly turns around"
                             show hugo surprised
                             h "What the?! What are you doing here?!"
                             p "Hugo?!-"
-                            play music "FEAR.mp3"
 
                             jump badending
                         "Wait":
@@ -210,8 +221,10 @@ label global_hugoVendetta:
                                 $ persistent.hugoTrailer_unlocked = True
                                 hide pita underneath
                                 "I grin and I enter the trailer though the trapdoor as quietly as I can."
+                                show hugo asleep
+                                play music "tension.mp3"
                                 "I scan my surroundings and see Hugo in bed, facing the wall. lowering my head, I quietly approach him. Eventually, I  get close enough to him and I look around for a weapon. I grab the base of a lamp with both of my hands."
-                                
+                                show hugo awake
                                 "Hugo turns his body towards me and jumps."
                                 show hugo surprised
                                 h "Are you trying to kill me?"
@@ -219,14 +232,14 @@ label global_hugoVendetta:
                                     "Yes":
                                         "I immediately strike down the lamp onto Hugo’s head."
                                         "He catches it in  midair. I gasp and let go of the lamp. I grit my teeth."
+                                        show hugo smile_action
                                         "Desperate, I strike at his face with my fingernails, drawing some blood. He recoils and screams. He wipes his face and notices the blood on his fingertips. He then looks at me with a sinister grin."
                                         h "Look what we have here. The fairy’s giving me an opportunity of a lifetime!"
-                                        "He swings the lamp towards me-"
-                                        play music "FEAR.mp3"
-                                        
+                                        "He swings the lamp towards me-"                                       
                                         show blackscreen
-                                        "..."
-                                        "I was met with a sudden darkness and warmth that felt like freedom."
+                                        stop music fadeout 0.5
+                                        "..." #add ringing sound
+                                        "Everything went dark for a moment as I got struck by the lamp."
 
                                     "No":
                                         "Hugo sits up on the bed and stares at me."
@@ -234,20 +247,23 @@ label global_hugoVendetta:
                                         h "Then explain why you have a lamp in your hands little fairy and why you’re out of your cage."
                                         "I hesitantly lower the lamp that’s in my hands."
                                         "Awkward…"
-                                        p "Uhh, I was simply inspecting it"
+                                        p "Uhh, I was simply inspecting it."
                                         show hugo smile
-                                        h "Ha! You’re a bad liar! You had an opportunity and you flopped. I wonder how the Ringmaster favored such an idiot over me. It pisses me off"
+                                        h "Ha! You’re a bad liar! You had an opportunity and you flopped. I wonder how the Ringmaster favored such an idiot over me. It pisses me off."
+                                        play music "FEAR.mp3"
                                         show hugo bad
                                         "He gets off the bed and towers over me. "
                                         
                                         h "Well finally, thank you for giving me an opportunity of a lifetime, Pita.The circus will be mine again!"
                                          
                                         "Hugo struck me and I was met with darkness…"
+                                        stop music fadeout 0.3
                                         show blackscreen with Dissolve(1.0)
                                         jump hugopt2
     label badending:
         hide blackscreen
         stop channel1
+        play music "FEAR.mp3"
         show hugo bad
         $ persistent.hugoBad_unlocked = True
         "I felt my neck be grasped and my body be lifted! I gasp and hyperventilate, clawing at the hand around my neck."
@@ -399,6 +415,7 @@ label global_hugoVendetta:
                             rm "After what’s happened, I promise I’ll protect you." 
                             rm "Who knows who else would treat you just like how Hugo did." 
                             rm "Hugo is gone, but I won’t have his death go to waste."
+                            play music "tension.mp3" fadein 0.3
                             show ringmaster hugohead
                             $ persistent.ringmasterHugoHead_unlocked = True
                             "He holds up Hugo's decapitated head" #TEMPORARY LINE UNTIL CG IS DONE
@@ -421,6 +438,7 @@ label global_hugoVendetta:
                             # play chest closing sound
                             hide ringmaster
                             show chest darkness
+                            stop music fadeout 1.0
                             show blackscreen with Dissolve(1.0)
                             "I felt the chest I’m inside of being lifted and moved somewhere else."
                             "..."
@@ -469,6 +487,8 @@ label global_hugoVendetta:
                             "It is unlocked."
                             rm "All you need to do is listen and be my perfect star."
                             "He lightly caresses the poster that he has of me on his wall."
+                            show ringmaster
+                            "He turns around and approaches my cage whilst putting out his hand."
                             rm "Whaddya say?"
                             if not marlonIsAlive and not bonnieIsAlive and not hugoIsAlive:
                                 menu: 
@@ -491,7 +511,8 @@ label global_hugoVendetta:
                                 "My hands are shaking…"
                                 "I don’t feel strong enough to go up against him." 
                                 "I don’t want to be stabbed next!"
-                                "I lower my head…"
+                                "I lower my head... and hesitantly take his hand..."
+                                stop music fadeout 0.3
                                 p "Fine, I’ll obey."
                                 "..."
                                 rm "That’s my good girl…"
@@ -509,7 +530,7 @@ label global_hugoVendetta:
                             h "Yes, Sir"
                             "!!!"
                             "I felt myself being lowered."
-                            play sound "audio/footsteps-dirt-gravel.mp3" fadeout 1.0
+                            stop sound fadeout 1.0
                             show chest carried
                             "Ah finally, they’re all gone!"
                             "I must find a way out of this chest."
@@ -533,6 +554,7 @@ label global_hugoVendetta:
                             "My heart pounds rapidly in my chest."
                             h "I’m going to do what I should have done a long time ago."
                             "!!!"
+                            stop sound
                             "I can feel the chest I’m inside of being dropped!"
                             #play thud sound
                             show chest dropped

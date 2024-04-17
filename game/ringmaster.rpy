@@ -98,6 +98,8 @@ label global_ringmaster:
                 rm "You got a nerve to be out of your cage."
                 p "I’m escaping with my wand and you’re not going to stop me!"
                 "I fly towards him at great speed with my claws ready to tear at his flesh."
+                play sound "piano-keys-smashed.mp3"
+                queue sound "death_screen.mp3" loop
                 p "Ack-!"
                 "He catches me from the throat and squeezes it. No! I’m not strong enough-"
                 rm "You know I don’t want to hurt you and yet you test me?!"
@@ -114,7 +116,6 @@ label global_ringmaster:
                 rm "Stay still."
                 p "?!!!"
                 hide ringmaster
-                #play music "FEAR.mp3"
                 show blackscreen
 
                 #CRUNCH NOISE
@@ -157,8 +158,9 @@ label global_ringmaster:
                 p "Second, tell me where my wand is. I’m not taking any other chances."
                 "He points at one of his drawers"
                 rm "In there, sweetheart, I kept it close to remind me of you at night."
-                "I slam him again out of disgust."
-                p "Finally, I’m never getting back into that damn cage. Thankfully, a few trailers are now vacant, so I’ll be taking one for my own."
+                "I slam him again out of disgust, and drag him towards the drawer he pointed at. Using my other hand, I rummage around and manage to find my wand."
+                p "There you are! No where were we… Oh yes, our terms."
+                p "Finally, I’m a fairy. I fly by my own terms, and you will never lock me down again. I’m staying out of convenience, and the minute I don’t need you or this circus, I’m gone. If you try to stop me, just remember what rule one was."
                 p "Now, are we clear?"
                 rm "Crystalline."
                 "I loosen my grip. He tenderly grabs my hand and leans in to kiss it, but I slap him away."
