@@ -37,7 +37,7 @@ label global_bonnie:
     "The outside a faded pink, two large windows sat on one side, painted green and decorated with a pattern of tulips that lined the rim."
     "Stepping up to the door I turn the handle, the door clicking as I push it open. The inside is dim, lit only by the moonlight peeking through the windows, tinting the room an eerie blue hue."
     stop sound fadeout 1.0
-    play music "audio/tension.mp3" fadein 1.0
+
     scene pt bonnie trailer
     stop channel1
     $ persistent.bonnieTrailer_unlocked = True
@@ -74,7 +74,7 @@ label global_bonnie:
                     menu:
                         "Hide behind the vanity":
                             hide screen qte
-                            
+                            play music "audio/tension.mp3" fadein 1.0
                             "I dash towards the vanity, hiding behind the old, rotted wood, white paint peeling off at every nook and cranny."
                             #show bonnie excited
                             b "*Yawn…*"
@@ -103,7 +103,7 @@ label global_bonnie:
                             "She’s been nothing but mean to me, she deserves this… she deserves {b}all{/b} that is coming to her…"
                             "I slowly reach forward, a large grin forming on my face."
                             "Suddenly, I grab her leg, and pulling her down, I manage to hit her head against the vanity, knocking her unconscious."
-                            stop music fadeout 1.5
+                            stop music fadeout 5.0
                             p "I am so hungry… starved, even.."
                             show bonnie dead
                             $ persistent.bonnieDead_unlocked = True
@@ -127,6 +127,7 @@ label global_bonnie:
                             menu:
                                 "Sneak up to her from behind": #fail
                                     label sneak:
+                                        play music "audio/tension.mp3" fadein 1.0
                                         hide screen qte
                                         hide full underbed
                                         "I step out from under the bed, remaining as low to the floor as I can..."
@@ -145,6 +146,7 @@ label global_bonnie:
                                         hide bonnie disgusted
                                         show blackscreen
                                         stop music 
+                                        play sound "audio/piano-keys-smashed.mp3"
                                         "{b}{i}SLAM{/i}{b}"
                                         "She bashes the drawer against my face, rendering me partially unconscious."
                                         hide blackscreen with Dissolve(0.5)
@@ -193,6 +195,7 @@ label global_bonnie:
                                     jump global_courtyard
                         "Attempt a direct approach":
                             hide screen qte
+                            play music "audio/tension.mp3" fadein 1.0
                             "No… I’m done hiding. I’m taking her on here and now."
                             "I stand my ground, balling my hands into tight fists as Bonnie rises from her slumber."
                         
@@ -262,6 +265,7 @@ label global_bonnie:
         #insert bed creaking noise & peak animation
         p "Bon-"
         stop sound
+        play music "audio/tension.mp3" 
         "{b}I am suddenly pulled out from under the bed-"
         #show bonnie disgusted
         b "Wretched thing." 
@@ -269,10 +273,14 @@ label global_bonnie:
         hide bed
         hide underbed
         show blackscreen
+        stop music
+        play sound "audio/piano-keys-smashed.mp3"
         "{b}SLAM{/b}"
         "I am knocked back, something incredibly heavy and hard hitting me square in the face…"
         #HIDE BLACK SCREEN
         hide blackscreen
+        stop sound
+        
         show bonnie disgusted at center
 
         "The drawer from her vanity, broken in half, held in her hands"
@@ -283,6 +291,7 @@ label global_bonnie:
         
         play music "audio/FEAR.mp3"
         show bonnie bad
+        show redflash
         $ persistent.bonnieBad_unlocked = True
         "She stands above me, raising the object over her head."
         

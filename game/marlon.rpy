@@ -5,7 +5,7 @@
 
 define m = Character("Marlon", color = "#6380e0")
 define p = Character("Pita", color = "#edf4b3")
-define r = Character("Ringmaster", color = "#880808")
+define rm = Character("Ringmaster", color = "#ff0000")
 default crimsonhere = True
 
 transform alpha_dissolve:
@@ -38,10 +38,7 @@ label global_visitMarlon:
     "I think it’s time to stop by Marlon’s trailer."
     
     "I head towards Marlons’s trailer, which is hard to see since it’s surrounded by cages filled with other circus animals. Bears, tigers, horses, monkeys, and even sea lions… All trapped here, just like me."
-    if renpy.music.is_playing:
-        play music "tension.mp3"
-    else:
-        play music "tension.mp3" fadein 3
+   
     "I guess there’s no point in being sneaky, since as soon as I get close enough to the cages, the animals start stirring and making loud noises, banging on their bars and reaching out to grab me."
 
     show marlon surprised at right
@@ -55,6 +52,10 @@ label global_visitMarlon:
     $ persistent.crimson_unlocked = True
     $ persistent.marlonChibi_unlocked = True
     $ persistent.marlonPoster_unlocked = True
+    if renpy.music.is_playing:
+        play music "tension.mp3"
+    else:
+        play music "tension.mp3" fadein 3
     m "I-Is someone there?"
 
     "I see Marlon, the circus’ animal trainer and performer. He’s standing in front of his trailer with a lion by his side, whip in one hand as he works with the animal."
@@ -478,44 +479,45 @@ label global_visitMarlon:
                     #show ringmaster at right
                     show marlon nuetral at right
                     show ringmaster at left
-                    r "Well, well, well, what do we have here…"
-                    r "My little Marlon, bringing with him a new pet."
+                    rm "Well, well, well, what do we have here…"
+                    rm "My little Marlon, bringing with him a new pet."
                     m "S-she was trying to escape, but luckily my animals alerted me and I was able to catch her."
-                    r "Well done, my boy. You’ve proven to me that you’re still useful."
-                    r "Who said you can’t teach an old dog new tricks? You’ve learned well to fetch me my prized fairy."
+                    rm "Well done, my boy. You’ve proven to me that you’re still useful."
+                    rm "Who said you can’t teach an old dog new tricks? You’ve learned well to fetch me my prized fairy."
                     "Marlon backs away from me as the Ringmaster approaches, inching towards my wand which he left on his table."
-                    r "Trying to fly away, are we, my little princess?"
+                    rm "Trying to fly away, are we, my little princess?"
                     
                     p "{i}Don’t{/i} call me that."
                     show marlon disapointed
-                    r "Aw, don’t be such a sour sugarplum. Be glad it was Marlon who caught you and not the others. Lord knows that {i}child{/i} couldn’t hurt a fly."
+                    rm "Aw, don’t be such a sour sugarplum. Be glad it was Marlon who caught you and not the others. Lord knows that {i}child{/i} couldn’t hurt a fly."
                     show marlon nuetral
                     "He grabs my face with a gloved hand, squeezing my cheeks as he pulls me closer to him."
-                    r "Oh what ever shall I do with you, pet? I can barely put you on a leash, let alone in a cage. Perhaps it’s time for more… drastic measures."
-                    r "I have ways to {i}discipline{/i} my naughty pets. Isn’t that right, Marlon?"
+                    rm "Oh what ever shall I do with you, pet? I can barely put you on a leash, let alone in a cage. Perhaps it’s time for more… drastic measures."
+                    rm "I have ways to {i}discipline{/i} my naughty pets. Isn’t that right, Marlon?"
                     "Marlon freezes just before he gets to my wand. He’s able to reel back and act like nothing happened."
                     show marlon surprised
                     m "Y-yes, sir…"
-                    r "Haha, of course you would know. After all, you’ve seen me work with the {i}naughtiest{/i} of them all."
-                    r "The nosey Echo, trying to seduce my precious Marlon right from under my nose. It’s a good thing he bit off more than he can chew with me."
-                    r "That was the last meal he ever had before he rotted away in his cage."
+                    rm "Haha, of course you would know. After all, you’ve seen me work with the {i}naughtiest{/i} of them all."
+                    rm "The nosey Echo, trying to seduce my precious Marlon right from under my nose. It’s a good thing he bit off more than he can chew with me."
+                    rm "That was the last meal he ever had before he rotted away in his cage."
                     show marlon angry 
                     m "You’re wrong about him."
                     "I see from over the Ringmaster’s shoulder, Marlon just grabbed my wand off the table. The Ringmaster turns to him with a crazed malice."
-                    r "What’s this, talking back to your {i}father{/i}? I taught you better manners than that."
+                    rm "What’s this, talking back to your {i}father{/i}? I taught you better manners than that."
                     m "And you’re wrong about me, too. I’m not your little boy."
                     m "I know now that everything you’ve ever done to me was wrong. And now, it’s time to end it."
                     "Marlon throws my wand to me, and while the Ringmaster is distracted, I take off my fake bindings and catch my wand."
-                    r "What the hell is this?! You rotten fairy, you’ve turned my own pet against me!"
+                    rm "What the hell is this?! You rotten fairy, you’ve turned my own pet against me!"
                     p "I didn’t do anything other than wake him up to the truth."
                     p "It’s finally over for you, Ringmaster."
                     m "This is for Echo"
                     "Marlon opens the door to let Crimson in. The lion pounces on top of the Ringmaster, who can’t help but struggle underneath the weights of the animal."
-                    r "GET OFF OF ME! MARLON, YOU STUPID SHIT, GET YOUR DISGUSTING CREATURE OFF OF ME!!!"
+                    rm "GET OFF OF ME! MARLON, YOU STUPID SHIT, GET YOUR DISGUSTING CREATURE OFF OF ME!!!"
+                    stop music
                     m "I don’t take orders from you anymore. Crimson, it’s feeding time."
                     "The lion clamps its jaws around the Ringmaster’s neck, tearing out his throat. I raise my wand, feeling my power slowly return to me as it surges from my fingertips."
                     "With my powers back, I toss away the Ringmaster’s mask to reveal his face for the first time. He’s barely able to protest as blood begins to fill his mouth and lungs."
-                    r "Ghhhk– s-stop… chhhk– give that… b-back…"
+                    rm "Ghhhk– s-stop… chhhk– give that… b-back…"
                     "Fear fills his eyes as he lifts into the air from my magic."
                     p "I’ve been thinking about this feast since the moment I got here. And that look on your face is only going to make this much sweeter."
                     "With my magic, I crack apart his jaw like a peanut shell, and almost instantly his body falls limp. Marlon winces and turns away from the scene."

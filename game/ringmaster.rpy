@@ -1,4 +1,4 @@
-define rm = Character("Ringmaster", color = "#F00040")
+define rm = Character("Ringmaster", color = "#ff0000")
 define p = Character("Pita", color = "#edf4b3")
 image ringmaster_looks_slideshow:
     "ringmaster maskless 2"
@@ -20,9 +20,9 @@ label global_ringmaster:
                 jump global_courtyard
     else:
         label enter:
+            stop channel1 
             hide door
             stop sound fadeout 1.0
-            play music "tension.mp3" fadein 1.5
             #scene ringmaster-trailer
             $ persistent.ringmasterTrailer_unlocked = True
             "I take a step on the stepping stool and open the door to a poorly lit room."
@@ -31,6 +31,7 @@ label global_ringmaster:
             scene ringmaster_looks_slideshow
             $ persistent.ringmasterMaskless2_unlocked = True
             $ persistent.ringmasterMaskless_unlocked = True
+            play music "tension.mp3" fadein 1.5
             "!!!"
             $ persistent.ringmaster_unlocked = True
             "He reaches for his mask and slips it on."
@@ -98,6 +99,7 @@ label global_ringmaster:
                 rm "You got a nerve to be out of your cage."
                 p "I’m escaping with my wand and you’re not going to stop me!"
                 "I fly towards him at great speed with my claws ready to tear at his flesh."
+                stop music
                 play sound "piano-keys-smashed.mp3"
                 queue sound "death_screen.mp3" loop
                 p "Ack-!"

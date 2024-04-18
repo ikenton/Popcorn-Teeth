@@ -1,6 +1,6 @@
-define h = Character("Hugo", color = "#5d0124")
+define h = Character("Hugo", color = "#862424")
 define p = Character("Pita", color = "#edf4b3")
-define rm = Character("Ringmaster", color = "#F00040")
+define rm = Character("Ringmaster", color = "#ff0000")
 
 #timer
 transform alpha_dissolve:
@@ -139,7 +139,7 @@ label global_hugoVendetta:
                                 $ hugoIsAlive = False
                                 "I raise the hammer above my head and strike it down onto Hugo’s face repeatedly."
                                 p "Hehe—-HEHEHEH!"
-                                stop music fadeout 2.0
+                                stop music fadeout 5.0
                                 "The adrenaline and euphoria embody my very soul to the brim as I hear his bones crack and flesh squelch every time I bring down the hammer."
                                 "I drop the hammer to the ground and begin picking at the teeth and other skull fragments from the disfigured face. I popped them into my mouth like how humans eat chips and chew with saliva and blood dripping from my jaw."
                                 hide hugo hammer
@@ -254,10 +254,11 @@ label global_hugoVendetta:
                                         show hugo bad
                                         "He gets off the bed and towers over me. "
                                         
-                                        h "Well finally, thank you for giving me an opportunity of a lifetime, Pita.The circus will be mine again!"
+                                        h "Well finally, thank you for giving me an opportunity of a lifetime, Pita. The circus will be mine again!"
                                          
                                         "Hugo struck me and I was met with darkness…"
                                         stop music fadeout 0.3
+                                        play sound "audio/ear-ringing.mp3" fadein 0.3 volume 0.20 loop
                                         show blackscreen with Dissolve(1.0)
                                         jump hugopt2
     label badending:
@@ -289,6 +290,7 @@ label global_hugoVendetta:
         "..."
         "...."
         "....."
+        stop sound fadeout 1.0
         scene blackscreen
         show chest hugo-trailer with Dissolve(1.0)
         "Where am I?"

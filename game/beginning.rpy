@@ -1,4 +1,4 @@
-define rm = Character("Ringmaster", color = "#F00040")
+define rm = Character("Ringmaster", color = "#ff0000")
 define p = Character("Pita", color = "#edf4b3")
 image pullaway_slideshow:
     "ringmaster lean"
