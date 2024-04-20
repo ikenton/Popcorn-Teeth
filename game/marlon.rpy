@@ -3,9 +3,9 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define m = Character("Marlon", color = "#6380e0")
-define p = Character("Pita", color = "#edf4b3")
-define rm = Character("Ringmaster", color = "#ff0000")
+define m = Character("Marlon", color = "#6380e0", voice_tag = "m")
+define p = Character("Pita", color = "#edf4b3", voice_tag="p")
+define rm = Character("Ringmaster", color = "#ff0000", voice_tag="rm")
 default crimsonhere = True
 
 transform alpha_dissolve:
