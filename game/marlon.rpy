@@ -209,6 +209,7 @@ label global_visitMarlon:
                     m "Here, do you want to try and feed him? That way you can see how nice he really is."
                     "Marlon walks over to a cupboard in his trailer and opens the door, putting out a small bag of treats called “Steak Bites.”"
                     "As soon as the treats come out, Crimson lets out a purr of anticipation."
+                    play sound "CrimsonPurr.mp3"
                     "Marlon takes two treats out and hands one to me."
                     m "Here, watch this."
                     show marlon nuetral
@@ -216,6 +217,7 @@ label global_visitMarlon:
                     #show crimson
                     "Like a dog, Crimson sits like Marlon commands."
                     m "Good, now roll over!"
+                    play sound "CrimsonPurr.mp3" volume 2.0
                     "The large cat gets on the floor and rolls around on the animal fur rug."
                     "{i}Heh, cute{/i}"
                     show marlon happy 
@@ -230,6 +232,7 @@ label global_visitMarlon:
                         "Roll over.":
                             p "Alright, roll over."
                             #show crimson 
+                            play sound "CrimsonPurr.mp3" volume 2.0
                             "Crimson looked at me cautiously, but eventually he rolled over on the floor."
                         "Play dead":
                             p "Alright, play dead."
@@ -238,16 +241,19 @@ label global_visitMarlon:
                         "Speak.":
                             p "Alright, speak."
                             #show crimson 
+                            play sound "CrimsonRoar.mp3"
                             "Crimson looked at me cautiously, but eventually he let out a loud roar that filled the trailer."
                     show marlon happy
                     m "Good boy, Crimson! Now give him his treat."
                     "I hand over the treat to the lion who very carefully takes it from me for devouring it."
+                    play sound "CrimsonPurr.mp3" volume 2.0
                     "{i}So the lion really likes these treats, huh? Maybe I can use that to distract him somehow so I can get Marlon alone.{/i}"
                 "Maybe the lion deserves it.": 
                     #BAD
                     $ bad += 1
                     p "That’s understandable. After all, a lion can still be very dangerous."
                     show marlon angry
+                    play sound "CrimsonGrowl.mp3"
                     m "You don’t know anything about Crimson."
                     show marlon nuetral
                     m "Lions may be dangerous predators, but if you grow up with one like I did, they treat you like part of their pride."
@@ -257,6 +263,7 @@ label global_visitMarlon:
                     show marlon nuetral
                     m "I can show you just how tame and friendly he is with some of his favorite treats."
                     "Marlon walks over to a cupboard in his trailer and opens the door, putting out a small bag of treats called “Steak Bites.”"
+                    play sound "CrimsonPurr.mp3" volume 2.0
                     "As soon as the treats come out, Crimson lets out a purr of anticipation."
                     "Marlon takes two treats out and hands one to me."
                     m "Here, watch this."
@@ -265,6 +272,7 @@ label global_visitMarlon:
                     #show crimson
                     "Like a dog, Crimson sits like Marlon commands."
                     m "Good, now roll over!"
+                    play sound "CrimsonPurr.mp3" volume 2.0
                     "The large cat gets on the floor and rolls around on the animal fur rug."
                     show marlon angry
                     m "See? He’s not as dangerous as he looks."
@@ -369,6 +377,7 @@ label global_visitMarlon:
                 m "Huh? What do you mean…?!"
                 if crimsonhere:
                     "I leap forward, trying to pry Marlon’s pretty little mouth just wide enough to yank out his teeth. But as soon as I move for him, I feel a large force jump on me."
+                    play sound "CrimsonRoar.mp3"
                     "I get pushed off of Marlon, rolling across the floor of the trailer. Once I get my bearings, I realize that I’m being pinned down by Marlon’s lion."
                     p "Get off of me!"
                     "I struggle against his weight, but I’m too weak to fend off this fully grown lion."
@@ -381,6 +390,7 @@ label global_visitMarlon:
                     m "Crimson, it’s feeding time." #he's an icon
                     hide marlon nuetral
                     show crimson bad
+                    play sound "CrimsonGrowl.mp3"
                     $ persistent.crimsonBad_unlocked = True
                     play music "FEAR.mp3"
                     "The lion on top of me growls, raising its hackles to reveal large and sharp teeth. For a moment, I smile as I think about how delicious they must be…"
@@ -425,11 +435,13 @@ label global_visitMarlon:
                     m "You just don’t get it, Pita…"
                     show marlon angry
                     m "Crimson, get her."
+                    play sound "CrimsonRoar.mp3"
                     "Before I can even react, the lion pounces on top of me."
                     #play music "FEAR.mp3"
                     stop music fadeout 3.0
                     show crimson bad
                     $ persistent.crimsonBad_unlocked = True
+                    play sound "CrimsonGrowl.mp3"
                     "I can feel its claws press against my body as it takes a bite out of my arm. The pain is enough to send my vision flashing white as I fall unconscious."
                     "The last thing I see is Marlon standing above me, his face warped with hurt, regret, and finally resolution."
 
@@ -511,10 +523,12 @@ label global_visitMarlon:
                     p "I didn’t do anything other than wake him up to the truth."
                     p "It’s finally over for you, Ringmaster."
                     m "This is for Echo"
+                    play sound "CrimsonRoar.mp3"
                     "Marlon opens the door to let Crimson in. The lion pounces on top of the Ringmaster, who can’t help but struggle underneath the weights of the animal."
                     rm "GET OFF OF ME! MARLON, YOU STUPID SHIT, GET YOUR DISGUSTING CREATURE OFF OF ME!!!"
                     stop music
                     m "I don’t take orders from you anymore. Crimson, it’s feeding time."
+                    play sound "CrimsonGrowl.mp3"
                     "The lion clamps its jaws around the Ringmaster’s neck, tearing out his throat. I raise my wand, feeling my power slowly return to me as it surges from my fingertips."
                     "With my powers back, I toss away the Ringmaster’s mask to reveal his face for the first time. He’s barely able to protest as blood begins to fill his mouth and lungs."
                     rm "Ghhhk– s-stop… chhhk– give that… b-back…"
@@ -599,6 +613,7 @@ label global_visitMarlon:
                             "Take the “Steak Bites”":
                                 hide screen qte
                                 $ crimsonhere = False
+                                play sound "CrimsonPurr.mp3" volume 2.0
                                 "I grab the treat and turn back to Crimson, whose eyes immediately lock onto the bag of “Steak Bites.” As I grab one treat and toss it out the open door, the lion immediately bolts out as Marlon comes back inside the trailer."
                                 hide crimson with moveoutleft
                                 show marlon surprised at center
