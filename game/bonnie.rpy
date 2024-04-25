@@ -1,6 +1,6 @@
 
-define b = Character("Bonnie", color = "#9966cc")
-define p = Character("Pita", color = "#edf4b3")
+define b = Character("Bonnie", color = "#9966cc", voice_tag="b")
+define p = Character("Pita", color = "#edf4b3", voice_tag="p")
 #timer
 transform alpha_dissolve:
     alpha 0.0
@@ -74,23 +74,27 @@ label global_bonnie:
                     menu:
                         "Hide behind the vanity":
                             hide screen qte
-                            play music "audio/tension.mp3" fadein 1.0
+                            play music "audio/tension.mp3" fadein 1.0 volume 0.3
                             "I dash towards the vanity, hiding behind the old, rotted wood, white paint peeling off at every nook and cranny."
                             #show bonnie excited
+                            voice "voices/Bonnie_Lines/Bonnie_Line1.wav"
                             b "*Yawn…*"
                             show bonnie hidden
                             $ persistent.bonnieHidden_unlocked = True
                             "She steps over to the vanity, sitting down on the cushioned chair."
                             #show bonnie sad
+                            voice "voices/Bonnie_Lines/Bonnie_Line2.wav"
                             b "My lord, have I not been getting enough beauty sleep…?"
                             "She presses a finger to her cheek, pulling at her taut skin. Deep red circles are under her eyes."
-                            #hide bonnie hidden
-                            #show bonnie disgusted
+                            voice "voices/Bonnie_Lines/Bonnie_Line3.wav"
                             b "Damned fairy…" 
                             "I flinch, holding my breath."
+                            voice "voices/Bonnie_Lines/Bonnie_Line4.wav"
                             b "I’ve hardly any attention from the ringmaster since she’s been here… not any good attention at least…"
                             "She opens her drawer, grabbing some pink face paint. She begins repainting her cheeks, applying some cream below her eye, all done quickly, methodically. She’s been here for a long time, her routine makes that much clear."
                             #show bonnie sad
+                            voice "voices/Bonnie_Lines/Bonnie_Line4.5_Sniffle.wav"
+
                             b "{b}Sniffle...{/b}"
                             #hide bonnie sad
                             
@@ -105,6 +109,7 @@ label global_bonnie:
                             "Suddenly, I grab her leg, and pulling her down, I manage to hit her head against the vanity, knocking her unconscious."
                             stop music fadeout 5.0
                             p "I am so hungry… starved, even.."
+                            voice "voices/Bonnie_Lines/Bonnie_Line4.5_Choking.wav"
                             show bonnie dead
                             $ persistent.bonnieDead_unlocked = True
                             $ bonnieIsAlive = False
@@ -122,12 +127,12 @@ label global_bonnie:
                             "After a few moments of silence, I spot Bonnie’s legs swinging overhead, and she makes her way over to her vanity, taking a seat and peering at her reflection in the mirror."
                             "I do my best to keep in the shadows, feeling fortunate that her room was so dimly lit."
                             "She opens her drawer and begins searching for something from within, this is my chance."
-                            $ time = 5
-                            show screen qte(5, 'sneak')
+                            $ time = 3
+                            show screen qte(3, 'sneak')
                             menu:
                                 "Sneak up to her from behind": #fail
                                     label sneak:
-                                        play music "audio/tension.mp3" fadein 1.0
+                                        play music "audio/tension.mp3" fadein 1.0 volume 0.3
                                         hide screen qte
                                         hide full underbed
                                         "I step out from under the bed, remaining as low to the floor as I can..."
@@ -156,16 +161,19 @@ label global_bonnie:
                                         
                                         #crazed yet melancholic expression
                                         show bonnie excited behind blackscreen
+                                        voice "voices/Bonnie_Lines/Bonnie_Line8.wav"
+
                                         b "{i}How does it feel...{/i}"
                                         
                                         #show flashing_red_effect
                                         "She rips one of my teeth from its socket, the initial shock saves me from most of the pain, but it doesn’t take long for it to  catch up with me, and I groan in pain, my breaths shallow."
+                                        voice "voices/Bonnie_Lines/Bonnie_Line9.wav"
                                         b "Tell me... is the pain truly unbearable...?"
                                         #TODO: PUT BLACKSCREEN ONTOP OF BONNIE SPRITE
                                                                     
                                         "Another tooth is pulled, my mouth tastes like iron, and my vision begins to dim, I choke on my own fluids, unable to utter even a single sound more."
                                         
-                                        
+                                        voice "voices/Bonnie_Lines/Bonnie_Line10.wav"
                                         b "Already...? That’s no fun..."
                                         
                                         
@@ -195,11 +203,12 @@ label global_bonnie:
                                     jump global_courtyard
                         "Attempt a direct approach":
                             hide screen qte
-                            play music "audio/tension.mp3" fadein 1.0
+                            play music "audio/tension.mp3" fadein 1.0 volume 0.3
                             "No… I’m done hiding. I’m taking her on here and now."
                             "I stand my ground, balling my hands into tight fists as Bonnie rises from her slumber."
                         
                             show bonnie shocked 
+                            voice "voices/Bonnie_Lines/Bonnie_Line11.wav"
 
                             b "What- Pita?  What are you doing in here?!"
                             
@@ -208,20 +217,28 @@ label global_bonnie:
                             show bonnie disgusted
                             "She slips her hand behind her bed, glaring at me."
 
+                            voice "voices/Bonnie_Lines/Bonnie_Line12.wav"
                             b "What are you getting at, little fairy… come to kill me, have you?"
                             "I stumble, taking in a sharp breath, but I continue on my way towards her."
                             show bonnie excited
 
+                            voice "voices/Bonnie_Lines/Bonnie_Line13.wav"
+
                             b "Oh I see.. Lords aren’t you just…"
                             "She pauses, pressing a finger to her lips in contemplation."
                             show bonnie disgusted
+                            voice "voices/Bonnie_Lines/Bonnie_Line14.wav"
+
                             b "Bothersome."
                             p "Shut it, Bonnie… I’ve had enough of your incessant whining."
                             show bonnie excited
+                            voice "voices/Bonnie_Lines/Bonnie_Line14.5_Giggle.wav"
+
                             "She laughs, no.. she giggles. She’s giddy and excited, her hand hidden behind her back."
                             "I pause, my eyes catching something glinting from behind her, something metal…"
                             "Something sharp…"
                             "She seems to notice my hesitance."
+                            voice "voices/Bonnie_Lines/Bonnie_Line15.wav"
                             b "Getting cold feet, are we?"
                             "She stands from her bed, walking in long strides towards me."
                             "This is my only chance… I lunge at her, my hands reaching for her neck, with intent to push her down."
@@ -232,10 +249,13 @@ label global_bonnie:
                             show redflash
                             p "Kch- ah.."
                             "She catches me on the object, my eyes falling to her hand, in it an incredibly sharp knife, implanted in my gut."
+                            voice "voices/Bonnie_Lines/Bonnie_Line16.wav"
                             b "Oh you poor thing… how clumsy of you, falling right onto such a dangerous object like that…"
                             "I slide off, falling onto the ground."
+                            voice "voices/Bonnie_Lines/Bonnie_Line17.wav"
                             b "I’ve had enough of you, little fairy…"
                             "She slams the object into my stomach, my body lurching forward in pain, tears streaming down my cheeks, the life spilling from my eyes in pitiful, salty tears."
+                            voice "voices/Bonnie_Lines/Bonnie_Line18.wav"
                             b "{b}Quite{/b} enough..."
                             "She stabs me again, my body convulsing." 
                             "I can hear the knife being torn from my flesh, over and over and over again, a disgusting slick, wet sound as my own life spills from the deep wound she created…"
@@ -265,9 +285,10 @@ label global_bonnie:
         #insert bed creaking noise & peak animation
         p "Bon-"
         stop sound
-        play music "audio/tension.mp3" 
+        play music "audio/tension.mp3" volume 0.3
         "{b}I am suddenly pulled out from under the bed-"
         #show bonnie disgusted
+        voice "voices/Bonnie_Lines/Bonnie_Line5.wav"
         b "Wretched thing." 
         "I spin to face her, but it is too late."
         hide bed
@@ -294,9 +315,11 @@ label global_bonnie:
         show redflash
         $ persistent.bonnieBad_unlocked = True
         "She stands above me, raising the object over her head."
+        voice "voices/Bonnie_Lines/Bonnie_Line6.wav"
         
         b "I’ve had enough of you, little fairy…"
         "She slams the object into my stomach, my body lurching forward in pain, tears streaming down my cheeks, the life spilling from my eyes in pitiful, salty tears."
+        voice "voices/Bonnie_Lines/Bonnie_Line7.wav"
         b "{b}Quite{/b} enough…"
         "She stabs me again, my body convulsing." 
         "I can hear the knife being torn from my flesh, over and over and over again, a disgusting slick, wet sound as my own life spills from the deep wound she created…"
