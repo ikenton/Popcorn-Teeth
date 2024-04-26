@@ -106,7 +106,9 @@ label global_hugoVendetta:
                             "!!!"
                             show hugo surprised
                             "Hugo‘s head snaps in my direction."
+                            voice "voices/HUGO LINES/Hugo_CommonBadEnding1.wav"
                             h "What the?! What are you doing here?!"
+                            voice "voices/Pita VA Clips/Hugo/Pita_Hugo1.wav"
                             p "Hugo?!-"
                             play music "FEAR.mp3"
 
@@ -143,11 +145,13 @@ label global_hugoVendetta:
                                 "The adrenaline and euphoria embody my very soul to the brim as I hear his bones crack and flesh squelch every time I bring down the hammer."
                                 "I drop the hammer to the ground and begin picking at the teeth and other skull fragments from the disfigured face. I popped them into my mouth like how humans eat chips and chew with saliva and blood dripping from my jaw."
                                 hide hugo hammer
+                                voice "voices/Pita VA Clips/Hugo/Pita_Mmm1.wav"
                                 p "Mmm"
                                 "I finish and wipe my mouth."
                                 "I’ve made quite a mess."
                                 "I wipe the blood off myself with Hugo’s blankets and I bend down to look for the hammer."
                                 "I look under the bed and see the hammer’s head separated from the handle."
+                                voice "voices/Pita VA Clips/Hugo/Pita_Crap1.wav"
                                 p "Crap"
                                 "I stand back up straight and look at the trailer’s door. I need more."
                                 "I leave the trailer and head back to the courtyard."
@@ -155,6 +159,7 @@ label global_hugoVendetta:
                 "Throw a pebble":
                     hide screen qte
                     "I look down and grab a pebble off the ground. This should get 'em distracted!"
+                    voice "voices/HUGO LINES/Hugo_Line1.wav"
                     h "Who’s there?!"
                     show hugo pebble
                     $ persistent.hugoPebble_unlocked = True
@@ -164,6 +169,7 @@ label global_hugoVendetta:
                     $ persistent.toolbox_unlocked = True
                     show hugo surprised
                     "Hugo turns around and looks down at me."
+                    voice "voices/HUGO LINES/Hugo_CommonBadEnding1.wav"
                     h "What the?! What are you doing here?!"
                     p "Hugo?!-"
                     play music "FEAR.mp3"
@@ -203,6 +209,7 @@ label global_hugoVendetta:
                             play music "tension.mp3" fadein 3.0
                             "Hugo suddenly turns around"
                             show hugo surprised
+                            voice "voices/HUGO LINES/Hugo_CommonBadEnding1.wav"
                             h "What the?! What are you doing here?!"
                             p "Hugo?!-"
 
@@ -227,6 +234,7 @@ label global_hugoVendetta:
                                 show hugo awake
                                 "Hugo turns his body towards me and jumps."
                                 show hugo surprised
+                                voice "voices/HUGO LINES/Hugo_Line2.wav"
                                 h "Are you trying to kill me?"
                                 menu:
                                     "Yes":
@@ -234,6 +242,7 @@ label global_hugoVendetta:
                                         "He catches it in  midair. I gasp and let go of the lamp. I grit my teeth."
                                         show hugo smile_action
                                         "Desperate, I strike at his face with my fingernails, drawing some blood. He recoils and screams. He wipes his face and notices the blood on his fingertips. He then looks at me with a sinister grin."
+                                        voice "voices/HUGO LINES/Hugo_Line3.wav"
                                         h "Look what we have here. The fairy’s giving me an opportunity of a lifetime!"
                                         "He swings the lamp towards me-"                                       
                                         show blackscreen
@@ -244,17 +253,20 @@ label global_hugoVendetta:
                                     "No":
                                         "Hugo sits up on the bed and stares at me."
                                         show hugo upset 
+                                        voice "voices/HUGO LINES/Hugo_Line4.wav"
                                         h "Then explain why you have a lamp in your hands little fairy and why you’re out of your cage."
                                         "I hesitantly lower the lamp that’s in my hands."
                                         "Awkward…"
                                         p "Uhh, I was simply inspecting it."
                                         show hugo smile
+                                        voice "voices/HUGO LINES/Hugo_Line5.wav"
                                         h "Ha! You’re a bad liar! You had an opportunity and you flopped. I wonder how the Ringmaster favored such an idiot over me. It pisses me off."
                                         play music "FEAR.mp3"
                                         show hugo bad
                                         "He gets off the bed and towers over me. "
                                         
-                                        h "Well finally, thank you for giving me an opportunity of a lifetime, Pita. The circus will be mine again!"
+                                        voice "voices/HUGO LINES/Hugo_Line6.wav"
+                                        h "Well it seems you've given me an opportunity of a lifetime, Pita. The circus will be mine again!"
                                          
                                         "Hugo struck me and I was met with darkness…"
                                         stop music fadeout 0.3
@@ -268,6 +280,7 @@ label global_hugoVendetta:
         show hugo bad
         $ persistent.hugoBad_unlocked = True
         "I felt my neck be grasped and my body be lifted! I gasp and hyperventilate, clawing at the hand around my neck."
+        voice "voices/HUGO LINES/Hugo_CommonBadEnding2.wav"
         h "I’m so happy that you gave me a reason to kill you."
         p "ghh- hk!"
         "{i}Stop it! Stop it!{/i}"
@@ -279,6 +292,7 @@ label global_hugoVendetta:
 
     label prebadending:
         show hugo surprised
+        voice "voices/HUGO LINES/Hugo_CommonBadEnding1.wav"
         h "What the?! What are you doing here?!"
         p "Hugo?!-"
         play music "FEAR.mp3"
@@ -307,11 +321,14 @@ label global_hugoVendetta:
                 "Bed creaking can be heard nearby."
                 "Crap-!"
                 stop sound
+                voice "voices/HUGO LINES/Hugo_Line7.wav"
                 h "Are you serious? I thought I killed you, little fairy!"
                 show chest eye
+                voice "voices/HUGO LINES/Hugo_Line8.wav"
                 h "I guess I need to finish the job~."
                 show chest death_slideshow
                 
+                voice "voices/HUGO LINES/Hugo_Line9.wav"
                 h "Die."
                 #play neck crack sound
                 
@@ -328,6 +345,7 @@ label global_hugoVendetta:
                 "Hugo’s here! I can’t see him, I must be right next to his bed."
                 # yawn sound
                 stop sound
+                voice "voices/HUGO LINES/Hugo_Line10.wav"
                 h "Let’s get this over with."
                 "I can feel myself and the chest I’m in being lifted off the ground."
                 show chest carried
@@ -338,8 +356,8 @@ label global_hugoVendetta:
                 "The sun is much brighter here. Is that-"
                 stop sound
                 show chest ringmaster
-                h "Joseph!-I mean sir-"
-                h "What are you doing out so early?"
+                voice "voices/HUGO LINES/Hugo_Line11.wav"
+                h "Joseph!-I mean sir- What are you doing out so early?"
                 rm "I’ve been looking for Pita!"
                 rm "I checked her cage and she wasn’t there. The circus will be in shambles if we don’t find her now!"
                 "He’s looking for me?!"
@@ -351,40 +369,69 @@ label global_hugoVendetta:
                         hide screen qte
                         p "Help me! Ringmaster! Please, I’m in here!"
                         "I didn’t want to do this but I felt like I didn’t have much of a choice…"
-                        rm "Pita?!"
-                        rm "You lied to me and you have her in that chest?! Let her go, this instant, Hugo!"
+
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_Line1.wav"
+                        rm "Pita?! You lied to me and you have her in that chest?! Let her go, this instant, Hugo!"
                         "!!!"
                         show chest dropped
                         "I can feel the chest I’m inside of being dropped!"
                         #play thud then bangning sounds play sound ["thud", "bang"]
                         "I scream and I bang at the chest from the inside."
                         p "Let me out, dammit!"
+
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_Line2.wav"
                         rm "How dare you treat her that way…"
+
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_Line3.wav"
                         h "Do you even want to know why I have her in the chest? She was trying to kill me!"
+                        
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_Line4.wav"
                         h "She’s a danger to us, Joseph!"
+                        
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_Line5.wav"
                         rm "Such a poor excuse! Pita trying to kill you? She can’t even harm a fly in her state…"
-                        rm "Well, I should’ve known you’d be like this with her too."
-                        rm "I’m quite disappointed."
+                        
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_Line6.wav"
+                        rm "Well, I should’ve known you’d be like this with her too. I’m quite disappointed."
                         "..."
                         "There’s a moment of silence between the two."
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_Line7.wav"
                         h "You’re the problem."
+                        
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_Line8.wav"
                         h "After everything we’ve done together, you choose her over your own people."
+                        
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_Line9.wav"
                         h "You won’t even give me a chance to explain."
-                        h "That makes me think you treated him the same way!"
-                        h "All of that for a damn mythical creature!"
+                        
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_Line10.wav"
+                        h "That makes me think you treated him the same way! All of that for a damn mythical creature!"
+                        
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_Line11.wav"
                         rm "Now, now, don’t be an idiot, and make the same mistake, Hugo."
+                        
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_Line12.wav"
                         h "I’m not scared of you, old man!"
-                        #hugo battle cry
+
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_BattleCry.wav"
+
                         show chest carried
-                        "The ringmaster gasps in pain" #TEMPORARY LINE UNTIL VOICE LINES ARE ADDED
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_ShockGasp.wav"
                         rm "!!!"
                         #fighting sounds
-                        #hugo gets stabbed
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_Line13.wav"
                         rm "You should’ve never crossed me, Hugo."
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_Line14.wav"
                         rm "Say hello to Echo for me, would you?"
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_Line15.wav"
+                        
                         rm "I’m sure he’ll describe to you how I tortured him every night in his cage whilst his ignorant brother was in his trailer moping about a “mythical creature.”"
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_Line16.wav"
                         h "Why?"
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_Line17.wav"
                         h "WHY?!"
+                        voice "voices/HUGO LINES/HUGO VS RM/HugoRM_Stabbed.wav"
+
                         # flesh being sliced sound then thud
                         #footsteps approaching
                         $ hugoIsAlive = False
@@ -478,7 +525,7 @@ label global_hugoVendetta:
                                 rm "You escaped your cage and ate their teeth. Hugo was right."
                                 "He must’ve checked the trailers…"
                             else:
-                                rm "You escaped your cage. Were you that impatient that you couldn’t wait by the end of week for your treat?"
+                                rm "You escaped your cage. Were you that impatient that you couldn’t wait by the end of this week for your treat?"
                                 rm "I know you wouldn’t go to his trailer without evil intent."
                                 rm "It’s clear you both hated each other."
                             "Crunch, crunch, crunch."
@@ -523,12 +570,14 @@ label global_hugoVendetta:
                     "Do Nothing":
                         label doNothing:
                             hide screen qte
-                            h "She’s most likely gone by now if she escaped last night, and well c’mon you didn’t mean that."
-                            h "We were doing just fine before she showed up and ruined everything. We don’t need her."
+                            voice "voices/HUGO LINES/Hugo_Line12.wav"
+                            h "She’s most likely gone by now if she escaped last night, and well c’mon you didn’t mean that. We were doing just fine before she showed up and ruined everything. We don’t need her."
                             rm "Wow, don’t be so daft…Without my Pita, we are nothing. You’re nothing!"
                             rm "Get it through your thick skull that she is the star now. You should know better than to be jealous."
+                            voice "voices/HUGO LINES/Hugo_Line13.wav"
                             h "Tch!"
                             rm "Hm, now,-why are you still lugging around that chest? Put it down and come help me."
+                            voice "voices/HUGO LINES/Hugo_Line14.wav"
                             h "Yes, Sir"
                             "!!!"
                             "I felt myself being lowered."
@@ -545,6 +594,7 @@ label global_hugoVendetta:
                             "!!!"
                             "No!"
                             stop sound
+                            voice "voices/HUGO LINES/Hugo_Line7.wav"
                             h "Aw, trying to get out? Well, that’s too bad."
                             "I can feel the chest I’m inside of being lifted again."
                             show chest carried
@@ -554,6 +604,7 @@ label global_hugoVendetta:
                             p "What are you going to do with me?!"
                             # play heartbeat sounds
                             "My heart pounds rapidly in my chest."
+                            voice "voices/HUGO LINES/Hugo_Line16.wav"
                             h "I’m going to do what I should have done a long time ago."
                             "!!!"
                             stop sound
@@ -562,6 +613,7 @@ label global_hugoVendetta:
                             show chest dropped
                             "I groaned as the impact made my body ache."
                             "I peek out of the keyhole, in search of my whereabouts, but all I could see was dirt."
+                            voice "voices/HUGO LINES/Hugo_Line17.wav"
                             h "Thanks again for easily giving me the chance of avenging my brother and myself, little fairy. All you did was ruin everything... Goodbye."
                             "I can hear something being thrown at the chest I’m in. It smells like dirt."
                             show chest dirt
