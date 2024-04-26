@@ -53,9 +53,9 @@ label global_visitMarlon:
     $ persistent.marlonChibi_unlocked = True
     $ persistent.marlonPoster_unlocked = True
     if renpy.music.is_playing:
-        play music "tension.mp3"
+        play music "tension.mp3" 
     else:
-        play music "tension.mp3" fadein 3
+        play music "tension.mp3" fadein 3 
     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Marlon_Line1.wav"
     m "I-Is someone there?"
 
@@ -573,7 +573,6 @@ label global_visitMarlon:
                     "Before we leave, Marlon takes with him the portrait of Echo on the wall and a bag of Steak Bites, with Crimson following behind us as we leave his trailer."
                     scene ringmaster-trailer
                     $ persistent.ringmasterTrailer_unlocked = True
-                    #play music "tension.mp3" fadein 1.5
                     "We make it to the Ringmaster’s trailer, and putting on my best act yet, I pretend to be helplessly captured by Marlon."
                     "When we enter the trailer, the Ringmaster is there playing quietly with my wand."
                     #show ringmaster at right

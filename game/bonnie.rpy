@@ -230,6 +230,7 @@ label global_bonnie:
                             voice "voices/Bonnie_Lines/Bonnie_Line14.wav"
 
                             b "Bothersome."
+                            voice "voices/Pita VA Clips/Bonnie/Pita_ShutIt1.wav"
                             p "Shut it, Bonnie… I’ve had enough of your incessant whining."
                             show bonnie excited
                             voice "voices/Bonnie_Lines/Bonnie_Line14.5_Giggle.wav"
