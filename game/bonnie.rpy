@@ -108,6 +108,7 @@ label global_bonnie:
                             "I slowly reach forward, a large grin forming on my face."
                             "Suddenly, I grab her leg, and pulling her down, I manage to hit her head against the vanity, knocking her unconscious."
                             stop music fadeout 5.0
+                            voice "voices/Pita VA Clips/Bonnie/Pita_Starved3.wav"
                             p "I am so hungry… starved, even.."
                             voice "voices/Bonnie_Lines/Bonnie_Line4.5_Choking.wav"
                             show bonnie dead
@@ -230,7 +231,7 @@ label global_bonnie:
                             voice "voices/Bonnie_Lines/Bonnie_Line14.wav"
 
                             b "Bothersome."
-                            voice "voices/Pita VA Clips/Bonnie/Pita_ShutIt1.wav"
+                            voice "voices/Pita VA Clips/Bonnie/Pita_ShutIt3.wav"
                             p "Shut it, Bonnie… I’ve had enough of your incessant whining."
                             show bonnie excited
                             voice "voices/Bonnie_Lines/Bonnie_Line14.5_Giggle.wav"
@@ -248,6 +249,7 @@ label global_bonnie:
                             show bonnie bad at center
                             $ persistent.bonnie_unlocked = True                    
                             show redflash
+                            voice "voices/Pita VA Clips/Bonnie/Pita_Stabbed2.wav"
                             p "Kch- ah.."
                             "She catches me on the object, my eyes falling to her hand, in it an incredibly sharp knife, implanted in my gut."
                             voice "voices/Bonnie_Lines/Bonnie_Line16.wav"
