@@ -16,6 +16,7 @@ label global_beginning:
     $ persistent.ringmasterChibi_unlocked = True
     $ persistent.ringmasterTaunt_unlocked = True
     $ persistent.ringmasterPoster_unlocked = True
+    $ persistent.ptPoster_unlocked = True
     pause 1.0
     rm "..."
     rm "You did great today, Sweetheart. The crowd loved you like always."

@@ -308,6 +308,10 @@ init python:
     gallery.button("ringmasterShirtless")
     gallery.image("ringmaster shirtless")
     gallery.condition("persistent.ringmasterShirtless_unlocked")
+
+    gallery.button("ptPoster")
+    gallery.image("pt poster")
+    gallery.condition("persistent.ptPoster_unlocked")
 transform gallery_transform_full:
     zoom 0.35
 
@@ -484,6 +488,7 @@ screen gallery_other:
                 add gallery.make_button(name="echoPoster", unlocked=At("images/echo poster.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="marlonPoster", unlocked=At("images/marlon poster.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="hugoPoster", unlocked=At("images/hugo poster.png",gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="ptPoster", unlocked=At("images/pt poster.png",gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="pitaInCage", unlocked=At("images/pita in cage.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="marlonEchoKiss", unlocked=im.Scale("images/marlon echo kiss.png", 400,279), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="echoImage", unlocked=At("images/echo.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
