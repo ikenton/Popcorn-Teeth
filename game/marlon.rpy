@@ -589,6 +589,7 @@ label global_visitMarlon:
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/Endings/_We should try to get out of here. Together_/Marlon no like Pita/Marlon_Line5.wav"
                     m "You just don’t get it, Pita…"
                     show marlon angry
+                    stop music
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/Endings/_We should try to get out of here. Together_/Marlon no like Pita/Marlon_Line6.wav"
                     m "Crimson, get her."
                     play sound "CrimsonRoar.mp3"
