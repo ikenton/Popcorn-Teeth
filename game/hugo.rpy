@@ -358,8 +358,8 @@ label global_hugoVendetta:
                 show chest ringmaster
                 voice "voices/HUGO LINES/Hugo_Line11.wav"
                 h "Joseph!-I mean sir- What are you doing out so early?"
-                rm "I’ve been looking for Pita!"
-                rm "I checked her cage and she wasn’t there. The circus will be in shambles if we don’t find her now!"
+                voice "voices/RM VA clips/Hugo/ive_been_looking_for_pita.wav"
+                rm "I’ve been looking for Pita! I checked her cage and she wasn’t there. The circus will be in shambles if we don’t find her now!"
                 "He’s looking for me?!"
                 "Maybe I should try something. I don’t know what Hugo plans on doing with me!"
                 $ time = 5
@@ -572,10 +572,12 @@ label global_hugoVendetta:
                             hide screen qte
                             voice "voices/HUGO LINES/Hugo_Line12.wav"
                             h "She’s most likely gone by now if she escaped last night, and well c’mon you didn’t mean that. We were doing just fine before she showed up and ruined everything. We don’t need her."
+                            voice "voices/RM VA clips/Hugo/dontbedaft.wav"
                             rm "Wow, don’t be so daft…Without my Pita, we are nothing. You’re nothing!"
                             rm "Get it through your thick skull that she is the star now. You should know better than to be jealous."
                             voice "voices/HUGO LINES/Hugo_Line13.wav"
                             h "Tch!"
+                            voice "voices/RM VA clips/Hugo/whylug.wav"
                             rm "Hm, now,-why are you still lugging around that chest? Put it down and come help me."
                             voice "voices/HUGO LINES/Hugo_Line14.wav"
                             h "Yes, Sir"

@@ -97,6 +97,7 @@ label global_ringmaster:
             label rmbadending:
                 rm "My, my, my little Princess is trying to fly away! "
                 rm "You got a nerve to be out of your cage."
+                voice "voices/Pita VA Clips/Ringmaster/Pita_Wand.wav"
                 p "I’m escaping with my wand and you’re not going to stop me!"
                 "I fly towards him at great speed with my claws ready to tear at his flesh."
                 stop music
@@ -109,10 +110,12 @@ label global_ringmaster:
                 rm "You’re mine forever, till death do us part!"
                 "I seethe and scratch at arms."
                 
-                "He drops me onto the ground. "
+                "He drops me onto the ground."
+                voice "voices/Pita VA Clips/Ringmaster/Pita_FuckYou.wav"
                 p "Fuck you! I’m not your pet!"
                 "I attempt to get up, yet I feel something pin my leg on the ground. He has his large foot on my shin!"
                 "I scream"
+                voice "voices/Pita VA Clips/Ringmaster/Pita_LetGo.wav"
                 p "{b}LET GO OF ME!{/b}"
                 rm "You know that’s not an option, sweetheart."
                 rm "Stay still."
@@ -136,6 +139,7 @@ label global_ringmaster:
                 rm "..."
                 rm "I'm doing this for your own good."
                 "He places a foot on my back and on my other leg I look at him in terror."
+                voice "voices/Pita VA Clips/Ringmaster/Pita_GoHome.wav"
                 p "No! Please just let me go, I’m sorry! I just want to go home! I want to go-"
 
                 #CRONCH
