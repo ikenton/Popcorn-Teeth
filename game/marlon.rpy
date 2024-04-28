@@ -53,9 +53,9 @@ label global_visitMarlon:
     $ persistent.marlonChibi_unlocked = True
     $ persistent.marlonPoster_unlocked = True
     if renpy.music.is_playing:
-        play music "tension.mp3" 
+        play music "tension.mp3" volume 0.5
     else:
-        play music "tension.mp3" fadein 3 
+        play music "tension.mp3" fadein 3 volume 0.5
     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Marlon_Line1.wav"
     m "I-Is someone there?"
 
@@ -166,7 +166,7 @@ label global_visitMarlon:
             
             menu:
                 "What are you going to do?":
-                    voices "voices/Pita VA Clips/Pita_SoWhat.wav"
+                    voice "voices/Pita VA Clips/Pita_SoWhat.wav"
                     p "So what are you going to do? You know how the Ringmaster is, if you don’t do as he says, he’ll punish you."
                     show marlon disapointed
 
@@ -439,7 +439,7 @@ label global_visitMarlon:
             menu:
                 "Seriously, after all he’s done?": #bad choice
                     $ bad += 1
-                    voice "game/voices/Pita VA Clips/Pita_UrWeak.wav"
+                    voice "voices/Pita VA Clips/Pita_UrWeak.wav"
                     p "Seeing how he treats all his performers, I’m surprised you can even tolerate him. You’re just weak."
                     show marlon surprised
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/HowClose/_Seriously after all he_s done_/Marlon_Line1.wav"
@@ -455,7 +455,7 @@ label global_visitMarlon:
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/HowClose/_Seriously after all he_s done_/Marlon_Line5.wav"
 
                     m "Only a few lucky ones have…"
-                    voice "game/voices/Pita VA Clips/Pita_Brainwashed.wav"
+                    voice "voices/Pita VA Clips/Pita_Brainwashed.wav"
                     p "Ugh, I can’t believe how brainwashed you are. You can’t even see how messed up he is!"
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/HowClose/_Seriously after all he_s done_/Marlon_Line6.wav"
 
@@ -475,7 +475,7 @@ label global_visitMarlon:
                     jump talking
 
                 "The Ringmaster isn't here, you can talk about it.":
-                    voice "game/voices/Pita VA Clips/Pita_NotHere.wav"
+                    voice "voices/Pita VA Clips/Pita_NotHere.wav"
                     p "Y’know, the Ringmaster isn’t here right now. And he’s not omniscient. You can talk about… whatever you need to say."
                     "Marlon takes a deep breath and looks over to Crimson for comfort. The lion nudges his hand as if to encourage him, and Marlon sighs."
                     show marlon disapointed
@@ -493,10 +493,10 @@ label global_visitMarlon:
                     show marlon disapointed
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/HowClose/_The Ringmaster isn_t here, you can talk about it_/Marlon_Line4.wav"
                     m "But then I think about what he’s done to those close to me… What he did to… to Echo…" 
-                    voice "game/voices/Pita VA Clips/Pita_MarlonHey.wav"
+                    voice "voices/Pita VA Clips/Pita_MarlonHey.wav"
                     p "Marlon, hey…"
                     "I move to place a hand on Marlon’s shoulder but he flinches, and Crimson growls in response. I slowly move my hand away but look at him with assurance."
-                    voice "game/voices/Pita VA Clips/Pita_Can'tBelieve.wav"
+                    voice "voices/Pita VA Clips/Pita_Can'tBelieve.wav"
                     p "I can’t believe I’m saying this, but… You can still love the Ringmaster and hate him, too. Feelings are… complicated like that. Just don’t forget to put yourself first."
 
                     "Marlon looks over to the side, his brows furrowed as he mulls over his complicated feelings."
@@ -507,7 +507,7 @@ label global_visitMarlon:
     label dialogTreeEndings:
         menu:
             "I’m done talking to you. It’s time to end this.":
-                voice "game/voices/Pita VA Clips/Pita_TastyTeeth.wav"
+                voice "voices/Pita VA Clips/Pita_TastyTeeth.wav"
                 p "All of this talking is making me hungry. And I did spy some tasty teeth in that mouth of yours."
                 show marlon surprised
                 voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/Endings/_I_m done talking to you. It_s time to end this_/Marlon_Line1.wav"
@@ -517,7 +517,7 @@ label global_visitMarlon:
                     "I leap forward, trying to pry Marlon’s pretty little mouth just wide enough to yank out his teeth. But as soon as I move for him, I feel a large force jump on me."
                     play sound "CrimsonRoar.mp3"
                     "I get pushed off of Marlon, rolling across the floor of the trailer. Once I get my bearings, I realize that I’m being pinned down by Marlon’s lion."
-                    voice "game/voices/Pita VA Clips/Pita_GetOff.wav"
+                    voice "voices/Pita VA Clips/Pita_GetOff.wav"
                     p "Get off of me!"
                     "I struggle against his weight, but I’m too weak to fend off this fully grown lion."
                     show marlon angry
@@ -546,16 +546,16 @@ label global_visitMarlon:
                     show marlon surprised
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/Endings/_I_m done talking to you. It_s time to end this_/Alone/Marlon_Line1.wav"
                     m "P-Pita! What are you doing…?!"
-                    voice "game/voices/Pita VA Clips/Pita_GettingTired.wav"
+                    voice "voices/Pita VA Clips/Pita_GettingTired.wav"
                     p "I’m getting tired of hearing your little sob stories. No matter what, I can’t forgive you for just standing aside while the Ringmaster tortured me!"
-                    voice "game/voices/Pita VA Clips/Pita_PlayThing.wav"
+                    voice "voices/Pita VA Clips/Pita_PlayThing.wav"
                     p "You think I’m his favorite plaything? Well, you’re right. He just loves to hear me scream in pain. And you know what? I bet I’d love to hear you scream, too!"
                     "I take my hands and shove them into his mouth, forcing them between his lips as I try to pry it open."
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/Endings/_I_m done talking to you. It_s time to end this_/Alone/Marlon_Line2.wav"   
                     m "P-Please stop, that hurts…!"
-                    voice "game/voices/Pita VA Clips/Pita_Beg.wav"
+                    voice "voices/Pita VA Clips/Pita_Beg.wav"
                     p "That’s right, beg. Beg for your life as I take it away, just like the Ringmaster and this damn Circus took away mine."
-                    voice "game/voices/Pita VA Clips/Pita_Wonder.wav"
+                    voice "voices/Pita VA Clips/Pita_Wonder.wav"
                     p "Oh, I wonder how he’ll react once he’s seen how I devoured his precious little boy."
                     show marlon bad
                     $ persistent.marlonBad_unlocked = True
@@ -565,12 +565,12 @@ label global_visitMarlon:
                     "Finally, with a sharp crack, I break his jaw as his mouth begins to fill with blood from his torn skin and muscles. He falls limp beneath me."
                     "I take out his teeth piece by piece, savoring each little snack as I take it into my mouth and chew. I can feel my power growing stronger."
                     hide marlon bad
-                    voice "game/voices/Pita VA Clips/Pita_Delicious.wav"
+                    voice "voices/Pita VA Clips/Pita_Delicious.wav"
                     p "Delicious."
                     jump global_courtyard
             "We should try to get out of here. Together.":
                 if bad > 0:
-                    voice "game/voices/Pita VA Clips/Pita_YouKnowHowBad.wav"
+                    voice "voices/Pita VA Clips/Pita_YouKnowHowBad.wav"
                     p "You know how bad the Ringmaster is. We should both try to escape him and this Circus"
                     show marlon surprised
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/Endings/_We should try to get out of here. Together_/Marlon no like Pita/Marlon_Line1.wav"
@@ -583,7 +583,7 @@ label global_visitMarlon:
                     show marlon angry
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/Endings/_We should try to get out of here. Together_/Marlon no like Pita/Marlon_Line4.wav"
                     m "… No. I can’t let you leave. If you go, who knows what the Ringmaster will do to me, to all of us… You’re staying right here."
-                    voice "game/voices/Pita VA Clips/PIta_DammitMarlon.wav"
+                    voice "voices/Pita VA Clips/PIta_DammitMarlon.wav"
                     p "Damn it Marlon, after all you’ve been through? The torture and abuse the Ringmaster has put you through, and you still choose his side?!"
                     show marlon disapointed
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/Endings/_We should try to get out of here. Together_/Marlon no like Pita/Marlon_Line5.wav"
@@ -606,20 +606,20 @@ label global_visitMarlon:
                     return
                 else:
                     #good ending
-                    voice "game/voices/Pita VA Clips/Pita_TellTruth.wav"
+                    voice "voices/Pita VA Clips/Pita_TellTruth.wav"
                     p "Marlon… I have to tell you the truth."
                     show marlon nuetral
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/Endings/_We should try to get out of here. Together_/Marlon fw Pita/Marlon_Line1.wav"
                     m "What is it?"
-                    voice "game/voices/Pita VA Clips/Pita_Trying.wav"
+                    voice "voices/Pita VA Clips/Pita_Trying.wav"
                     p "I’m trying to escape. You and I both know that we deserve better lives than this."
-                    voice "game/voices/Pita VA Clips/Pita_WantToLeaveToo.wav"
+                    voice "voices/Pita VA Clips/Pita_WantToLeaveToo.wav"
                     p "Marlon, I know you want to leave, too. We need to leave the Circus and the Ringmaster."
                     show marlon surprised
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/Endings/_We should try to get out of here. Together_/Marlon fw Pita/Marlon_Line2.wav"
                     m "O-oh… I…"
                     "Marlon hesitates, but I interject quickly before he gets a chance to think about rejecting my offer."
-                    voice "game/voices/Pita VA Clips/Pita_ForHim.wav"
+                    voice "voices/Pita VA Clips/Pita_ForHim.wav"
                     p "Do it for him."
                     "I point to the portrait on the wall and he follows to look at it. Then, he turns to me with a look of determination."
                     show marlon nuetral
@@ -635,21 +635,21 @@ label global_visitMarlon:
                     m "Alright, I’ll come with you."
                     "I grin knowing this makes my plans for escape so much easier"
                     "And my stomach rumbles knowing this makes my plans for revenge even sweeter."
-                    voice "game/voices/Pita VA Clips/Pita_BeforeLeave.wav"
+                    voice "voices/Pita VA Clips/Pita_BeforeLeave.wav"
                     p "Before we leave, I need to get my wand back from the Ringmaster. Without it, I don’t have any power."
                     show marlon nuetral
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/Endings/_We should try to get out of here. Together_/Marlon fw Pita/Marlon_Line7.wav"
                     m "Alright, I’m sure I can sneak into the Ringmaster’s trailer to get it for you. I go there all the time anyways."
-                    voice "game/voices/Pita VA Clips/Pita_Actually.wav"
+                    voice "voices/Pita VA Clips/Pita_Actually.wav"
                     p "Actually, it’s more than that."
                     show marlon surprised
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/Endings/_We should try to get out of here. Together_/Marlon fw Pita/Marlon_Line8.wav"
                     m "Huh? What is it?"
-                    voice "game/voices/Pita VA Clips/Pita_Revenge.wav"
+                    voice "voices/Pita VA Clips/Pita_Revenge.wav"
                     p "I  need {i}revenge{/i}. Revenge for what the Ringmaster has done to me, how he captured me and tortured me all for his little Circus."
-                    voice "game/voices/Pita VA Clips/Pita_ImSure.wav"
+                    voice "voices/Pita VA Clips/Pita_ImSure.wav"
                     p "And I’m sure you want it, too. For everything the Ringmaster took away from you. Your life, your childhood, your partner…"
-                    voice "game/voices/Pita VA Clips/Pita_WithWand.wav"
+                    voice "voices/Pita VA Clips/Pita_WithWand.wav"
                     p "With that wand, we can both take down the Ringmaster."
                     show marlon nuetral
                     "Marlon pauses to think, but this time he responds quickly and confidently, full of resolve."
@@ -672,7 +672,7 @@ label global_visitMarlon:
                     rm "Who said you can’t teach an old dog new tricks? You’ve learned well to fetch me my prized fairy."
                     "Marlon backs away from me as the Ringmaster approaches, inching towards my wand which he left on his table."
                     rm "Trying to fly away, are we, my little princess?"
-                    voice "game/voices/Pita VA Clips/Pita_DontCall.wav"
+                    voice "voices/Pita VA Clips/Pita_DontCall.wav"
                     p "{i}Don’t{/i} call me that."
                     show marlon disapointed
                     rm "Aw, don’t be such a sour sugarplum. Be glad it was Marlon who caught you and not the others. Lord knows that {i}child{/i} couldn’t hurt a fly."
@@ -698,9 +698,9 @@ label global_visitMarlon:
                     m "I know now that everything you’ve ever done to me was wrong. And now, it’s time to end it."
                     "Marlon throws my wand to me, and while the Ringmaster is distracted, I take off my fake bindings and catch my wand."
                     rm "What the hell is this?! You rotten fairy, you’ve turned my own pet against me!"
-                    voice "game/voices/Pita VA Clips/Pita_WakeHimUp.wav"
+                    voice "voices/Pita VA Clips/Pita_WakeHimUp.wav"
                     p "I didn’t do anything other than wake him up to the truth."
-                    voice "game/voices/Pita VA Clips/Pita_FinallyOver.wav"
+                    voice "voices/Pita VA Clips/Pita_FinallyOver.wav"
                     p "It’s finally over for you, Ringmaster."
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/Endings/_We should try to get out of here. Together_/Marlon fw Pita/Inside RM_s Trailer/Marlon_Line5.wav"
                     m "This is for Echo"
@@ -715,7 +715,7 @@ label global_visitMarlon:
                     "With my powers back, I toss away the Ringmaster’s mask to reveal his face for the first time. He’s barely able to protest as blood begins to fill his mouth and lungs."
                     rm "Ghhhk– s-stop… chhhk– give that… b-back…"
                     "Fear fills his eyes as he lifts into the air from my magic."
-                    voice "game/voices/Pita VA Clips/Pita_BeenThinking.wav"
+                    voice "voices/Pita VA Clips/Pita_BeenThinking.wav"
                     p "I’ve been thinking about this feast since the moment I got here. And that look on your face is only going to make this much sweeter."
                     "With my magic, I crack apart his jaw like a peanut shell, and almost instantly his body falls limp. Marlon winces and turns away from the scene."
                     hide ringmaster 
@@ -734,7 +734,7 @@ label global_visitMarlon:
                     return
             "I think I hear something going on outside." if crimsonhere and not attempted:
                 $ attempted = True
-                voice "game/voices/Pita VA Clips/Pita_Hears.wav"
+                voice "voices/Pita VA Clips/Pita_Hears.wav"
                 p "I think I hear something outside… Like one of your animals choking on something."
                 show marlon surprised
                 voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/Endings/_I think I hear something going on outside_/Marlon_Line1.wav"
@@ -770,7 +770,7 @@ label global_visitMarlon:
                     "Walk to the drawer":
                         hide screen qte
                         "I walk over and check inside for its contents, except I don’t find what I’m looking for."
-                        voice "game/voices/Pita VA Clips/Pita_WhereAreThey.wav"
+                        voice "voices/Pita VA Clips/Pita_WhereAreThey.wav"
                         p "Damn it, where are they?!"
                         "As I frantically start searching for the treats, I hear Marlon shouting from outside as he walks back towards the trailer."
                         show marlon disapointed at right
@@ -814,7 +814,7 @@ label global_visitMarlon:
                                 voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/Endings/_I think I hear something going on outside_/Wrong Choices/Marlon_Line4.wav"
                                 m "Woah, Crimson!"
                                 "I quickly stash the treats away and walk over to the door to close and lock it."
-                                voice "game/voices/Pita VA Clips/Pita_ItLooksLike.wav"
+                                voice "voices/Pita VA Clips/Pita_ItLooksLike.wav"
                                 p "It looks like Crimson wanted some time outside."
                                 show marlon disapointed
                                 voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/Endings/_I think I hear something going on outside_/Wrong Choices/Marlon_Line5.wav"
