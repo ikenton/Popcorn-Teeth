@@ -312,7 +312,7 @@ label global_visitMarlon:
                     $ bad += 1
                     p "That’s understandable. After all, a lion can still be very dangerous."
                     show marlon angry
-                    play sound "CrimsonGrowl.mp3" #voice line will not play with growl in background for some reason will need to fix
+                    #play sound "CrimsonGrowl.mp3" #voice line will not play with growl in background for some reason will need to fix
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/_So you and Crimson must be quite close_/Subchoices/_Maybe the lion deserves it._/Marlon_Line1.wav"
                     m "You don’t know anything about Crimson."
                     show marlon nuetral
@@ -435,7 +435,73 @@ label global_visitMarlon:
             voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/HowClose/Marlon_Line6.wav"
             m "“Hate” is a strong word, but…"
             "Marlon takes another look at the portrait on the wall."
-            jump talking
+            menu:
+                "Seriously, after all he’s done?": #bad choice
+                    $ bad += 1
+                    p "Seeing how he treats all his performers, I’m surprised you can even tolerate him. You’re just weak."
+                    show marlon surprised
+                    voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/HowClose/_Seriously after all he_s done_/Marlon_Line1.wav"
+                    m "W-what did you just say…?"
+                    show marlon angry
+                    voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/HowClose/_Seriously after all he_s done_/Marlon_Line2.wav"
+                    m "The Ringmaster may… act the way he does, but he does plenty for the Circus!"
+                    voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/HowClose/_Seriously after all he_s done_/Marlon_Line3.wav"
+                    m "He provides us food and shelter… He gives us guidance when we need it the most…"
+                    voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/HowClose/_Seriously after all he_s done_/Marlon_Line4.wav"
+                    m "He’s even the most talented performer in the Circus– no, in the world! You just haven’t seen it for yourself…"
+                    show marlon disapointed
+                    voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/HowClose/_Seriously after all he_s done_/Marlon_Line5.wav"
+
+                    m "Only a few lucky ones have…"
+
+                    p "Ugh, I can’t believe how brainwashed you are. You can’t even see how messed up he is!"
+                    voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/HowClose/_Seriously after all he_s done_/Marlon_Line6.wav"
+
+                    show marlon angry
+                    m "JUST SHUT UP!"
+
+                    "As Marlon yells, Crimson gets up next to him and starts to growl. I have never seen him get so angry before…"
+
+                    voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/HowClose/_Seriously after all he_s done_/Marlon_Line7.wav"
+                    m "You don’t understand anything."
+
+                    "Marlon stares at me with a venom behind his eyes. He heaves heavily before finally taking a deep breath to calm himself down."
+
+                    show marlon nuetral
+                    voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/HowClose/_Seriously after all he_s done_/Marlon_Line8.wav"
+                    m "Whatever, let’s just move on from this."
+                    jump talking
+
+                "The Ringmaster isn't here, you can talk about it.":
+                    p "Y’know, the Ringmaster isn’t here right now. And he’s not omniscient. You can talk about… whatever you need to say."
+                    "Marlon takes a deep breath and looks over to Crimson for comfort. The lion nudges his hand as if to encourage him, and Marlon sighs."
+                    show marlon disapointed
+                    voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/HowClose/_The Ringmaster isn_t here, you can talk about it_/Marlon_Line1.wav"
+                    m "Maybe I’m just trying to convince myself everything’s fine, but…"
+                    voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/HowClose/_The Ringmaster isn_t here, you can talk about it_/Marlon_Line2.wav"
+                    m "No matter how hard I try to think about hating him, I feel like I can’t."
+                    show marlon nuetral
+                    m "Even after all he’s done, he still gives us food and shelter… Honest advice about our performances and how we can do better…"
+                    show marlon happy
+                    "Marlon smiles quietly to himself."
+                    voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/HowClose/_The Ringmaster isn_t here, you can talk about it_/Marlon_Line3.wav"
+                    m "You should’ve seen him when he was a performer… He was amazing. He’s the best performer in the Circus– no, the world, even."
+                    
+                    show marlon disapointed
+                    voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/HowClose/_The Ringmaster isn_t here, you can talk about it_/Marlon_Line4.wav"
+                    m "But then I think about what he’s done to those close to me… What he did to… to Echo…" 
+
+                    p "Marlon, hey…"
+                    "I move to place a hand on Marlon’s shoulder but he flinches, and Crimson growls in response. I slowly move my hand away but look at him with assurance."
+                    p "I can’t believe I’m saying this, but…"
+                    p "You can still love the Ringmaster and hate him, too. Feelings are… complicated like that."
+                    p "Just don’t forget to put yourself first."
+
+                    "Marlon looks over to the side, his brows furrowed as he mulls over his complicated feelings."
+                    voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/HowClose/_The Ringmaster isn_t here, you can talk about it_/Marlon_Line5.wav"
+
+                    m "R-right…"
+                    jump talking
     label dialogTreeEndings:
         menu:
             "I’m done talking to you. It’s time to end this.":
