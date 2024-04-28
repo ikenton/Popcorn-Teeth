@@ -262,6 +262,7 @@ label global_visitMarlon:
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/_So you and Crimson must be quite close_/Subchoices/_What_s it like being friends with a lion_/Marlon_Line5.wav"
                     m "Here, do you want to try and feed him? That way you can see how nice he really is."
                     "Marlon walks over to a cupboard in his trailer and opens the door, putting out a small bag of treats called “Steak Bites.”"
+                    show crimson purr
                     "As soon as the treats come out, Crimson lets out a purr of anticipation."
                     play sound "CrimsonPurr.mp3"
                     "Marlon takes two treats out and hands one to me."
@@ -269,6 +270,7 @@ label global_visitMarlon:
                     m "Here, watch this."
                     show marlon nuetral
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/_So you and Crimson must be quite close_/Subchoices/_What_s it like being friends with a lion_/Marlon_Line7.wav"
+                    show crimson
                     m "Crimson, sit."
                     #show crimson
                     "Like a dog, Crimson sits like Marlon commands."
@@ -305,8 +307,10 @@ label global_visitMarlon:
                     show marlon happy
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/_So you and Crimson must be quite close_/Subchoices/_What_s it like being friends with a lion_/Marlon_Line11.wav"
                     m "Good boy, Crimson! Now give him his treat."
+                    show crimson purr
                     "I hand over the treat to the lion who very carefully takes it from me for devouring it."
                     play sound "CrimsonPurr.mp3" volume 2.0
+                    show crimson
                     "{i}So the lion really likes these treats, huh? Maybe I can use that to distract him somehow so I can get Marlon alone.{/i}"
                 "Maybe the lion deserves it.": 
                     #BAD
@@ -329,10 +333,12 @@ label global_visitMarlon:
                     m "I can show you just how tame and friendly he is with some of his favorite treats."
                     "Marlon walks over to a cupboard in his trailer and opens the door, putting out a small bag of treats called “Steak Bites.”"
                     play sound "CrimsonPurr.mp3" volume 2.0
+                    show crimson purr
                     "As soon as the treats come out, Crimson lets out a purr of anticipation."
                     "Marlon takes two treats out and hands one to me."
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/_So you and Crimson must be quite close_/Subchoices/_What_s it like being friends with a lion_/Marlon_Line6.wav"
                     m "Here, watch this."
+                    show crimson
                     show marlon nuetral
                     m "Crimson, sit."
                     #show crimson
@@ -340,8 +346,10 @@ label global_visitMarlon:
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/_So you and Crimson must be quite close_/Subchoices/_Maybe the lion deserves it._/Marlon_Line6.wav"
                     m "Good, now roll over!"
                     play sound "CrimsonPurr.mp3" volume 2.0
+                    show crimson purr
                     "The large cat gets on the floor and rolls around on the animal fur rug."
                     show marlon angry
+                    show crimson
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/_So you and Crimson must be quite close_/Subchoices/_Maybe the lion deserves it._/Marlon_Line8.wav"
                     m "See? He’s not as dangerous as he looks."
                     "{i}So the lion really likes these treats, huh? Maybe I can use that to distract him somehow so I can get Marlon alone.{/i}"
@@ -809,6 +817,7 @@ label global_visitMarlon:
                                 hide screen qte
                                 $ crimsonhere = False
                                 play sound "CrimsonPurr.mp3" volume 2.0
+                                show crimson surprised
                                 "I grab the treat and turn back to Crimson, whose eyes immediately lock onto the bag of “Steak Bites.” As I grab one treat and toss it out the open door, the lion immediately bolts out as Marlon comes back inside the trailer."
                                 hide crimson with moveoutleft
                                 show marlon surprised at center
