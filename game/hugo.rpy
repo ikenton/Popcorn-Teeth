@@ -108,7 +108,7 @@ label global_hugoVendetta:
                             "Hugo‘s head snaps in my direction."
                             voice "voices/HUGO LINES/Hugo_CommonBadEnding1.wav"
                             h "What the?! What are you doing here?!"
-                            voice "voices/Pita VA Clips/Hugo/Pita_Hugo1.wav"
+                            voice "voices/Pita VA Clips/Hugo/Pita_Hugo2.wav"
                             p "Hugo?!-"
                             play music "FEAR.mp3"
 
