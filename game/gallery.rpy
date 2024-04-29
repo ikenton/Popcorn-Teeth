@@ -93,6 +93,14 @@ init python:
     gallery.image("crimson")
     gallery.condition("persistent.crimson_unlocked")
 
+    gallery.button("crimsonPurr")
+    gallery.image("crimson purr")
+    gallery.condition("persistent.crimsonPurr_unlocked")
+
+    gallery.button("crimsonSurprised")
+    gallery.image("crimson surprised")
+    gallery.condition("persistent.crimsonSurprised_unlocked")
+
     gallery.button("ringmaster")
     gallery.image("ringmaster")
     gallery.condition("persistent.ringmaster_unlocked")
@@ -312,6 +320,10 @@ init python:
     gallery.button("ptPoster")
     gallery.image("pt poster")
     gallery.condition("persistent.ptPoster_unlocked")
+
+    gallery.button("mecho")
+    gallery.image("mecho")
+    gallery.condition("persistent.mecho_unlocked")
 transform gallery_transform_full:
     zoom 0.35
 
@@ -403,8 +415,10 @@ screen gallery_characters:
             xalign 0.5
             yalign 0.5
             spacing 30
-            grid 2 1:
+            grid 2 2:
                 add gallery.make_button(name="crimson", unlocked=At("images/crimson.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="crimsonPurr", unlocked=At("images/crimson purr.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="crimsonSurprised", unlocked=At("images/crimson surprised.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="ringmaster", unlocked=At("images/ringmaster.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
 
 screen gallery_cgs:
@@ -491,6 +505,7 @@ screen gallery_other:
                 add gallery.make_button(name="ptPoster", unlocked=At("images/pt poster.png",gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="pitaInCage", unlocked=At("images/pita in cage.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="marlonEchoKiss", unlocked=im.Scale("images/marlon echo kiss.png", 400,279), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="mecho", unlocked=At("images/mecho.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="echoImage", unlocked=At("images/echo.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="pitaChibi", unlocked=At("images/pita chibi.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="marlonChibi", unlocked=At("images/marlon chibi.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))

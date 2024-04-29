@@ -263,6 +263,7 @@ label global_visitMarlon:
                     m "Here, do you want to try and feed him? That way you can see how nice he really is."
                     "Marlon walks over to a cupboard in his trailer and opens the door, putting out a small bag of treats called “Steak Bites.”"
                     show crimson purr
+                    $ persistent.crimsonPurr_unlocked = True
                     "As soon as the treats come out, Crimson lets out a purr of anticipation."
                     play sound "CrimsonPurr.mp3"
                     "Marlon takes two treats out and hands one to me."
@@ -417,6 +418,7 @@ label global_visitMarlon:
                     $ persistent.echoPoster_unlocked = True
                     $ persistent.echo_unlocked = True
                     $ persistent.marlonPregante_unlocked = True
+                    $ persistent.mecho_unlocked = True
                 "Really? You and him?":
                     hide screen qte
                     $ bad += 1
@@ -818,6 +820,7 @@ label global_visitMarlon:
                                 $ crimsonhere = False
                                 play sound "CrimsonPurr.mp3" volume 2.0
                                 show crimson surprised
+                                $ persistent.crimsonSurprised_unlocked = True
                                 "I grab the treat and turn back to Crimson, whose eyes immediately lock onto the bag of “Steak Bites.” As I grab one treat and toss it out the open door, the lion immediately bolts out as Marlon comes back inside the trailer."
                                 hide crimson with moveoutleft
                                 show marlon surprised at center
