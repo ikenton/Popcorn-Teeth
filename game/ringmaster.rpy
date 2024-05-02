@@ -165,7 +165,7 @@ label global_ringmaster:
                 "He points at one of his drawers"
                 rm "In there, sweetheart, I kept it close to remind me of you at night."
                 "I slam him again out of disgust, and drag him towards the drawer he pointed at. Using my other hand, I rummage around and manage to find my wand."
-                p "There you are! No where were we… Oh yes, our terms."
+                p "There you are! Now where were we… Oh yes, our terms."
                 p "Finally, I’m a fairy. I fly by my own terms, and you will never lock me down again. I’m staying out of convenience, and the minute I don’t need you or this circus, I’m gone. If you try to stop me, just remember what rule one was."
                 p "Now, are we clear?"
                 rm "Crystalline."
@@ -184,7 +184,7 @@ label global_ringmaster:
                 #play applause sound effects
                 "A roar of cheers and applause rings through the tent."
                 "I walk up the stage and give a great wave and a wide smile"
-                p "Thank you all for coming to the show! I hope you’ll enjoy this performance as I will performing it!"
+                p "Thank you all for coming to the show! I hope you’ll enjoy this performance as I will be performing it!"
                 "I spot a nice target in the crowd and I lick my lips in enthusiasm. The afterparty will be fantastic once more."
                 $ persistent.ringmasterShirtless_unlocked = True
                 return

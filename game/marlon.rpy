@@ -714,7 +714,7 @@ label global_visitMarlon:
                     voice "voices/Pita VA Clips/Pita_FinallyOver.wav"
                     p "It’s finally over for you, Ringmaster."
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/Endings/_We should try to get out of here. Together_/Marlon fw Pita/Inside RM_s Trailer/Marlon_Line5.wav"
-                    m "This is for Echo"
+                    m "This is for Echo."
                     play sound "CrimsonRoar.mp3"
                     "Marlon opens the door to let Crimson in. The lion pounces on top of the Ringmaster, who can’t help but struggle underneath the weights of the animal."
                     rm "GET OFF OF ME! MARLON, YOU STUPID SHIT, GET YOUR DISGUSTING CREATURE OFF OF ME!!!"
