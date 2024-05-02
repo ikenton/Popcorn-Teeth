@@ -441,28 +441,36 @@ label global_hugoVendetta:
                         show ringmaster crackedmask #temp until rm cg is done
                         $ persistent.ringmasterCrackedMask_unlocked = True
                         "I gasp. His mask is broken…And he’s bloody. Did he… Kill Hugo?"
+                        voice "voices/RM VA clips/Hugo/RM_HelloSweet.wav"
                         rm "Hello, sweetheart."
+                        voice "voices/RM VA clips/Hugo/RM_Apologize.wav"
                         rm "I apologize for the wait."
+                        voice "voices/RM VA clips/Hugo/RM_RuOK.wav"
                         rm "Are you okay?"
                         menu:
                             "No, my body aches.":
+                                voice "voices/RM VA clips/Hugo/RM_PoorThing.wav"
                                 rm "Ah, you poor thing. I’m sorry about that."
                                 jump resume
                             "Ringmaster, he did terrible things!":
+                                voice "voices/RM VA clips/Hugo/RM_DontWorryAbout.wav"
                                 rm "Ah, don’t worry about him anymore. He’s just another idiot six feet under now."
                                 jump resume
                             "Yeah, I’m fine.":
-                                "Ah, that’s wonderful. I’m glad he didn’t hurt you as bad as I thought."
+                                voice "voices/RM VA clips/Hugo/RM_Wonderful.wav"
+                                rm "Ah, that’s wonderful. I’m glad he didn’t hurt you as bad as I thought."
                                 jump resume
                             "Screw you!":
-                                rm "Ah, well that’s no way to treat your savior."
+                                rm "Ah, well that’s no way to treat your savior." #NO VOICE LINE FOR
                                 jump resume
                             "I’m fine… But,how did you do it?":
+                                voice "voices/RM VA clips/Hugo/RM_BuiltInSword.wav"
                                 rm "Remember the cane that I sometimes carry around? It has a built-in sword."
                                 jump resume
                         label resume:
-                            rm "After what’s happened, I promise I’ll protect you." 
-                            rm "Who knows who else would treat you just like how Hugo did." 
+                            voice "voices/RM VA clips/Hugo/RM_AfterWhats.wav"
+                            rm "After what’s happened, I promise I’ll protect you. Who knows who else would treat you just like how Hugo did." 
+                            voice "voices/RM VA clips/Hugo/RM_AfterWhats.wav"
                             rm "Hugo is gone, but I won’t have his death go to waste."
                             play music "tension.mp3" fadein 0.3
                             show ringmaster hugohead
@@ -473,17 +481,20 @@ label global_hugoVendetta:
                             "I can’t breathe."
                             show ringmaster hugoteeth
                             $ persistent.ringmasterHugoTeeth_unlocked = True
+                            voice "voices/RM VA clips/Hugo/RM_LookAt.wav"
                             rm "Look at all of those teeth! Aren’t they just delicious looking?"
                             "He places a finger on the decapitated head’s upper lip and he lifts it, revealing the upper teeth and gums better."
                             rm "Well, they’re a little yellow from smoking but they’re surely edible."
                             p "They are…"
                             "I reach towards the teeth but he smacks my hand away!"
+                            voice "voices/RM VA clips/Hugo/RM_nuhuh.wav"
                             rm "Nah-ah-ahh~."
+                            voice "voices/RM VA clips/Hugo/RM_CantHave.wav"
                             rm "You cannot have any of this yet."
                             show ringmaster crackedmask
                             "He lowers the head."
-                            rm "I need to move you and clean up some things first."
-                            rm "You’re going to be staying with me from now on."
+                            voice "voices/RM VA clips/Hugo/RM_INeedTo.wav"
+                            rm "I need to move you and clean up some things first. You’re going to be staying with me from now on."
                             # play chest closing sound
                             hide ringmaster
                             show chest darkness
@@ -505,8 +516,8 @@ label global_hugoVendetta:
                             "My cage is in his trailer now…"
                             scene cage-trailer with Dissolve(1.0)
                             show ringmaster
-                            rm "Here’s your treat. To be honest, I feel awful for letting you get hurt like that."
-                            rm "Take it as an apology gift."
+                            voice "voices/RM VA clips/Hugo/RM_Treat.wav"
+                            rm "Here’s your treat. To be honest, I feel awful for letting you get hurt like that. Take it as an apology gift."
                             "He hands me over Hugo’s severed head."
                             "I stare at the head for a moment."
                             "I did hate the man and I feel a little bad for what happened to him, but I cannot refuse a meal in my condition."
@@ -519,9 +530,11 @@ label global_hugoVendetta:
                             "..."
                             "He turns away from me and he walks towards his desk."
                             hide ringmaster
+                            voice "voices/RM VA clips/Hugo/RM_IKnow.wav"
                             rm "I know what you did. What you tried to do."
                             "He stares at the posters on his wall, having his back towards me."
                             if not marlonIsAlive or  not bonnieIsAlive:
+                                
                                 rm "You escaped your cage and ate their teeth. Hugo was right."
                                 "He must’ve checked the trailers…"
                             else:
