@@ -470,7 +470,7 @@ label global_hugoVendetta:
                         label resume:
                             voice "voices/RM VA clips/Hugo/RM_AfterWhats.wav"
                             rm "After what’s happened, I promise I’ll protect you. Who knows who else would treat you just like how Hugo did." 
-                            voice "voices/RM VA clips/Hugo/RM_AfterWhats.wav"
+                            voice "voices/RM VA clips/Hugo/RM_HugoIsGone.wav"
                             rm "Hugo is gone, but I won’t have his death go to waste."
                             play music "tension.mp3" fadein 0.3
                             show ringmaster hugohead
@@ -484,6 +484,7 @@ label global_hugoVendetta:
                             voice "voices/RM VA clips/Hugo/RM_LookAt.wav"
                             rm "Look at all of those teeth! Aren’t they just delicious looking?"
                             "He places a finger on the decapitated head’s upper lip and he lifts it, revealing the upper teeth and gums better."
+                            voice "game/voices/RM VA clips/Hugo/RM_WellYellow.wav"
                             rm "Well, they’re a little yellow from smoking but they’re surely edible."
                             p "They are…"
                             "I reach towards the teeth but he smacks my hand away!"
@@ -534,23 +535,29 @@ label global_hugoVendetta:
                             rm "I know what you did. What you tried to do."
                             "He stares at the posters on his wall, having his back towards me."
                             if not marlonIsAlive or  not bonnieIsAlive:
-                                
+                                voice "voices/RM VA clips/Hugo/RM_HugoWasRight.wav"
                                 rm "You escaped your cage and ate their teeth. Hugo was right."
                                 "He must’ve checked the trailers…"
                             else:
+                                voice "voices/RM VA clips/Hugo/RM_YouEscaped2.wav"
                                 rm "You escaped your cage. Were you that impatient that you couldn’t wait by the end of this week for your treat?"
+                                voice "voices/RM VA clips/Hugo/RM_EvilIntent.wav"
                                 rm "I know you wouldn’t go to his trailer without evil intent."
+                                voice "voices/RM VA clips/Hugo/RM_ItsClear.wav"
                                 rm "It’s clear you both hated each other."
                             "Crunch, crunch, crunch."
                             "I feel a surge of energy from the teeth I have eaten."
                             "I pluck the last tooth from Hugo’s mouth and carefully begin picking at the lock carefully like how I did with the other tooth I had in my possession earlier."
                             "I need to act fast!"
+                            voice "voices/RM VA clips/Hugo/RM_WhateverDoesntMat.wav"
                             rm "Well, whatever you did doesn’t really matter to me. What really matters to me is if you’re willing to work with me."
                             "It is unlocked."
+                            voice "game/voices/RM VA clips/Hugo/RM_PerfectStar.wav"
                             rm "All you need to do is listen and be my perfect star."
                             "He lightly caresses the poster that he has of me on his wall."
                             show ringmaster
                             "He turns around and approaches my cage whilst putting out his hand."
+                            voice "voices/RM VA clips/Hugo/RM_whaddyaSay.wav"
                             rm "Whaddya say?"
                             if not marlonIsAlive and not bonnieIsAlive and not hugoIsAlive:
                                 menu: 
@@ -559,6 +566,7 @@ label global_hugoVendetta:
                                         "I swing open the cage and I step out of it as I scowl at him."
                                         scene ringmaster-trailer
                                         show ringmaster
+                                        voice "voices/RM VA clips/Hugo/RM_HOW.wav"
                                         rm "How?-"
                                         p "I’ll never work with you!"
                                         jump killing_rm
@@ -567,6 +575,7 @@ label global_hugoVendetta:
                                         "I swing open the cage and I step out of it while grinning at him."
                                         scene ringmaster-trailer
                                         show ringmaster
+                                        voice "voices/RM VA clips/Hugo/RM_Gasp.wav"
                                         "He gasps" #Temp line
                                         jump rm_teamup
                             else:
@@ -577,6 +586,7 @@ label global_hugoVendetta:
                                 stop music fadeout 0.3
                                 p "Fine, I’ll obey."
                                 "..."
+                                voice "voices/RM VA clips/Hugo/RM_GoodGirl.wav"
                                 rm "That’s my good girl…"
                                 show blackscreen
                                 with Fade(1.0, 4.0, 0.5)
