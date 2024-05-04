@@ -140,6 +140,7 @@ label global_hugoVendetta:
                                 $ persistent.hugoHammer_unlocked = True
                                 $ hugoIsAlive = False
                                 "I raise the hammer above my head and strike it down onto Hugo’s face repeatedly."
+                                voice "voices/Pita VA Clips/Pita_Laugh2.wav"
                                 p "Hehe—-HEHEHEH!"
                                 stop music fadeout 5.0
                                 "The adrenaline and euphoria embody my very soul to the brim as I hear his bones crack and flesh squelch every time I bring down the hammer."
