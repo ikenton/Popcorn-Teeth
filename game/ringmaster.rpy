@@ -77,11 +77,17 @@ label global_ringmaster:
                     "I tear off his mask and I grins as he begins coughing and wheezing."
                     show ringmaster dead
                     $ persistent.ringmasterDead_unlocked = True
+                    voice "voices/RM VA clips/RM_DreamComeTrue.wav"
                     rm "Do you know how much of a dream come true that you are to me?"
-                    rm "Ever since I was a kid, I worshiped you, I kept sacrificing my teeth till I got you."
+                    voice "voices/RM VA clips/RM_EverSince.wav"
+                    rm "Ever since I was a kid, I worshipped you, I kept sacrificing my teeth till I got you."
+                    voice "voices/RM VA clips/RM_Will2Live.wav"
                     rm "You were my will to live,"
+                    voice "voices/RM VA clips/RM_PrizedPoss.wav"
                     rm "you were my most prized possession,"
+                    voice "voices/RM VA clips/RM_PerfectStar.wav"
                     rm "you were a perfect and beautiful star."
+                    voice "voices/RM VA clips/RM_ManToday.wav"
                     rm "{b}You made me the man that I am today.{/b}"
                     "He places a hand on mine."
                     "I recoil and slap him."
@@ -183,17 +189,16 @@ label global_ringmaster:
                 "I slam him again out of disgust, and drag him towards the drawer he pointed at. Using my other hand, I rummage around and manage to find my wand."
                 voice "voices/Pita VA Clips/Ringmaster/TeamUp/Pita_Line4.wav"
                 p "There you are! Now where were we… Oh yes, our terms."
-                voice "voices/Pita VA Clips/Ringmaster/TeamUp/Pita_Line5.wav"
+                voice "voices/Pita VA Clips/Ringmaster/TeamUp/Pita_Line6.wav"
 
                 p "Finally, I’m a fairy. I fly by my own terms, and you will never lock me down again. I’m staying out of convenience, and the minute I don’t need you or this circus, I’m gone. If you try to stop me, just remember what rule one was."
-                voice "voices/Pita VA Clips/Ringmaster/TeamUp/Pita_Line6.wav"
+                voice "voices/Pita VA Clips/Ringmaster/TeamUp/Pita_Line7.wav"
                 p "Now, are we clear?"
                 voice "voices/RM VA clips/RMteamup/RM_cryst.wav"
                 rm "Crystalline."
                 "I loosen my grip. He tenderly grabs my hand and leans in to kiss it, but I slap him away."
-                voice "voices/Pita VA Clips/Ringmaster/TeamUp/Pita_Line7.wav"
-
-                p "Quit it!"
+                
+                p "Quit it!" #NO VOICE LINE OR A MIX UP, WILL HAVE TO GO BACK THROUGH ALL THE AUDIO TO FIND IT
                 "But he just cackles in glee."
                 voice "voices/RM VA clips/RMteamup/RM_LookForward.wav"
                 rm "Oh how I look forward to our new partnership!"
