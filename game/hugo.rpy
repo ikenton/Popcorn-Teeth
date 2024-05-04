@@ -67,7 +67,7 @@ label global_hugoVendetta:
             $ persistent.hugoChibi_unlocked = True
             "I place my dainty hand on the trailer and slowly poke my head out."
             "Oh I know who it is."
-            play music "tension.mp3" fadein 1.0
+            play music "tension.mp3" fadein 1.0 volume 0.5
             show hugo back
             $ persistent.hugoChad_unlocked = True
             $ persistent.hugoPoster_unlocked = True
@@ -206,7 +206,7 @@ label global_hugoVendetta:
                             play sound "wood-creak-single-v3.mp3"
                             "Creeeak"
                             "!!!"
-                            play music "tension.mp3" fadein 3.0
+                            play music "tension.mp3" fadein 3.0 volume 0.5
                             "Hugo suddenly turns around"
                             show hugo surprised
                             voice "voices/HUGO LINES/Hugo_CommonBadEnding1.wav"
@@ -229,7 +229,7 @@ label global_hugoVendetta:
                                 hide pita underneath
                                 "I grin and I enter the trailer though the trapdoor as quietly as I can."
                                 show hugo asleep
-                                play music "tension.mp3"
+                                play music "tension.mp3" volume 0.5
                                 "I scan my surroundings and see Hugo in bed, facing the wall. lowering my head, I quietly approach him. Eventually, I  get close enough to him and I look around for a weapon. I grab the base of a lamp with both of my hands."
                                 show hugo awake
                                 "Hugo turns his body towards me and jumps."
@@ -474,7 +474,7 @@ label global_hugoVendetta:
                             rm "After what’s happened, I promise I’ll protect you. Who knows who else would treat you just like how Hugo did." 
                             voice "voices/RM VA clips/Hugo/RM_HugoIsGone.wav"
                             rm "Hugo is gone, but I won’t have his death go to waste."
-                            play music "tension.mp3" fadein 0.3
+                            play music "tension.mp3" fadein 0.3 volume 0.5
                             show ringmaster hugohead
                             $ persistent.ringmasterHugoHead_unlocked = True
                             "He holds up Hugo's decapitated head" #TEMPORARY LINE UNTIL CG IS DONE
