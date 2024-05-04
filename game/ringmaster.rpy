@@ -119,9 +119,12 @@ label global_ringmaster:
                 voice "voices/Pita VA Clips/Pita_Ack2.wav" #VOICE LINE NO WORK FIX LATER
                 p "Ack-!"
                 "He catches me from the throat and squeezes it. No! I’m not strong enough-"
-
+                voice "voices/RM VA clips/Bad Ending/RM_Line3.wav"
                 rm "You know I don’t want to hurt you and yet you test me?!"
+                voice "voices/RM VA clips/Bad Ending/RM_Line4.wav"
                 rm "You have no power and you will learn your place that you’re supposed to be my perfect star."
+                voice "voices/RM VA clips/Bad Ending/RM_Line5.wav"
+                
                 rm "You’re mine forever, till death do us part!"
                 "I seethe and scratch at arms."
                 
@@ -132,6 +135,7 @@ label global_ringmaster:
                 "I scream"
                 voice "voices/Pita VA Clips/Ringmaster/Pita_LetGo.wav"
                 p "{b}LET GO OF ME!{/b}"
+                voice "voices/RM VA clips/Bad Ending/RM_Line6.wav"
                 rm "You know that’s not an option, sweetheart."
                 rm "Stay still."
                 p "?!!!"
