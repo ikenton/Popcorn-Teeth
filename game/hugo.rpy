@@ -171,6 +171,7 @@ label global_hugoVendetta:
                     "Hugo turns around and looks down at me."
                     voice "voices/HUGO LINES/Hugo_CommonBadEnding1.wav"
                     h "What the?! What are you doing here?!"
+                    voice "voices/Pita VA Clips/Hugo/Pita_Hugo2.wav"
                     p "Hugo?!-"
                     play music "FEAR.mp3"
 
@@ -211,6 +212,7 @@ label global_hugoVendetta:
                             show hugo surprised
                             voice "voices/HUGO LINES/Hugo_CommonBadEnding1.wav"
                             h "What the?! What are you doing here?!"
+                            voice "voices/Pita VA Clips/Hugo/Pita_Hugo2.wav"
                             p "Hugo?!-"
 
                             jump badending
@@ -294,6 +296,7 @@ label global_hugoVendetta:
         show hugo surprised
         voice "voices/HUGO LINES/Hugo_CommonBadEnding1.wav"
         h "What the?! What are you doing here?!"
+        voice "voices/Pita VA Clips/Hugo/Pita_Hugo2.wav"
         p "Hugo?!-"
         play music "FEAR.mp3"
         jump badending
@@ -603,6 +606,7 @@ label global_hugoVendetta:
                             h "She’s most likely gone by now if she escaped last night, and well c’mon you didn’t mean that. We were doing just fine before she showed up and ruined everything. We don’t need her."
                             voice "voices/RM VA clips/Hugo/dontbedaft.wav"
                             rm "Wow, don’t be so daft…Without my Pita, we are nothing. You’re nothing!"
+                            voice "voices/RM VA clips/Hugo/jealous.wav"
                             rm "Get it through your thick skull that she is the star now. You should know better than to be jealous."
                             voice "voices/HUGO LINES/Hugo_Line13.wav"
                             h "Tch!"
