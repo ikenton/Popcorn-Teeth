@@ -19,16 +19,21 @@ label global_beginning:
     $ persistent.ptPoster_unlocked = True
     pause 1.0
     rm "..."
+    voice "voices/RM VA clips/Beginning/RM_Line1.wav"
     rm "You did great today, Sweetheart. The crowd loved you like always."
     show ringmaster taunt
+    voice "voices/RM VA clips/Beginning/RM_Line2.wav"
     rm "Continue to be my good girl and I’ll get you a treat at the end of this week."
     
+    voice "voices/RM VA clips/Beginning/RM_Line3.wav"
     rm "You wouldn’t want to starve now would you?"
+    voice "voices/RM VA clips/giggler.wav"
     "He lets out a gleeful chortle, the same one that I heard when he first caught me."
     "{i}This creep!{/i}"
     show pullaway_slideshow
     "He rubs one of his fingers against my knuckles and I immediately pull away."
     $ persistent.ringmasterPull_unlocked = True
+    voice "voices/RM VA clips/Beginning/RM_Line4.wav"
     rm "Goodnight. See you tomorrow, Sweetheart."
     hide pullaway_slideshow
     show cage int
