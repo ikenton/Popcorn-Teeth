@@ -51,8 +51,10 @@ label global_ringmaster:
                 rm "How did their teeth taste?"
                 rm "I hope it was to your liking."
                 "How did he know?"
+                voice "voices/Pita VA Clips/Ringmaster/Pita_TastedWonderfully.wav"
                 p "They tasted wonderfully~"
                 "I put out my hand and scowl"
+                voice "voices/Pita VA Clips/Ringmaster/Pita_NowGive.wav"
                 p "Now give me my wand before I take your life! "
                 rm "No, sweetheart. Now think of what we could have together."
                 rm "Just the two of us."
@@ -66,7 +68,8 @@ label global_ringmaster:
                     "Yes.":
                         jump rm_teamup
                 label killing_rm:
-                    p "I never wanted to be here to begin with!"
+
+                    p "I never wanted to be here to begin with!" #NO VOICE LINE! GO BACK AND SEARCH!!!!!!!!! PROBABLY IN voices/Pita VA Clips/Celina_Endings.wav
                     "I fly towards him at great speed with my claws ready to tear at his flesh."
                     "He catches my arm but I quickly pull away and slash at him repeatedly."
                     "With my unfathomable rage, I knock him down to the ground and pummel him senselessly."
@@ -82,6 +85,7 @@ label global_ringmaster:
                     rm "{b}You made me the man that I am today.{/b}"
                     "He places a hand on mine."
                     "I recoil and slap him."
+                    voice "voices/Pita VA Clips/Ringmaster/Pita_IDC.wav"
                     p "I don’t care."
                     "I break his jaw and he goes still."
                     "I pluck a tooth from his lower jaw and chew."
@@ -95,7 +99,9 @@ label global_ringmaster:
                     $ persistent.ringmasterShirtless_unlocked = True
                     return
             label rmbadending:
+                voice "voices/RM VA clips/RM_MyMyMy.wav"
                 rm "My, my, my little Princess is trying to fly away! "
+                voice "voices/RM VA clips/RM_GotNerve.wav"
                 rm "You got a nerve to be out of your cage."
                 voice "voices/Pita VA Clips/Ringmaster/Pita_Wand.wav"
                 p "I’m escaping with my wand and you’re not going to stop me!"
@@ -103,8 +109,11 @@ label global_ringmaster:
                 stop music
                 play sound "piano-keys-smashed.mp3"
                 queue sound "death_screen.mp3" loop
+                ""
+                voice "voices/Pita VA Clips/Pita_Ack2.wav" #VOICE LINE NO WORK FIX LATER
                 p "Ack-!"
                 "He catches me from the throat and squeezes it. No! I’m not strong enough-"
+
                 rm "You know I don’t want to hurt you and yet you test me?!"
                 rm "You have no power and you will learn your place that you’re supposed to be my perfect star."
                 rm "You’re mine forever, till death do us part!"
@@ -120,16 +129,17 @@ label global_ringmaster:
                 rm "You know that’s not an option, sweetheart."
                 rm "Stay still."
                 p "?!!!"
-                hide ringmaster
+                hide ringmaster 
                 show blackscreen
 
                 #CRUNCH NOISE
-
+                voice "voices/Pita VA Clips/Pita_Aggh.wav"
                 p "AHH-AGH"
                 hide blackscreen                
                 show pita dead
                 $ persistent.pitaDead_unlocked = True
                 "I look down at my leg and notice that it’s bleeding and that one of my bones is sticking out."
+                voice "voices/Pita VA Clips/Pita_No.wav"
                 p "{b}NO! NO!!{/b}"
                 "My body terribly shakes in horror at the sigh of my own broken leg. "
                 "I can’t move it and it hurts!"
@@ -156,24 +166,33 @@ label global_ringmaster:
                 show pita push
                 $ persistent.pitaPush_unlocked = True
                 "I reach past his hand and grab him by the collar, dragging him in."
+                voice "voices/Pita VA Clips/Ringmaster/TeamUp/Pita_Line1.wav"
                 p "Fine... but we need to establish some ground rules."
+                voice "voices/Pita VA Clips/Ringmaster/TeamUp/Pita_Line2.wav"
                 p "First, we’re not equals. If you try anything funny, I’ll kill you."
                 voice "voices/RM VA clips/RMteamup/RM_DontTrust.wav"
                 rm "You don’t trust me? I’m hurt! How you wound me so, my beautiful princess…"
                 "I slam him against the caravan wall and snarl."
                 voice "voices/RM VA clips/RMteamup/RM_VeryWell.wav"
                 rm "Very well, as you wish."
+                voice "voices/Pita VA Clips/Ringmaster/TeamUp/Pita_Line3.wav"
                 p "Second, tell me where my wand is. I’m not taking any other chances."
                 "He points at one of his drawers"
                 voice "voices/RM VA clips/RMteamup/RM_InThereSweet.wav"
                 rm "In there, sweetheart, I kept it close to remind me of you at night."
                 "I slam him again out of disgust, and drag him towards the drawer he pointed at. Using my other hand, I rummage around and manage to find my wand."
+                voice "voices/Pita VA Clips/Ringmaster/TeamUp/Pita_Line4.wav"
                 p "There you are! Now where were we… Oh yes, our terms."
+                voice "voices/Pita VA Clips/Ringmaster/TeamUp/Pita_Line5.wav"
+
                 p "Finally, I’m a fairy. I fly by my own terms, and you will never lock me down again. I’m staying out of convenience, and the minute I don’t need you or this circus, I’m gone. If you try to stop me, just remember what rule one was."
+                voice "voices/Pita VA Clips/Ringmaster/TeamUp/Pita_Line6.wav"
                 p "Now, are we clear?"
                 voice "voices/RM VA clips/RMteamup/RM_cryst.wav"
                 rm "Crystalline."
                 "I loosen my grip. He tenderly grabs my hand and leans in to kiss it, but I slap him away."
+                voice "voices/Pita VA Clips/Ringmaster/TeamUp/Pita_Line7.wav"
+
                 p "Quit it!"
                 "But he just cackles in glee."
                 voice "voices/RM VA clips/RMteamup/RM_LookForward.wav"
@@ -190,6 +209,8 @@ label global_ringmaster:
                 #play applause sound effects
                 "A roar of cheers and applause rings through the tent."
                 "I walk up the stage and give a great wave and a wide smile"
+                voice "voices/Pita VA Clips/Ringmaster/TeamUp/Pita_Line8.wav"
+
                 p "Thank you all for coming to the show! I hope you’ll enjoy this performance as I will be performing it!"
                 "I spot a nice target in the crowd and I lick my lips in enthusiasm. The afterparty will be fantastic once more."
                 $ persistent.ringmasterShirtless_unlocked = True

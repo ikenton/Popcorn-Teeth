@@ -367,6 +367,7 @@ label global_hugoVendetta:
                 menu:
                     "Plea for help!":
                         hide screen qte
+                        voice "voices/Pita VA Clips/Hugo/Pita_HelpMe.wav"
                         p "Help me! Ringmaster! Please, I’m in here!"
                         "I didn’t want to do this but I felt like I didn’t have much of a choice…"
 
@@ -377,6 +378,7 @@ label global_hugoVendetta:
                         "I can feel the chest I’m inside of being dropped!"
                         #play thud then bangning sounds play sound ["thud", "bang"]
                         "I scream and I bang at the chest from the inside."
+
                         p "Let me out, dammit!"
 
                         voice "voices/HUGO LINES/HUGO VS RM/HugoRM_Line2.wav"
@@ -484,8 +486,9 @@ label global_hugoVendetta:
                             voice "voices/RM VA clips/Hugo/RM_LookAt.wav"
                             rm "Look at all of those teeth! Aren’t they just delicious looking?"
                             "He places a finger on the decapitated head’s upper lip and he lifts it, revealing the upper teeth and gums better."
-                            voice "game/voices/RM VA clips/Hugo/RM_WellYellow.wav"
+                            voice "voices/RM VA clips/Hugo/RM_WellYellow.wav"
                             rm "Well, they’re a little yellow from smoking but they’re surely edible."
+                            voice "voices/Pita VA Clips/Hugo/Pita_TheyAre.wav"
                             p "They are…"
                             "I reach towards the teeth but he smacks my hand away!"
                             voice "voices/RM VA clips/Hugo/RM_nuhuh.wav"
@@ -526,6 +529,7 @@ label global_hugoVendetta:
                             "Delicious and a little smoky."
                             "..."
                             "I can feel his gaze on me as I eat."
+                            voice "voices/Pita VA Clips/Hugo/Pita_Rude2Stare.wav"
                             p "It's rude to stare."
                             "He stares at me for a brief moment longer."
                             "..."
@@ -552,7 +556,7 @@ label global_hugoVendetta:
                             voice "voices/RM VA clips/Hugo/RM_WhateverDoesntMat.wav"
                             rm "Well, whatever you did doesn’t really matter to me. What really matters to me is if you’re willing to work with me."
                             "It is unlocked."
-                            voice "game/voices/RM VA clips/Hugo/RM_PerfectStar.wav"
+                            voice "voices/RM VA clips/Hugo/RM_PerfectStar.wav"
                             rm "All you need to do is listen and be my perfect star."
                             "He lightly caresses the poster that he has of me on his wall."
                             show ringmaster
@@ -568,6 +572,7 @@ label global_hugoVendetta:
                                         show ringmaster
                                         voice "voices/RM VA clips/Hugo/RM_HOW.wav"
                                         rm "How?-"
+                                        voice "voices/Pita VA Clips/Hugo/Pita_NeverWorkW.wav"
                                         p "I’ll never work with you!"
                                         jump killing_rm
                                         
@@ -584,6 +589,7 @@ label global_hugoVendetta:
                                 "I don’t want to be stabbed next!"
                                 "I lower my head... and hesitantly take his hand..."
                                 stop music fadeout 0.3
+                                voice "voices/Pita VA Clips/Hugo/Pita_FineObey.wav"
                                 p "Fine, I’ll obey."
                                 "..."
                                 voice "voices/RM VA clips/Hugo/RM_GoodGirl.wav"
@@ -626,6 +632,7 @@ label global_hugoVendetta:
                             play sound "audio/footsteps-dirt-gravel.mp3" loop
                             "He’s been walking for a bit."
                             "Where is he taking me?"
+                            voice "voices/Pita VA Clips/Hugo/PIta_WhatAreUGoing.wav"
                             p "What are you going to do with me?!"
                             # play heartbeat sounds
                             "My heart pounds rapidly in my chest."

@@ -277,7 +277,7 @@ label global_visitMarlon:
                     "Like a dog, Crimson sits like Marlon commands."
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/_So you and Crimson must be quite close_/Subchoices/_What_s it like being friends with a lion_/Marlon_Line8.wav"
                     m "Good, now roll over!"
-                    play sound "CrimsonPurr.mp3" volume 2.0
+                    play sound "CrimsonPurr.mp3" 
                     "The large cat gets on the floor and rolls around on the animal fur rug."
                     "{i}Heh, cute{/i}"
                     show marlon happy 
@@ -294,7 +294,7 @@ label global_visitMarlon:
                         "Roll over.":
                             p "Alright, roll over."
                             #show crimson 
-                            play sound "CrimsonPurr.mp3" volume 2.0
+                            play sound "CrimsonPurr.mp3" 
                             "Crimson looked at me cautiously, but eventually he rolled over on the floor."
                         "Play dead":
                             p "Alright, play dead."
@@ -310,7 +310,7 @@ label global_visitMarlon:
                     m "Good boy, Crimson! Now give him his treat."
                     show crimson purr
                     "I hand over the treat to the lion who very carefully takes it from me for devouring it."
-                    play sound "CrimsonPurr.mp3" volume 2.0
+                    play sound "CrimsonPurr.mp3" 
                     show crimson
                     "{i}So the lion really likes these treats, huh? Maybe I can use that to distract him somehow so I can get Marlon alone.{/i}"
                 "Maybe the lion deserves it.": 
@@ -333,7 +333,7 @@ label global_visitMarlon:
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/_So you and Crimson must be quite close_/Subchoices/_Maybe the lion deserves it._/Marlon_Line5.wav"
                     m "I can show you just how tame and friendly he is with some of his favorite treats."
                     "Marlon walks over to a cupboard in his trailer and opens the door, putting out a small bag of treats called “Steak Bites.”"
-                    play sound "CrimsonPurr.mp3" volume 2.0
+                    play sound "CrimsonPurr.mp3"
                     show crimson purr
                     "As soon as the treats come out, Crimson lets out a purr of anticipation."
                     "Marlon takes two treats out and hands one to me."
@@ -346,7 +346,7 @@ label global_visitMarlon:
                     "Like a dog, Crimson sits like Marlon commands."
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/_So you and Crimson must be quite close_/Subchoices/_Maybe the lion deserves it._/Marlon_Line6.wav"
                     m "Good, now roll over!"
-                    play sound "CrimsonPurr.mp3" volume 2.0
+                    play sound "CrimsonPurr.mp3"
                     show crimson purr
                     "The large cat gets on the floor and rolls around on the animal fur rug."
                     show marlon angry
@@ -400,7 +400,7 @@ label global_visitMarlon:
                 "He died screaming in his cage.":
                     jump lizard_wrong
                 "He didn’t deserve that fate.":
-                    # no voicel ines
+                    # no voice lines
                     hide screen qte
                     show marlon surprised
                     m "O-oh."
@@ -833,7 +833,7 @@ label global_visitMarlon:
                             "Take the “Steak Bites”":
                                 hide screen qte
                                 $ crimsonhere = False
-                                play sound "CrimsonPurr.mp3" volume 2.0
+                                play sound "CrimsonPurr.mp3" 
                                 show crimson surprised
                                 $ persistent.crimsonSurprised_unlocked = True
                                 "I grab the treat and turn back to Crimson, whose eyes immediately lock onto the bag of “Steak Bites.” As I grab one treat and toss it out the open door, the lion immediately bolts out as Marlon comes back inside the trailer."
