@@ -419,6 +419,7 @@ label global_visitMarlon:
                     $ persistent.echo_unlocked = True
                     $ persistent.marlonPregante_unlocked = True
                     $ persistent.mecho_unlocked = True
+                    $ persistent.maidEcho_unlocked = True
                 "Really? You and him?":
                     hide screen qte
                     $ bad += 1

@@ -324,6 +324,14 @@ init python:
     gallery.button("mecho")
     gallery.image("mecho")
     gallery.condition("persistent.mecho_unlocked")
+
+    gallery.button("maidEcho")
+    gallery.image("maid echo")
+    gallery.condition("persistent.maidEcho_unlocked")
+
+    gallery.button("outtaTeeth")
+    gallery.image("outta teeth")
+    gallery.condition("persistent.outtaTeeth_unlocked")
 transform gallery_transform_full:
     zoom 0.35
 
@@ -497,7 +505,7 @@ screen gallery_other:
             xalign 0.5
             yalign 0.5
             spacing 30
-            grid 3 8:
+            grid 3 10:
                 add gallery.make_button(name="ringmasterPoster", unlocked=At("images/ringmaster poster.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="echoPoster", unlocked=At("images/echo poster.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="marlonPoster", unlocked=At("images/marlon poster.png", gallery_transform_expression), locked=At("images/blackscreen.png", gallery_transform_locked))
@@ -516,4 +524,5 @@ screen gallery_other:
                 add gallery.make_button(name="marlonPregante", unlocked=im.Scale("images/marlon pregante.png", 400,311), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="ringmasterShirtless", unlocked=im.Scale("images/ringmaster shirtless.png",  400,435), locked=At("images/blackscreen.png", gallery_transform_locked))
                 add gallery.make_button(name="pitapita", unlocked=im.Scale("images/pita pita.png", 400, 291), locked=At("images/blackscreen.png", gallery_transform_locked))
-                
+                add gallery.make_button(name="maidEcho", unlocked=im.Scale("images/maid echo.png", 400, 375), locked=At("images/blackscreen.png", gallery_transform_locked))
+                add gallery.make_button(name="outtaTeeth", unlocked=im.Scale("images/outta teeth.png", 400, 400.8), locked=At("images/blackscreen.png", gallery_transform_locked))

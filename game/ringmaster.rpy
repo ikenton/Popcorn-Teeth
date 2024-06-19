@@ -40,6 +40,7 @@ label global_ringmaster:
             show ringmaster
             "He stands up and fully faces me."
             if not marlonIsAlive and not bonnieIsAlive and not hugoIsAlive:
+                $ persistent.outtaTeeth_unlocked = True
                 jump goodEnding
             else:
                 jump rmbadending
