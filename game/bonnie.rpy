@@ -108,7 +108,7 @@ label global_bonnie:
                             "I slowly reach forward, a large grin forming on my face."
                             "Suddenly, I grab her leg, and pulling her down, I manage to hit her head against the vanity, knocking her unconscious."
                             stop music fadeout 5.0
-                            voice "voices/Pita VA Clips/Bonnie/Pita_Starved3.wav"
+                            #voice "voices/Pita VA Clips/Bonnie/Pita_Starved3.wav"
                             p "I am so hungry… starved, even.."
                             voice "voices/Bonnie_Lines/Bonnie_Line4.5_Choking.wav"
                             show bonnie dead
@@ -119,6 +119,8 @@ label global_bonnie:
                             "Her teeth taste divine, heavenly after being starved for so long… more… I want more."
                             "My claws dig into the flesh, tearing at cheek and gum, a mess of red staining my hands, spilling from her defiled mouth."
                             "Bits of veins and strings of tattered flesh now decorate the crevice with which once held her teeth in place, filling my stomach, regaining my power…"
+                            voice "game/voices/Pita VA Clips/Pita_Delicious.wav"
+                            p "Delicious."
                             jump global_courtyard
                         "Hide under the bed":
                             hide screen qte
@@ -231,7 +233,7 @@ label global_bonnie:
                             voice "voices/Bonnie_Lines/Bonnie_Line14.wav"
 
                             b "Bothersome."
-                            voice "voices/Pita VA Clips/Bonnie/Pita_ShutIt3.wav"
+                            #voice "voices/Pita VA Clips/Bonnie/Pita_ShutIt3.wav"
                             p "Shut it, Bonnie… I’ve had enough of your incessant whining."
                             show bonnie excited
                             voice "voices/Bonnie_Lines/Bonnie_Line14.5_Giggle.wav"

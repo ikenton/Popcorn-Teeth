@@ -140,19 +140,19 @@ label global_hugoVendetta:
                                 $ persistent.hugoHammer_unlocked = True
                                 $ hugoIsAlive = False
                                 "I raise the hammer above my head and strike it down onto Hugo’s face repeatedly."
-                                voice "voices/Pita VA Clips/Pita_Laugh2.wav"
+                                #voice "voices/Pita VA Clips/Pita_Laugh2.wav"
                                 p "Hehe—-HEHEHEH!"
                                 stop music fadeout 5.0
                                 "The adrenaline and euphoria embody my very soul to the brim as I hear his bones crack and flesh squelch every time I bring down the hammer."
                                 "I drop the hammer to the ground and begin picking at the teeth and other skull fragments from the disfigured face. I popped them into my mouth like how humans eat chips and chew with saliva and blood dripping from my jaw."
                                 hide hugo hammer
-                                voice "voices/Pita VA Clips/Hugo/Pita_Mmm1.wav"
+                                #voice "voices/Pita VA Clips/Hugo/Pita_Mmm1.wav"
                                 p "Mmm"
                                 "I finish and wipe my mouth."
                                 "I’ve made quite a mess."
                                 "I wipe the blood off myself with Hugo’s blankets and I bend down to look for the hammer."
                                 "I look under the bed and see the hammer’s head separated from the handle."
-                                voice "voices/Pita VA Clips/Hugo/Pita_Crap1.wav"
+                                #voice "voices/Pita VA Clips/Hugo/Pita_Crap1.wav"
                                 p "Crap"
                                 "I stand back up straight and look at the trailer’s door. I need more."
                                 "I leave the trailer and head back to the courtyard."
@@ -371,7 +371,7 @@ label global_hugoVendetta:
                 menu:
                     "Plea for help!":
                         hide screen qte
-                        voice "voices/Pita VA Clips/Hugo/Pita_HelpMe.wav"
+                        #voice "voices/Pita VA Clips/Hugo/Pita_HelpMe.wav"
                         p "Help me! Ringmaster! Please, I’m in here!"
                         "I didn’t want to do this but I felt like I didn’t have much of a choice…"
 
@@ -492,7 +492,7 @@ label global_hugoVendetta:
                             "He places a finger on the decapitated head’s upper lip and he lifts it, revealing the upper teeth and gums better."
                             voice "voices/RM VA clips/Hugo/RM_WellYellow.wav"
                             rm "Well, they’re a little yellow from smoking but they’re surely edible."
-                            voice "voices/Pita VA Clips/Hugo/Pita_TheyAre.wav"
+                            #voice "voices/Pita VA Clips/Hugo/Pita_TheyAre.wav"
                             p "They are…"
                             "I reach towards the teeth but he smacks my hand away!"
                             voice "voices/RM VA clips/Hugo/RM_nuhuh.wav"
@@ -533,7 +533,7 @@ label global_hugoVendetta:
                             "Delicious and a little smoky."
                             "..."
                             "I can feel his gaze on me as I eat."
-                            voice "voices/Pita VA Clips/Hugo/Pita_Rude2Stare.wav"
+                            #voice "voices/Pita VA Clips/Hugo/Pita_Rude2Stare.wav"
                             p "It's rude to stare."
                             "He stares at me for a brief moment longer."
                             "..."
@@ -576,7 +576,7 @@ label global_hugoVendetta:
                                         show ringmaster
                                         voice "voices/RM VA clips/Hugo/RM_HOW.wav"
                                         rm "How?-"
-                                        voice "voices/Pita VA Clips/Hugo/Pita_NeverWorkW.wav"
+                                        #voice "voices/Pita VA Clips/Hugo/Pita_NeverWorkW.wav"
                                         p "I’ll never work with you!"
                                         jump killing_rm
                                         
@@ -593,7 +593,7 @@ label global_hugoVendetta:
                                 "I don’t want to be stabbed next!"
                                 "I lower my head... and hesitantly take his hand..."
                                 stop music fadeout 0.3
-                                voice "voices/Pita VA Clips/Hugo/Pita_FineObey.wav"
+                                #voice "voices/Pita VA Clips/Hugo/Pita_FineObey.wav"
                                 p "Fine, I’ll obey."
                                 "..."
                                 voice "voices/RM VA clips/Hugo/RM_GoodGirl.wav"
@@ -637,7 +637,7 @@ label global_hugoVendetta:
                             play sound "audio/footsteps-dirt-gravel.mp3" loop
                             "He’s been walking for a bit."
                             "Where is he taking me?"
-                            voice "voices/Pita VA Clips/Hugo/PIta_WhatAreUGoing.wav"
+                            #voice "voices/Pita VA Clips/Hugo/PIta_WhatAreUGoing.wav"
                             p "What are you going to do with me?!"
                             # play heartbeat sounds
                             "My heart pounds rapidly in my chest."
