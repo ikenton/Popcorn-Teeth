@@ -622,7 +622,7 @@ label global_visitMarlon:
                     show marlon nuetral
                     voice "voices/Marlon_VA_clips/Front_of_Marlon_s_Trailer/Inside Trailer/Endings/_We should try to get out of here. Together_/Marlon fw Pita/Marlon_Line1.wav"
                     m "What is it?"
-                    voice "voices/Pita VA Clips/Pita_Trying.wav"
+                    #voice "voices/Pita VA Clips/Pita_Trying.wav"
                     p "I’m trying to escape. You and I both know that we deserve better lives than this."
                     #voice "voices/Pita VA Clips/Pita_WantToLeaveToo.wav"
                     p "Marlon, I know you want to leave, too. We need to leave the Circus and the Ringmaster."

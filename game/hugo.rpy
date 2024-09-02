@@ -104,6 +104,7 @@ label global_hugoVendetta:
                             "I crawl out of the trailer and I stand up, hunching as I approach behind Hugo. I go up one of the steps and it creaks."
                             stop sound 
                             "!!!"
+                            stop sound
                             show hugo surprised
                             "Hugo‘s head snaps in my direction."
                             voice "voices/HUGO LINES/Hugo_CommonBadEnding1.wav"
@@ -294,6 +295,7 @@ label global_hugoVendetta:
         return
 
     label prebadending:
+        stop channel2 fadeout 1.0
         show hugo surprised
         voice "voices/HUGO LINES/Hugo_CommonBadEnding1.wav"
         h "What the?! What are you doing here?!"
