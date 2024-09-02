@@ -119,6 +119,7 @@ label global_bonnie:
                             "Her teeth taste divine, heavenly after being starved for so long… more… I want more."
                             "My claws dig into the flesh, tearing at cheek and gum, a mess of red staining my hands, spilling from her defiled mouth."
                             "Bits of veins and strings of tattered flesh now decorate the crevice with which once held her teeth in place, filling my stomach, regaining my power…"
+                            
                             jump global_courtyard
                         "Hide under the bed":
                             hide screen qte
@@ -231,7 +232,7 @@ label global_bonnie:
                             voice "voices/Bonnie_Lines/Bonnie_Line14.wav"
 
                             b "Bothersome."
-                            voice "voices/Pita VA Clips/Bonnie/Pita_ShutIt3.wav"
+                            #voice "voices/Pita VA Clips/Bonnie/Pita_ShutIt3.wav"
                             p "Shut it, Bonnie… I’ve had enough of your incessant whining."
                             show bonnie excited
                             voice "voices/Bonnie_Lines/Bonnie_Line14.5_Giggle.wav"
